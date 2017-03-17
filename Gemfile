@@ -8,8 +8,7 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -28,6 +27,11 @@ gem 'puma', '~> 3.0'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'rspec-rails', '~> 3.5.2'
+  gem 'database_cleaner', '~> 1.5'
+  gem 'factory_girl_rails'
+  gem 'webmock'
+  gem 'vcr'
 end
 
 group :development do
@@ -42,3 +46,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'devise_token_auth', '~> 0.1.40'
 gem 'omniauth', '~> 1.6.1'
+gem 'rspotify', '~> 1.19'
