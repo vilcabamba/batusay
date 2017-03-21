@@ -1,8 +1,8 @@
 module Api
-  class SearchesController < ApplicationController
+  class SearchesController < BaseController
     def show
       # TODO
-      results = RSpotify::Track.search('rock it')
+      results = SongRepositoryService.search(params[:q])
       render json: results
     end
   end
