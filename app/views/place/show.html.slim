@@ -1,0 +1,6 @@
+.place-public-view
+  = @place.name
+  = image_tag @place.picture_url
+
+  - @place.playlist_songs.each do |song|
+    = song.inspect
