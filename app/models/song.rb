@@ -8,4 +8,10 @@ class Song < ApplicationRecord
             :place_id,
             :spotify_id,
             presence: true
+
+  def artist_names
+    spotify_track["artists"].map do |artist|
+      artist["name"]
+    end.join(", ")
+  end
 end

@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.place-public-view {
+  font-family: Helvetica Neue, Verdana;
+  max-width: 90%;
+  margin: auto;
+}
+
+.place-public-view h1 {
+  text-align: center;
+}
+
+.place-public-view .place-image img {
+  max-width: 300px;
+  display: block;
+  margin: auto;
+}
+
+.place-public-view img {
+  max-width: 100%;
+}
+
+.song-in-queue {
+
+}
+
+.song-in-queue img {
+  float: left;
+  max-width: 80px;
+  margin-right: 10px;
+}
+
+.song-in-queue .song-name {
+
+}
