@@ -111,6 +111,8 @@ GEM
     omniauth (1.6.1)
       hashie (>= 3.4.6, < 3.6.0)
       rack (>= 1.6.2, < 3)
+    omniauth-facebook (4.0.0)
+      omniauth-oauth2 (~> 1.2)
     omniauth-oauth2 (1.3.1)
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
@@ -118,6 +120,7 @@ GEM
     pg (0.18.4)
     puma (3.8.2)
     rack (2.0.1)
+    rack-cors (0.4.1)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.2)
@@ -230,9 +233,10 @@ DEPENDENCIES
   geokit-rails (~> 2.2)
   jbuilder (~> 2.5)
   listen (~> 3.0.5)
-  omniauth (~> 1.6.1)
+  omniauth-facebook
   pg
   puma (~> 3.0)
+  rack-cors
   rails (~> 5.0.2)
   rails-erd
   rspec-rails (~> 3.5.2)
@@ -245,4 +249,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   1.12.5
+   1.14.6
