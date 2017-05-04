@@ -1,0 +1,7 @@
+.song-in-queue
+  = image_tag song.spotify_track["album"]["images"].first["url"]
+  .song-name = song.spotify_track["name"]
+  .song-artists = song.artist_names
+  .song-preview
+    audio controls=""
+      source src="#{song.spotify_track["preview_url"]}"
