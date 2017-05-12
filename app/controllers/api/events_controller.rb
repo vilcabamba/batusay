@@ -32,6 +32,23 @@ module Api
       end
     end
 
+    def update
+      update! do
+        if resource.valid?
+          status = :accepted
+          template_name = resource_instance_name
+        else
+          status = :unprocessable_entity
+          template_name = 'api/resource/errors'
+        end
+        return render(
+          template_name,
+          formats: :json,
+          status: status
+        )
+      end
+    end
+
     protected
 
     def begin_of_association_chain

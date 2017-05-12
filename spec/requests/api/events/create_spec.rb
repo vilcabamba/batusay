@@ -19,14 +19,16 @@ RSpec.describe Api::EventsController,
         created_event["descripcion"]
       ).to eq(event_params[:descripcion])
       expect(
-        created_event["lat"]
-      ).to eq(event_params[:lat])
-      expect(
-        created_event["lng"]
-      ).to eq(event_params[:lng])
-      expect(
         created_event["user_id"]
       ).to eq(user.id)
+
+      # to_i so it's simpler
+      expect(
+        created_event["lat"].to_i
+      ).to eq(event_params[:lat].to_i)
+      expect(
+        created_event["lng"].to_i
+      ).to eq(event_params[:lng].to_i)
     }
   end
 end
