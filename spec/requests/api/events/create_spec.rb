@@ -11,10 +11,10 @@ RSpec.describe Api::EventsController,
         params: event_params,
         headers: user.create_new_auth_token
       )
-      created_event = JSON.parse(response.body)
+      created_event = JSON.parse(response.body).fetch("event")
       expect(
-        created_event["titulo"]
-      ).to eq(event_params[:titulo])
+        created_event["name"]
+      ).to eq(event_params[:name])
       expect(
         created_event["descripcion"]
       ).to eq(event_params[:descripcion])
