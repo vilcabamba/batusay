@@ -9,6 +9,12 @@ module Api
       end
     end
 
+    def show
+      show! do
+        return render resource_instance_name, formats: :json
+      end
+    end
+
     def create
       create! do
         if resource.persisted?
