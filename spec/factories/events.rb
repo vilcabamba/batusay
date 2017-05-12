@@ -1,12 +1,12 @@
 FactoryGirl.define do
   factory :event do
     user
-    name "some event"
+    sequence(:name) { |n| "event #{n}" }
 
     trait :full do
-      descripcion "some event's description"
-      lat 1.33
-      lng 9.11
+      lat         { Faker::Address.latitude }
+      lng         { Faker::Address.longitude }
+      descripcion { Faker::Hipster.sentence }
     end
   end
 end
