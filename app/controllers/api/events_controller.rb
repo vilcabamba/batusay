@@ -3,6 +3,12 @@ module Api
     before_action :authenticate_api_user!
     respond_to :json # does this actually do anything?
 
+    def index
+      index! do
+        return render formats: :json
+      end
+    end
+
     def create
       create! do
         if resource.persisted?

@@ -5,15 +5,15 @@ RSpec.describe Api::EventsController,
   describe "as a user I can see my events" do
     it {
       user = create :user
-      event = create :event
+      event = create :event, user: user
       get(
         api_events_path,
         headers: user.create_new_auth_token
       )
-      resp_event = JSON.parse(response.body).first
+      resp_event = JSON.parse(response.body).fetch("events").first
       expect(
-        resp_event["titulo"]
-      ).to eq(event.titulo)
+        resp_event["name"]
+      ).to eq(event.name)
     }
   end
 end
