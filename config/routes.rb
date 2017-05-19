@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     resource :search, only: :show
     resources :songs, only: :create
     resources :events
+    resources :friends, only: :index
   end
   resources :place, path: "p", only: :show
 end
