@@ -35,6 +35,8 @@ group :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails', '~> 3.5.2'
   gem 'database_cleaner', '~> 1.5'
+  gem 'autodoc'
+  gem 'redcarpet'
 end
 
 group :development do
