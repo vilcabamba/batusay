@@ -3,12 +3,14 @@ class Event < ApplicationRecord
 
   validates :name,
             :user_id,
+            :date,
             presence: true
 
   API_PERMITTED_ATTRS = [
     :name,
     :descripcion,
     :lat,
-    :lng
+    :lng,
+    :date
   ].freeze
 end
