@@ -4,6 +4,7 @@ FactoryGirl.define do
     sequence(:name) { |n| "event #{n}" }
 
     trait :full do
+      date        { Faker::Time.forward(23, :morning) }
       lat         { Faker::Address.latitude }
       lng         { Faker::Address.longitude }
       descripcion { Faker::Hipster.sentence }
