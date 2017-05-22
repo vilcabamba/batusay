@@ -9,6 +9,7 @@ class Event < ApplicationRecord
     :name,
     :descripcion,
     :lat,
-    :lng
+    :lng,
+    :date
   ].freeze
 end
