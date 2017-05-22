@@ -1,8 +1,10 @@
 json.extract!(
   event,
+  :id,
   :user_id,
   :name,
   :descripcion,
   :lat,
-  :lng
+  :lng,
+  :date
 )
