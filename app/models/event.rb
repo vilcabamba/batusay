@@ -6,6 +6,8 @@ class Event < ApplicationRecord
             :date,
             presence: true
 
+  validate :date_must_be_future
+
   API_PERMITTED_ATTRS = [
     :name,
     :descripcion,
@@ -13,4 +15,11 @@ class Event < ApplicationRecord
     :lng,
     :date
   ].freeze
+
+
+def date_must_be_future
+  if date.present? && date < Date.today
+    errors.add(:date, "no puede estar en el pasado")
+  end
+end
 end
