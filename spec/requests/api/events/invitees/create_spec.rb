@@ -39,7 +39,7 @@ RSpec.describe Api::InviteesController,
         { user_ids: [ friend.id, friend_2.id ] }
       }
 
-      it {
+      it "renders created invitees" do
         event = create :event, user: user
         post(
           api_event_invitees_path(event_id: event.id),
@@ -48,10 +48,12 @@ RSpec.describe Api::InviteesController,
         )
         resp_invitees = JSON.parse(response.body).fetch("invitees")
         expect(resp_invitees.count).to eq(2)
-      }
+      end
     end
 
     describe "reinvite friends with ids" do
+      let(:description) { "when a friend has already been invited.\nIn this case, user with id #{friend.id} is already an invitee" }
+
       let(:friend_2) { create :user }
 
       let(:params) {
