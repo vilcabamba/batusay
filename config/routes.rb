@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     resources :songs, only: :create
     resources :friends, only: :index
     resources :events do
-      resources :invitees, only: :create
+      resources :invitees, only: [:create, :index]
     end
   end
   resources :place, path: "p", only: :show
