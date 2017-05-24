@@ -16,10 +16,11 @@ class Event < ApplicationRecord
     :date
   ].freeze
 
+  private
 
-def date_must_be_future
-  if date.present? && date < Date.today
-    errors.add(:date, :must_be_future)
+  def date_must_be_future
+    if date.present? && date < Date.today
+      errors.add(:date, :must_be_future)
+    end
   end
-end
 end
