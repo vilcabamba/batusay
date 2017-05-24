@@ -1,7 +1,7 @@
 class Api::Auth::OmniauthCallbacksController < DeviseTokenAuth::OmniauthCallbacksController
   ##
   # monkey patching
-  # https://github.com/lynndylanhurley/devise_token_auth/blob/master/app/controllers/devise_token_auth/omniauth_callbacks_controller.rb#L10
+  # https://github.com/lynndylanhurley/devise_token_auth/blob/5300ea7cc9e06346e42f31864f85f776c2379e4d/app/controllers/devise_token_auth/omniauth_callbacks_controller.rb#L10
   def redirect_callbacks
     devise_mapping = [request.env['omniauth.params']['namespace_name'],
                       request.env['omniauth.params']['resource_class'].underscore.gsub('/', '_')].compact.join('_')
