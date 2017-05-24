@@ -59,7 +59,7 @@
 <div class='generated-at'>
 Generated at:
 <br>
-2017-05-24 10:27:55 -0500</div>
+2017-05-24 10:39:03 -0500</div>
 </div>
 
 <div class='page-wrapper'>
@@ -71,18 +71,18 @@ Generated at:
 
 <h4>Request</h4>
 
-<pre><code>POST /api/events/23/invitees HTTP/1.1
+<pre><code>POST /api/events/26/invitees HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: CTJd7sggx2O9bRNZpkAmGQ
-Client: YCKoxyVDJEstLblnJgq_WA
+Access-Token: rlugt9PJUxyS5NTLa-fHPw
+Client: fYHmvwkMc0IucHDWjtCOXg
 Content-Length: 11
 Content-Type: application/x-www-form-urlencoded
-Expiry: 1496849274
+Expiry: 1496849942
 Host: www.example.com
 Token-Type: Bearer
 Uid: person1@email.com
 
-user_ids=55
+user_ids=63
 </code></pre>
 
 <h4>Response</h4>
@@ -91,44 +91,44 @@ user_ids=55
 Cache-Control: max-age=0, private, must-revalidate
 Content-Length: 51
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;37b696619f4b07421d63360561bbd2db&quot;
+ETag: W/&quot;bbc7fb9b47dc6d23fe08434524eba64d&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 8692b2d7-2ec8-4d92-a1c9-6da5aa2197ed
-X-Runtime: 0.171032
+X-Request-Id: a455b8e6-05dd-4a4e-aa81-bd8d708cd775
+X-Runtime: 0.198166
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;invitees&quot;: [
     {
-      &quot;id&quot;: 26,
-      &quot;user_id&quot;: 55,
-      &quot;event_id&quot;: 23
+      &quot;id&quot;: 31,
+      &quot;user_id&quot;: 63,
+      &quot;event_id&quot;: 26
     }
   ]
 }
 </code></pre>
 </div><div class="api-action"><h2>POST /api/events/:event_id/invitees</h2>
 
-<p>Should eq 2.</p>
+<p>Renders created invitees.</p>
 
 <h3>Example</h3>
 
 <h4>Request</h4>
 
-<pre><code>POST /api/events/24/invitees HTTP/1.1
+<pre><code>POST /api/events/27/invitees HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: 3MFCNBcIUeQspmb8RLkDZw
-Client: Es7pyZ3evGEjGxYIAfS-XA
+Access-Token: tCqycayxUfrjJt0HQXl0NQ
+Client: ZEh3zD7ueuLZgbRuMpLCJA
 Content-Length: 27
 Content-Type: application/x-www-form-urlencoded
-Expiry: 1496849274
+Expiry: 1496849942
 Host: www.example.com
 Token-Type: Bearer
 Uid: person3@email.com
 
-user_ids[]=57&amp;user_ids[]=58
+user_ids[]=65&amp;user_ids[]=66
 </code></pre>
 
 <h4>Response</h4>
@@ -137,49 +137,50 @@ user_ids[]=57&amp;user_ids[]=58
 Cache-Control: max-age=0, private, must-revalidate
 Content-Length: 88
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;80378e3c1bb9169204c6c42fc83b1806&quot;
+ETag: W/&quot;aa7e1dfab5d414edfb80dc059103c113&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: e7b3b01c-055b-4a18-9847-8e5b6009d7ba
-X-Runtime: 0.118965
+X-Request-Id: dfa372bd-f18f-4860-a0a7-ec597cace2a6
+X-Runtime: 0.124114
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;invitees&quot;: [
     {
-      &quot;id&quot;: 27,
-      &quot;user_id&quot;: 57,
-      &quot;event_id&quot;: 24
+      &quot;id&quot;: 32,
+      &quot;user_id&quot;: 65,
+      &quot;event_id&quot;: 27
     },
     {
-      &quot;id&quot;: 28,
-      &quot;user_id&quot;: 58,
-      &quot;event_id&quot;: 24
+      &quot;id&quot;: 33,
+      &quot;user_id&quot;: 66,
+      &quot;event_id&quot;: 27
     }
   ]
 }
 </code></pre>
 </div><div class="api-action"><h2>POST /api/events/:event_id/invitees</h2>
 
-<p>Creates and renders non-duplicate invitees.</p>
+<p>when a friend has already been invited.
+In this case, user with id 68 is already an invitee</p>
 
 <h3>Example</h3>
 
 <h4>Request</h4>
 
-<pre><code>POST /api/events/25/invitees HTTP/1.1
+<pre><code>POST /api/events/28/invitees HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: JaOTaW9SkIUqCWEvwYabIw
-Client: 4NIwd3Vtw2PuM8lvqEGkjQ
+Access-Token: Bl_By2R156GpVzuYlGYYGQ
+Client: xhyzYJTTibr_TdNu8WVVkQ
 Content-Length: 27
 Content-Type: application/x-www-form-urlencoded
-Expiry: 1496849275
+Expiry: 1496849942
 Host: www.example.com
 Token-Type: Bearer
 Uid: person6@email.com
 
-user_ids[]=60&amp;user_ids[]=61
+user_ids[]=68&amp;user_ids[]=69
 </code></pre>
 
 <h4>Response</h4>
@@ -188,20 +189,20 @@ user_ids[]=60&amp;user_ids[]=61
 Cache-Control: max-age=0, private, must-revalidate
 Content-Length: 51
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;b057515656ffea9227d375392fdbd907&quot;
+ETag: W/&quot;9d351fa88b51a8ae64b1f114ed68fd38&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 8d4b937b-36e8-4259-8df0-74c7d7a84cb4
-X-Runtime: 0.117525
+X-Request-Id: 571a3708-de2c-4f42-96e5-28c38ada0534
+X-Runtime: 0.117838
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;invitees&quot;: [
     {
-      &quot;id&quot;: 30,
-      &quot;user_id&quot;: 61,
-      &quot;event_id&quot;: 25
+      &quot;id&quot;: 35,
+      &quot;user_id&quot;: 69,
+      &quot;event_id&quot;: 28
     }
   ]
 }

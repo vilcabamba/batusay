@@ -5,18 +5,18 @@ Invite a friend with id.
 
 #### Request
 ```
-POST /api/events/23/invitees HTTP/1.1
+POST /api/events/26/invitees HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: CTJd7sggx2O9bRNZpkAmGQ
-Client: YCKoxyVDJEstLblnJgq_WA
+Access-Token: rlugt9PJUxyS5NTLa-fHPw
+Client: fYHmvwkMc0IucHDWjtCOXg
 Content-Length: 11
 Content-Type: application/x-www-form-urlencoded
-Expiry: 1496849274
+Expiry: 1496849942
 Host: www.example.com
 Token-Type: Bearer
 Uid: person1@email.com
 
-user_ids=55
+user_ids=63
 ```
 
 #### Response
@@ -25,44 +25,44 @@ HTTP/1.1 201
 Cache-Control: max-age=0, private, must-revalidate
 Content-Length: 51
 Content-Type: application/json; charset=utf-8
-ETag: W/"37b696619f4b07421d63360561bbd2db"
+ETag: W/"bbc7fb9b47dc6d23fe08434524eba64d"
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 8692b2d7-2ec8-4d92-a1c9-6da5aa2197ed
-X-Runtime: 0.171032
+X-Request-Id: a455b8e6-05dd-4a4e-aa81-bd8d708cd775
+X-Runtime: 0.198166
 X-XSS-Protection: 1; mode=block
 
 {
   "invitees": [
     {
-      "id": 26,
-      "user_id": 55,
-      "event_id": 23
+      "id": 31,
+      "user_id": 63,
+      "event_id": 26
     }
   ]
 }
 ```
 
 ## POST /api/events/:event_id/invitees
-Should eq 2.
+Renders created invitees.
 
 ### Example
 
 #### Request
 ```
-POST /api/events/24/invitees HTTP/1.1
+POST /api/events/27/invitees HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: 3MFCNBcIUeQspmb8RLkDZw
-Client: Es7pyZ3evGEjGxYIAfS-XA
+Access-Token: tCqycayxUfrjJt0HQXl0NQ
+Client: ZEh3zD7ueuLZgbRuMpLCJA
 Content-Length: 27
 Content-Type: application/x-www-form-urlencoded
-Expiry: 1496849274
+Expiry: 1496849942
 Host: www.example.com
 Token-Type: Bearer
 Uid: person3@email.com
 
-user_ids[]=57&user_ids[]=58
+user_ids[]=65&user_ids[]=66
 ```
 
 #### Response
@@ -71,49 +71,50 @@ HTTP/1.1 201
 Cache-Control: max-age=0, private, must-revalidate
 Content-Length: 88
 Content-Type: application/json; charset=utf-8
-ETag: W/"80378e3c1bb9169204c6c42fc83b1806"
+ETag: W/"aa7e1dfab5d414edfb80dc059103c113"
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: e7b3b01c-055b-4a18-9847-8e5b6009d7ba
-X-Runtime: 0.118965
+X-Request-Id: dfa372bd-f18f-4860-a0a7-ec597cace2a6
+X-Runtime: 0.124114
 X-XSS-Protection: 1; mode=block
 
 {
   "invitees": [
     {
-      "id": 27,
-      "user_id": 57,
-      "event_id": 24
+      "id": 32,
+      "user_id": 65,
+      "event_id": 27
     },
     {
-      "id": 28,
-      "user_id": 58,
-      "event_id": 24
+      "id": 33,
+      "user_id": 66,
+      "event_id": 27
     }
   ]
 }
 ```
 
 ## POST /api/events/:event_id/invitees
-Creates and renders non-duplicate invitees.
+when a friend has already been invited.
+In this case, user with id 68 is already an invitee
 
 ### Example
 
 #### Request
 ```
-POST /api/events/25/invitees HTTP/1.1
+POST /api/events/28/invitees HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: JaOTaW9SkIUqCWEvwYabIw
-Client: 4NIwd3Vtw2PuM8lvqEGkjQ
+Access-Token: Bl_By2R156GpVzuYlGYYGQ
+Client: xhyzYJTTibr_TdNu8WVVkQ
 Content-Length: 27
 Content-Type: application/x-www-form-urlencoded
-Expiry: 1496849275
+Expiry: 1496849942
 Host: www.example.com
 Token-Type: Bearer
 Uid: person6@email.com
 
-user_ids[]=60&user_ids[]=61
+user_ids[]=68&user_ids[]=69
 ```
 
 #### Response
@@ -122,20 +123,20 @@ HTTP/1.1 201
 Cache-Control: max-age=0, private, must-revalidate
 Content-Length: 51
 Content-Type: application/json; charset=utf-8
-ETag: W/"b057515656ffea9227d375392fdbd907"
+ETag: W/"9d351fa88b51a8ae64b1f114ed68fd38"
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 8d4b937b-36e8-4259-8df0-74c7d7a84cb4
-X-Runtime: 0.117525
+X-Request-Id: 571a3708-de2c-4f42-96e5-28c38ada0534
+X-Runtime: 0.117838
 X-XSS-Protection: 1; mode=block
 
 {
   "invitees": [
     {
-      "id": 30,
-      "user_id": 61,
-      "event_id": 25
+      "id": 35,
+      "user_id": 69,
+      "event_id": 28
     }
   ]
 }
