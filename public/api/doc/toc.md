@@ -1,4 +1,5 @@
 ## Table of Contents
-* [api/friends/index.md](api/friends/index.md)
- * [GET /api/friends](api/friends/index.md#get-apifriends)
- * [GET /api/friends?q=](api/friends/index.md#get-apifriends?q=)
+* [api/events/invitees/create.md](api/events/invitees/create.md)
+ * [POST /api/events/:event_id/invitees](api/events/invitees/create.md#post-apieventsevent_idinvitees)
+ * [POST /api/events/:event_id/invitees](api/events/invitees/create.md#post-apieventsevent_idinvitees-1)
+ * [POST /api/events/:event_id/invitees](api/events/invitees/create.md#post-apieventsevent_idinvitees-2)
