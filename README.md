@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## requirements
 
-Things you may want to cover:
+* ruby
+* postgreSQL
 
-* Ruby version
+## setup
 
-* System dependencies
+    $ bundle exec rake db:create db:migrate
+    $ bundle exec rails server
 
-* Configuration
+## documentation
 
-* Database creation
+using [autodoc](https://github.com/r7kamura/autodoc#usage). run specs with flag:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+    $ AUTODOC=1 rspec

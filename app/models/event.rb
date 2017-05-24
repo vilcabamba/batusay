@@ -1,5 +1,6 @@
 class Event < ApplicationRecord
   belongs_to :user
+  has_many :invitees
 
   validates :name,
             :user_id,
