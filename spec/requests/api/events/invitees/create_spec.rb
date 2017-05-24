@@ -8,7 +8,7 @@ RSpec.describe Api::InviteesController,
     let(:friend) { create :user }
 
     let(:params) {
-      { user_ids: friend.id }
+      { user_ids: [{id: friend.id}] }
     }
 
     let(:headers) {
@@ -36,7 +36,7 @@ RSpec.describe Api::InviteesController,
       let(:friend_2) { create :user }
 
       let(:params) {
-        { user_ids: [ friend.id, friend_2.id ] }
+        { user_ids: [ {id: friend.id}, {id: friend_2.id} ] }
       }
 
       it "renders created invitees" do
@@ -57,7 +57,7 @@ RSpec.describe Api::InviteesController,
       let(:friend_2) { create :user }
 
       let(:params) {
-        { user_ids: [ friend.id, friend_2.id ] }
+        { user_ids: [ {id: friend.id}, {id: friend_2.id} ] }
       }
 
       it "creates and renders non-duplicate invitees" do
