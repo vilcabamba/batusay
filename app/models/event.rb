@@ -19,7 +19,7 @@ class Event < ApplicationRecord
 
 def date_must_be_future
   if date.present? && date < Date.today
-    errors.add(:date, "no puede estar en el pasado")
+    errors.add(:date, :must_be_future)
   end
 end
 end

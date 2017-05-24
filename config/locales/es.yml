@@ -116,6 +116,7 @@ es:
   errors:
     format: "%{attribute} %{message}"
     messages:
+      must_be_future: no puede estar en el pasado
       accepted: debe ser aceptado
       blank: no puede estar en blanco
       present: debe estar en blanco
