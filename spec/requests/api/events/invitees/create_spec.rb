@@ -8,9 +8,7 @@ RSpec.describe Api::InviteesController,
     let(:friend) { create :user }
 
     let(:params) {
-      {
-        user_id: friend.id
-      }
+      { user_ids: friend.id }
     }
 
     let(:headers) {
@@ -24,13 +22,53 @@ RSpec.describe Api::InviteesController,
         params: params,
         headers: headers
       )
-      resp_invitee = JSON.parse(response.body).fetch("invitee")
+      resp_invitees = JSON.parse(response.body).fetch("invitees")
+      resp_invitee = resp_invitees.first
       expect(
         resp_invitee["user_id"]
       ).to eq(friend.id)
       expect(
         resp_invitee["event_id"]
       ).to eq(event.id)
+    end
+
+    describe "invite several friends with ids" do
+      let(:friend_2) { create :user }
+
+      let(:params) {
+        { user_ids: [ friend.id, friend_2.id ] }
+      }
+
+      it {
+        event = create :event, user: user
+        post(
+          api_event_invitees_path(event_id: event.id),
+          params: params,
+          headers: headers
+        )
+        resp_invitees = JSON.parse(response.body).fetch("invitees")
+        expect(resp_invitees.count).to eq(2)
+      }
+    end
+
+    describe "reinvite friends with ids" do
+      let(:friend_2) { create :user }
+
+      let(:params) {
+        { user_ids: [ friend.id, friend_2.id ] }
+      }
+
+      it "creates and renders non-duplicate invitees" do
+        event = create :event, user: user
+        invitee = create :invitee, user: friend, event: event
+        post(
+          api_event_invitees_path(event_id: event.id),
+          params: params,
+          headers: headers
+        )
+        resp_invitees = JSON.parse(response.body).fetch("invitees")
+        expect(resp_invitees.count).to eq(1)
+      end
     end
   end
 end
