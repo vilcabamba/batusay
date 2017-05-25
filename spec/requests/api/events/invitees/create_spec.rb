@@ -8,7 +8,7 @@ RSpec.describe Api::InviteesController,
     let(:friend) { create :user }
 
     let(:params) {
-      { user_ids: [{id: friend.id}] }
+      { user_ids: [ friend.id ] }
     }
 
     let(:headers) {
@@ -25,7 +25,7 @@ RSpec.describe Api::InviteesController,
       resp_invitees = JSON.parse(response.body).fetch("invitees")
       resp_invitee = resp_invitees.first
       expect(
-        resp_invitee["user_id"]
+        resp_invitee["user"]["id"]
       ).to eq(friend.id)
       expect(
         resp_invitee["event_id"]
@@ -36,7 +36,7 @@ RSpec.describe Api::InviteesController,
       let(:friend_2) { create :user }
 
       let(:params) {
-        { user_ids: [ {id: friend.id}, {id: friend_2.id} ] }
+        { user_ids: [ friend.id, friend_2.id ] }
       }
 
       it "renders created invitees" do
@@ -57,7 +57,7 @@ RSpec.describe Api::InviteesController,
       let(:friend_2) { create :user }
 
       let(:params) {
-        { user_ids: [ {id: friend.id}, {id: friend_2.id} ] }
+        { user_ids: [ friend.id, friend_2.id ] }
       }
 
       it "creates and renders non-duplicate invitees" do

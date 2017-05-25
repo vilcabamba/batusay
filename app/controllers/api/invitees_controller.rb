@@ -5,18 +5,13 @@ module Api
 
     def create
       @invitees = batch_create_invitees
-      return render(
-        resource_instance_name.to_s.pluralize,
-        formats: :json,
-        status: :created
-      )
+      return render(:index, formats: :json, status: :created)
     end
 
     def index
-      @invitees = Invitee.where(
-        event_id: params[:event_id]
-      )
-      return render formats: :json
+      index! do
+        return render formats: :json
+      end
     end
 
     protected
@@ -32,8 +27,8 @@ module Api
     # params[:user_ids] being an array.
     # we'll reject non-saved invitees
     def batch_create_invitees
-      Array(params[:user_ids]).map do |user|
-        invitee = end_of_association_chain.new(user_id: user[:id])
+      Array(params[:user_ids]).map do |user_id|
+        invitee = end_of_association_chain.new(user_id: user_id)
         if invitee.save
           invitee
         end
