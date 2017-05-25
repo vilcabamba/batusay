@@ -25,7 +25,7 @@ RSpec.describe Api::InviteesController,
       resp_invitees = JSON.parse(response.body).fetch("invitees")
       resp_invitee = resp_invitees.first
       expect(
-        resp_invitee["user_id"]
+        resp_invitee["user"]["id"]
       ).to eq(friend.id)
       expect(
         resp_invitee["event_id"]

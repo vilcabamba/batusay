@@ -5,18 +5,13 @@ module Api
 
     def create
       @invitees = batch_create_invitees
-      return render(
-        resource_instance_name.to_s.pluralize,
-        formats: :json,
-        status: :created
-      )
+      return render(:index, formats: :json, status: :created)
     end
 
     def index
-      @invitees = Invitee.where(
-        event_id: params[:event_id]
-      )
-      return render formats: :json
+      index! do
+        return render formats: :json
+      end
     end
 
     protected
