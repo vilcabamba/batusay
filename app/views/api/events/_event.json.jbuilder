@@ -8,3 +8,5 @@ json.extract!(
   :lng,
   :date
 )
+
+json.invited_people event.invitees.count
