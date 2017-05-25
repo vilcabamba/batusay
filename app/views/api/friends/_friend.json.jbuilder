@@ -1,5 +1,1 @@
-json.extract!(
-  friend,
-  :id,
-  :name
-)
+json.partial!('api/users/user', user: friend)
