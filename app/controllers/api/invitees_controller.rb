@@ -27,8 +27,8 @@ module Api
     # params[:user_ids] being an array.
     # we'll reject non-saved invitees
     def batch_create_invitees
-      Array(params[:user_ids]).map do |user|
-        invitee = end_of_association_chain.new(user_id: user[:id])
+      Array(params[:user_ids]).map do |user_id|
+        invitee = end_of_association_chain.new(user_id: user_id)
         if invitee.save
           invitee
         end
