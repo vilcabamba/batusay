@@ -56,10 +56,18 @@
     <a href="#public/api/doc/api/events/invitees/create.md">api/events/invitees/create.md</a>
   </li>
   
+      <li>
+    <a href="#public/api/doc/api/events/invitees/index.md">api/events/invitees/index.md</a>
+  </li>
+  
+      <li>
+    <a href="#public/api/doc/api/friends/index.md">api/friends/index.md</a>
+  </li>
+  
 <div class='generated-at'>
 Generated at:
 <br>
-2017-05-24 10:39:03 -0500</div>
+2017-05-24 19:22:18 -0500</div>
 </div>
 
 <div class='page-wrapper'>
@@ -71,40 +79,43 @@ Generated at:
 
 <h4>Request</h4>
 
-<pre><code>POST /api/events/26/invitees HTTP/1.1
+<pre><code>POST /api/events/62/invitees HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: rlugt9PJUxyS5NTLa-fHPw
-Client: fYHmvwkMc0IucHDWjtCOXg
-Content-Length: 11
+Access-Token: VggX1w3bOEt38QVG4FrnIg
+Client: -YgNl9lSajBm9wDoiosAtQ
+Content-Length: 14
 Content-Type: application/x-www-form-urlencoded
-Expiry: 1496849942
+Expiry: 1496881337
 Host: www.example.com
 Token-Type: Bearer
-Uid: person1@email.com
+Uid: person6@email.com
 
-user_ids=63
+user_ids[]=144
 </code></pre>
 
 <h4>Response</h4>
 
 <pre><code>HTTP/1.1 201
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 51
+Content-Length: 86
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;bbc7fb9b47dc6d23fe08434524eba64d&quot;
+ETag: W/&quot;a429de7e5cad2fcda5e7fc3709aeafe4&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: a455b8e6-05dd-4a4e-aa81-bd8d708cd775
-X-Runtime: 0.198166
+X-Request-Id: 4ca80f78-a6da-45f7-8474-e84828cd6a5e
+X-Runtime: 0.134223
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;invitees&quot;: [
     {
-      &quot;id&quot;: 31,
-      &quot;user_id&quot;: 63,
-      &quot;event_id&quot;: 26
+      &quot;id&quot;: 68,
+      &quot;event_id&quot;: 62,
+      &quot;user&quot;: {
+        &quot;id&quot;: 144,
+        &quot;name&quot;: &quot;Clara Cerda Santiago&quot;
+      }
     }
   ]
 }
@@ -117,45 +128,51 @@ X-XSS-Protection: 1; mode=block
 
 <h4>Request</h4>
 
-<pre><code>POST /api/events/27/invitees HTTP/1.1
+<pre><code>POST /api/events/63/invitees HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: tCqycayxUfrjJt0HQXl0NQ
-Client: ZEh3zD7ueuLZgbRuMpLCJA
-Content-Length: 27
+Access-Token: ZQdz9OwHxbalaeAQjesdrw
+Client: fZ_Wq2c4P_32EthlDIycrQ
+Content-Length: 29
 Content-Type: application/x-www-form-urlencoded
-Expiry: 1496849942
+Expiry: 1496881337
 Host: www.example.com
 Token-Type: Bearer
-Uid: person3@email.com
+Uid: person8@email.com
 
-user_ids[]=65&amp;user_ids[]=66
+user_ids[]=146&amp;user_ids[]=147
 </code></pre>
 
 <h4>Response</h4>
 
 <pre><code>HTTP/1.1 201
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 88
+Content-Length: 165
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;aa7e1dfab5d414edfb80dc059103c113&quot;
+ETag: W/&quot;b2cfb3ef71ee2e1ad9e603ba87b3aa49&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: dfa372bd-f18f-4860-a0a7-ec597cace2a6
-X-Runtime: 0.124114
+X-Request-Id: b563b478-06ef-48d4-a60e-7562377ccab0
+X-Runtime: 0.124946
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;invitees&quot;: [
     {
-      &quot;id&quot;: 32,
-      &quot;user_id&quot;: 65,
-      &quot;event_id&quot;: 27
+      &quot;id&quot;: 69,
+      &quot;event_id&quot;: 63,
+      &quot;user&quot;: {
+        &quot;id&quot;: 146,
+        &quot;name&quot;: &quot;Francisco Valadez Banda&quot;
+      }
     },
     {
-      &quot;id&quot;: 33,
-      &quot;user_id&quot;: 66,
-      &quot;event_id&quot;: 27
+      &quot;id&quot;: 70,
+      &quot;event_id&quot;: 63,
+      &quot;user&quot;: {
+        &quot;id&quot;: 147,
+        &quot;name&quot;: &quot;Fernando Alva Altamirano&quot;
+      }
     }
   ]
 }
@@ -163,46 +180,179 @@ X-XSS-Protection: 1; mode=block
 </div><div class="api-action"><h2>POST /api/events/:event_id/invitees</h2>
 
 <p>when a friend has already been invited.
-In this case, user with id 68 is already an invitee</p>
+In this case, user with id 149 is already an invitee</p>
 
 <h3>Example</h3>
 
 <h4>Request</h4>
 
-<pre><code>POST /api/events/28/invitees HTTP/1.1
+<pre><code>POST /api/events/64/invitees HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: Bl_By2R156GpVzuYlGYYGQ
-Client: xhyzYJTTibr_TdNu8WVVkQ
-Content-Length: 27
+Access-Token: SRNXk2zYrwT7pub5Ldl5OQ
+Client: l6NYujUEwKwq6JuGE-LeyQ
+Content-Length: 29
 Content-Type: application/x-www-form-urlencoded
-Expiry: 1496849942
+Expiry: 1496881337
 Host: www.example.com
 Token-Type: Bearer
-Uid: person6@email.com
+Uid: person11@email.com
 
-user_ids[]=68&amp;user_ids[]=69
+user_ids[]=149&amp;user_ids[]=150
 </code></pre>
 
 <h4>Response</h4>
 
 <pre><code>HTTP/1.1 201
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 51
+Content-Length: 92
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;9d351fa88b51a8ae64b1f114ed68fd38&quot;
+ETag: W/&quot;8a571c9fcc398cacfd4f1ce71c3d5724&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 571a3708-de2c-4f42-96e5-28c38ada0534
-X-Runtime: 0.117838
+X-Request-Id: 28da6b3d-4825-4c59-923e-d599d05d7d36
+X-Runtime: 0.120916
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;invitees&quot;: [
     {
-      &quot;id&quot;: 35,
-      &quot;user_id&quot;: 69,
-      &quot;event_id&quot;: 28
+      &quot;id&quot;: 72,
+      &quot;event_id&quot;: 64,
+      &quot;user&quot;: {
+        &quot;id&quot;: 150,
+        &quot;name&quot;: &quot;Sta. Daniel Orellana Casas&quot;
+      }
+    }
+  ]
+}
+</code></pre>
+</div></div><div id="public/api/doc/api/events/invitees/index.md" class="api-resource"><div class="api-action"><h2>GET /api/events/:event_id/invitees</h2>
+
+<p>Lists event invitees.</p>
+
+<h3>Example</h3>
+
+<h4>Request</h4>
+
+<pre><code>GET /api/events/65/invitees HTTP/1.1
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Access-Token: oDMKFBaVga5LBvNA1rLpzg
+Client: XFrvYIqgUaHR-noljGCL5w
+Content-Length: 0
+Expiry: 1496881338
+Host: www.example.com
+Token-Type: Bearer
+Uid: person14@email.com
+</code></pre>
+
+<h4>Response</h4>
+
+<pre><code>HTTP/1.1 200
+Cache-Control: max-age=0, private, must-revalidate
+Content-Length: 86
+Content-Type: application/json; charset=utf-8
+ETag: W/&quot;40bc216cd1ac408d2337b9713bfcbeb1&quot;
+Vary: Origin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Request-Id: 78bc5783-c8a1-4682-9423-e7840cd06183
+X-Runtime: 0.111696
+X-XSS-Protection: 1; mode=block
+
+{
+  &quot;invitees&quot;: [
+    {
+      &quot;id&quot;: 73,
+      &quot;event_id&quot;: 65,
+      &quot;user&quot;: {
+        &quot;id&quot;: 152,
+        &quot;name&quot;: &quot;Adela Bustos Serrano&quot;
+      }
+    }
+  ]
+}
+</code></pre>
+</div></div><div id="public/api/doc/api/friends/index.md" class="api-resource"><div class="api-action"><h2>GET /api/friends</h2>
+
+<p>Lists all user friends.</p>
+
+<h3>Example</h3>
+
+<h4>Request</h4>
+
+<pre><code>GET /api/friends HTTP/1.1
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Access-Token: ukTU0zgF5iXPuEA9ttukFg
+Client: mELkc22Bh8SjRgVNjJPDpQ
+Content-Length: 0
+Expiry: 1496881338
+Host: www.example.com
+Token-Type: Bearer
+Uid: person17@email.com
+</code></pre>
+
+<h4>Response</h4>
+
+<pre><code>HTTP/1.1 200
+Cache-Control: max-age=0, private, must-revalidate
+Content-Length: 53
+Content-Type: application/json; charset=utf-8
+ETag: W/&quot;7d779186b9dc01a5d7e28dab37e68dfd&quot;
+Vary: Origin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Request-Id: 4829ecb4-03a8-4873-a654-90b8a561db66
+X-Runtime: 0.119905
+X-XSS-Protection: 1; mode=block
+
+{
+  &quot;friends&quot;: [
+    {
+      &quot;id&quot;: 155,
+      &quot;name&quot;: &quot;Anita Báez Mireles&quot;
+    }
+  ]
+}
+</code></pre>
+</div><div class="api-action"><h2>GET /api/friends?q=</h2>
+
+<p>Filter friends by query.</p>
+
+<h3>Example</h3>
+
+<h4>Request</h4>
+
+<pre><code>GET /api/friends?q=Cebollas HTTP/1.1
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Access-Token: 2HJUDhcXNEOqCoKjZ1jf6w
+Client: aAac_mFgbMvtju3txX3UBg
+Content-Length: 0
+Expiry: 1496881338
+Host: www.example.com
+Token-Type: Bearer
+Uid: person19@email.com
+</code></pre>
+
+<h4>Response</h4>
+
+<pre><code>HTTP/1.1 200
+Cache-Control: max-age=0, private, must-revalidate
+Content-Length: 55
+Content-Type: application/json; charset=utf-8
+ETag: W/&quot;fb4780fb835fb09fbf19cf7ee668e763&quot;
+Vary: Origin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Request-Id: 5c0f1636-f072-4c05-8050-06810c06f648
+X-Runtime: 0.120592
+X-XSS-Protection: 1; mode=block
+
+{
+  &quot;friends&quot;: [
+    {
+      &quot;id&quot;: 157,
+      &quot;name&quot;: &quot;Peter Parker Cebollas&quot;
     }
   ]
 }
