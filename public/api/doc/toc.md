@@ -1,4 +1,6 @@
 ## Table of Contents
+* [api/events/index.md](api/events/index.md)
+ * [GET /api/events](api/events/index.md#get-apievents)
 * [api/events/invitees/create.md](api/events/invitees/create.md)
  * [POST /api/events/:event_id/invitees](api/events/invitees/create.md#post-apieventsevent_idinvitees)
  * [POST /api/events/:event_id/invitees](api/events/invitees/create.md#post-apieventsevent_idinvitees-1)
