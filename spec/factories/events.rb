@@ -9,5 +9,14 @@ FactoryGirl.define do
       lng         { Faker::Address.longitude }
       descripcion { Faker::Hipster.sentence }
     end
+
+    trait :past do
+      after(:create) do |event|
+        past_date = Faker::Time.backward(23)
+        Timecop.freeze(past_date) do
+          event.update!(date: past_date)
+        end
+      end
+    end
   end
 end

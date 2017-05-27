@@ -1,19 +1,31 @@
 require "rails_helper"
 
 RSpec.describe Api::EventsController,
-               type: :request do
-  describe "as a user I can see my events" do
-    it {
-      user = create :user
-      event = create :event, user: user
+               type: :request,
+               autodoc: true do
+  describe "GET /api/events" do
+    let(:user) { create :user }
+    let(:event1) { create :event, user: user }
+    let(:event2) { create :event, :past, user: user }
+
+    let(:description) {
+      "Let's assume current date is #{Date.today} and there exists events for #{event1.date.to_date} and #{event2.date.to_date}"
+    }
+
+    it "lists past & future events" do
+      event1
+      event2
       get(
         api_events_path,
         headers: user.create_new_auth_token
       )
-      resp_event = JSON.parse(response.body).fetch("events").first
+      parsed_body = JSON.parse(response.body)
       expect(
-        resp_event["name"]
-      ).to eq(event.name)
-    }
+        parsed_body["future_events"].first["name"]
+      ).to eq(event1.name)
+      expect(
+        parsed_body["past_events"].first["name"]
+      ).to eq(event2.name)
+    end
   end
 end

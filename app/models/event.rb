@@ -9,6 +9,13 @@ class Event < ApplicationRecord
 
   validate :date_must_be_future
 
+  scope :future, -> {
+    where("date > :now", now: Time.zone.now)
+  }
+  scope :past, -> {
+    where("date < :now", now: Time.zone.now)
+  }
+
   API_PERMITTED_ATTRS = [
     :name,
     :descripcion,
