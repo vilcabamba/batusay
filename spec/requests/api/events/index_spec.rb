@@ -6,13 +6,7 @@ RSpec.describe Api::EventsController,
   describe "GET /api/events" do
     let(:user) { create :user }
     let(:event1) { create :event, user: user }
-    let(:event2) {
-      event = build :event, :past, user: user
-      Timecop.freeze(event.date) do
-        event.save
-      end
-      event
-    }
+    let(:event2) { create :event, :past, user: user }
 
     let(:description) {
       "Let's assume current date is #{Date.today} and there exists events for #{event1.date.to_date} and #{event2.date.to_date}"
