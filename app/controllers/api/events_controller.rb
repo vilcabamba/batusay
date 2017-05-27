@@ -5,6 +5,8 @@ module Api
 
     def index
       index! do
+        @past_events = @events.past
+        @future_events = @events.future
         return render formats: :json
       end
     end
