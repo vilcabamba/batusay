@@ -38,6 +38,18 @@ module Api
       end
     end
 
+    def destroy
+      destroy! do
+        status = :no_content
+        template_name = resource_instance_name
+        return render(
+          template_name,
+          formats: :json,
+          status: status
+        )
+      end
+    end
+
     protected
 
     def begin_of_association_chain
