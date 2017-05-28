@@ -1,6 +1,6 @@
 class Event < ApplicationRecord
   belongs_to :user
-  has_many :invitees
+  has_many :invitees, dependent: :destroy
 
   validates :name,
             :user_id,
