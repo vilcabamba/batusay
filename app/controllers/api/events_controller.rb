@@ -31,6 +31,18 @@ module Api
           template_name = 'api/resource/errors'
         end
         return render(
+          nothing: true,
+          formats: :json,
+          status: status
+        )
+      end
+    end
+
+    def destroy
+      destroy! do
+        status = :no_content
+        template_name = resource_instance_name
+        return render(
           template_name,
           formats: :json,
           status: status
