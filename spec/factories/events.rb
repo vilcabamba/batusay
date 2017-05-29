@@ -14,7 +14,8 @@ FactoryGirl.define do
       after(:create) do |event|
         past_date = Faker::Time.backward(23)
         Timecop.freeze(past_date) do
-          event.update!(date: past_date)
+          event.date = past_date
+          event.save!(validate: false)
         end
       end
     end

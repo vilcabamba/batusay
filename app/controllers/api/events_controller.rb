@@ -31,7 +31,7 @@ module Api
           template_name = 'api/resource/errors'
         end
         return render(
-          nothing: true,
+          template_name,
           formats: :json,
           status: status
         )
@@ -43,7 +43,7 @@ module Api
         status = :no_content
         template_name = resource_instance_name
         return render(
-          template_name,
+          body: nil,
           formats: :json,
           status: status
         )
