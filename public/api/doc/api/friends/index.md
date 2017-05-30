@@ -7,10 +7,10 @@ Lists all user friends.
 ```
 GET /api/friends HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: 5REV0rQ9G-vFZF-eRTG8_g
-Client: v--RBfuBflAy3FRO0sdzrQ
+Access-Token: kyDfdf6tonZw8pWsGNS80Q
+Client: 919OmNAl3W35v7xzusdveA
 Content-Length: 0
-Expiry: 1497325818
+Expiry: 1497334940
 Host: www.example.com
 Token-Type: Bearer
 Uid: person17@email.com
@@ -22,19 +22,19 @@ HTTP/1.1 200
 Cache-Control: max-age=0, private, must-revalidate
 Content-Length: 60
 Content-Type: application/json; charset=utf-8
-ETag: W/"58e17ba9794a7cb0ab6d674bd43b16e4"
+ETag: W/"0b5d6ce71a7e711b571b8e85063c933c"
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 939fb6a2-1dce-4f05-bd61-0fd3d05af6c1
-X-Runtime: 0.121915
+X-Request-Id: 2404023d-c3ae-4067-b07d-4ce75f77289d
+X-Runtime: 0.130353
 X-XSS-Protection: 1; mode=block
 
 {
   "friends": [
     {
-      "id": 235,
-      "name": "Sta. Mariana Guillen Ponce"
+      "id": 68,
+      "name": "Carolina Carrasquillo Cerda"
     }
   ]
 }
@@ -49,10 +49,10 @@ Filter friends by query.
 ```
 GET /api/friends?q=Cebollas HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: N9mRnQU2xN41Ur2WSkPZTA
-Client: rJDDLPQMo2iX8cMMsoEalA
+Access-Token: En3LqEDVO1yJ2aczlMFCjg
+Client: eHEBpkERn9xjcRrs_G8VNg
 Content-Length: 0
-Expiry: 1497325819
+Expiry: 1497334940
 Host: www.example.com
 Token-Type: Bearer
 Uid: person19@email.com
@@ -62,20 +62,20 @@ Uid: person19@email.com
 ```
 HTTP/1.1 200
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 55
+Content-Length: 54
 Content-Type: application/json; charset=utf-8
-ETag: W/"64b4e464b2495aae7eaed2a292145e73"
+ETag: W/"53ad0432edc38e3fdd615c470f649f1a"
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: a0b6667c-e004-4525-aa79-18b36857c44a
-X-Runtime: 0.106954
+X-Request-Id: 982e8cba-a3eb-4339-b217-bc6f66e5f382
+X-Runtime: 0.113421
 X-XSS-Protection: 1; mode=block
 
 {
   "friends": [
     {
-      "id": 237,
+      "id": 70,
       "name": "Peter Parker Cebollas"
     }
   ]

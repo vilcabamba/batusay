@@ -7,13 +7,13 @@ I can search songs.
 ```
 GET /api/search?q=rock+it HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: pDsZRUhkACiaFJXX44Me-A
-Client: fsWDl0ziqOGfbOgxi2yTsQ
+Access-Token: 5h_h15TrLSzY1jDS1sm-aw
+Client: ku1YYt1lc1M7eZOruy8cCQ
 Content-Length: 0
-Expiry: 1497325819
+Expiry: 1497334941
 Host: www.example.com
 Token-Type: Bearer
-Uid: person22@email.com
+Uid: person26@email.com
 ```
 
 #### Response
@@ -22,12 +22,12 @@ HTTP/1.1 200
 Cache-Control: max-age=0, private, must-revalidate
 Content-Length: 52385
 Content-Type: application/json; charset=utf-8
-ETag: W/"4b5fd3646e1656773e7e4e82adb1a8e0"
+ETag: W/"ba7d8c4938de8234904fa6b7989f26c0"
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 748ba4d4-5999-4bec-a143-ad6102d2e4a2
-X-Runtime: 0.076367
+X-Request-Id: 9dc6aab5-aa8d-4993-b848-ac921bce656a
+X-Runtime: 0.977098
 X-XSS-Protection: 1; mode=block
 
 [
@@ -1936,7 +1936,7 @@ X-XSS-Protection: 1; mode=block
       "isrc": "GBDMT1400313"
     },
     "name": "Bye Bye Bye - Rock",
-    "popularity": 49,
+    "popularity": 48,
     "preview_url": "https://p.scdn.co/mp3-preview/0985eb3d9c9faf986a80644eebcd1a8231950b1e?cid=e16acd3a7ef344789b1a6cac6c2c8881",
     "track_number": 1,
     "album": {
@@ -2645,7 +2645,7 @@ X-XSS-Protection: 1; mode=block
       "isrc": "TCACB1407358"
     },
     "name": "Pay for It (feat. Kendrick Lamar & Chantal)",
-    "popularity": 48,
+    "popularity": 47,
     "preview_url": "https://p.scdn.co/mp3-preview/60697048a3cc96c8e5e99512b60af3688bf84fae?cid=e16acd3a7ef344789b1a6cac6c2c8881",
     "track_number": 1,
     "album": {
@@ -3224,7 +3224,7 @@ X-XSS-Protection: 1; mode=block
       "isrc": "USUEM1122229"
     },
     "name": "It Felt Good",
-    "popularity": 5,
+    "popularity": 7,
     "preview_url": "https://p.scdn.co/mp3-preview/70889de260b2ece9db2c6b753e1ed53506e8c644?cid=e16acd3a7ef344789b1a6cac6c2c8881",
     "track_number": 6,
     "album": {
@@ -3439,7 +3439,7 @@ X-XSS-Protection: 1; mode=block
       "isrc": "USUEM1122233"
     },
     "name": "Cant take it",
-    "popularity": 5,
+    "popularity": 7,
     "preview_url": "https://p.scdn.co/mp3-preview/1c6d606b2965e80ec99376808c43de183b0e4bb1?cid=e16acd3a7ef344789b1a6cac6c2c8881",
     "track_number": 10,
     "album": {

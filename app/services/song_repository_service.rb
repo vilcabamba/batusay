@@ -13,7 +13,7 @@ class SongRepositoryService
     end
 
     def authenticate!
-      return if @@authenticated || Rails.env.test?
+      return if @@authenticated
       @@authenticated = true
       RSpotify.authenticate(
         Rails.application.secrets.spotify_client,
