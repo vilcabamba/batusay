@@ -1,11 +1,13 @@
 class Song < ApplicationRecord
-  belongs_to :place
+  API_PERMITTED_ATTRS = [:spotify_id].freeze
+
   belongs_to :user
+  belongs_to :event
 
   scope :not_played, -> { where(already_played: false) }
 
   validates :user_id,
-            :place_id,
+            :event_id,
             :spotify_id,
             presence: true
 

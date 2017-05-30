@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :song do
-    place
+    event
     user
     spotify_id "14523asdfas"
     now_playing

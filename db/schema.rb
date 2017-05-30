@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170524123557) do
+ActiveRecord::Schema.define(version: 20170530074942) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,18 +32,10 @@ ActiveRecord::Schema.define(version: 20170524123557) do
     t.integer  "user_id",    null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "status"
     t.index ["event_id"], name: "index_invitees_on_event_id", using: :btree
+    t.index ["status"], name: "index_invitees_on_status", using: :btree
     t.index ["user_id"], name: "index_invitees_on_user_id", using: :btree
-  end
-
-  create_table "places", force: :cascade do |t|
-    t.string   "name",        null: false
-    t.string   "picture_url"
-    t.float    "lat",         null: false
-    t.float    "lng",         null: false
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.index ["lat", "lng"], name: "index_places_on_lat_and_lng", using: :btree
   end
 
   create_table "sessions", force: :cascade do |t|
@@ -56,7 +48,6 @@ ActiveRecord::Schema.define(version: 20170524123557) do
   end
 
   create_table "songs", force: :cascade do |t|
-    t.integer  "place_id",                       null: false
     t.integer  "user_id",                        null: false
     t.string   "spotify_id",                     null: false
     t.boolean  "now_playing",    default: false
@@ -64,9 +55,18 @@ ActiveRecord::Schema.define(version: 20170524123557) do
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
     t.json     "spotify_track"
+    t.integer  "event_id",                       null: false
     t.index ["already_played"], name: "index_songs_on_already_played", using: :btree
-    t.index ["place_id"], name: "index_songs_on_place_id", using: :btree
+    t.index ["event_id"], name: "index_songs_on_event_id", using: :btree
     t.index ["user_id"], name: "index_songs_on_user_id", using: :btree
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.integer  "event_id",    null: false
+    t.string   "description", null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["event_id"], name: "index_tasks_on_event_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -88,8 +88,6 @@ ActiveRecord::Schema.define(version: 20170524123557) do
     t.text     "tokens"
     t.datetime "created_at",                               null: false
     t.datetime "updated_at",                               null: false
-    t.integer  "current_place_id"
-    t.index ["current_place_id"], name: "index_users_on_current_place_id", using: :btree
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true, using: :btree
@@ -98,7 +96,7 @@ ActiveRecord::Schema.define(version: 20170524123557) do
   add_foreign_key "events", "users"
   add_foreign_key "invitees", "events"
   add_foreign_key "invitees", "users"
-  add_foreign_key "songs", "places"
+  add_foreign_key "songs", "events"
   add_foreign_key "songs", "users"
-  add_foreign_key "users", "places", column: "current_place_id"
+  add_foreign_key "tasks", "events"
 end

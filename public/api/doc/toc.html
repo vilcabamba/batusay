@@ -65,19 +65,43 @@
   </li>
   
       <li>
+    <a href="#public/api/doc/api/events/songs/create.md">api/events/songs/create.md</a>
+  </li>
+  
+      <li>
+    <a href="#public/api/doc/api/events/tasks/create.md">api/events/tasks/create.md</a>
+  </li>
+  
+      <li>
     <a href="#public/api/doc/api/friends/index.md">api/friends/index.md</a>
+  </li>
+  
+      <li>
+    <a href="#public/api/doc/api/invites/accept.md">api/invites/accept.md</a>
+  </li>
+  
+      <li>
+    <a href="#public/api/doc/api/invites/index.md">api/invites/index.md</a>
+  </li>
+  
+      <li>
+    <a href="#public/api/doc/api/invites/reject.md">api/invites/reject.md</a>
+  </li>
+  
+      <li>
+    <a href="#public/api/doc/api/search_songs.md">api/search_songs.md</a>
   </li>
   
 <div class='generated-at'>
 Generated at:
 <br>
-2017-05-27 09:34:51 -0500</div>
+2017-05-30 02:53:34 -0500</div>
 </div>
 
 <div class='page-wrapper'>
   <div id="public/api/doc/api/events/index.md" class="api-resource"><div class="api-action"><h2>GET /api/events</h2>
 
-<p>Let&#39;s assume current date is 2017-05-27 and there exists events for 2017-06-05 and 2017-05-24</p>
+<p>Let&#39;s assume current date is 2017-05-30 and there exists events for 2017-06-06 and 2017-05-19</p>
 
 <h3>Example</h3>
 
@@ -85,50 +109,52 @@ Generated at:
 
 <pre><code>GET /api/events HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: KltmnkINnp_SfM0uy4ConQ
-Client: 8PfYRPB_aGTnd8-LhaalZw
+Access-Token: cg-BnM_-S7acbs3OxGx3aA
+Client: C-5CtC32t-QKgZ1NI7uxqw
 Content-Length: 0
-Expiry: 1497105289
+Expiry: 1497340411
 Host: www.example.com
 Token-Type: Bearer
-Uid: person5@email.com
+Uid: person4@email.com
 </code></pre>
 
 <h4>Response</h4>
 
 <pre><code>HTTP/1.1 200
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 267
+Content-Length: 299
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;46be754ace21a196be4f12c36351333e&quot;
+ETag: W/&quot;a45add30af4917682be911bacab93f9c&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: a7326d2e-501a-4c41-b00a-6412c5cd4a21
-X-Runtime: 0.111589
+X-Request-Id: 139612be-cbb0-44d5-a88f-f61cec4bd261
+X-Runtime: 0.121870
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;past_events&quot;: [
     {
-      &quot;id&quot;: 77,
-      &quot;user_id&quot;: 168,
+      &quot;id&quot;: 8,
+      &quot;user_id&quot;: 7,
       &quot;name&quot;: &quot;event 6&quot;,
       &quot;descripcion&quot;: null,
       &quot;lat&quot;: null,
       &quot;lng&quot;: null,
-      &quot;date&quot;: &quot;2017-05-24T22:40:32.000Z&quot;
+      &quot;date&quot;: &quot;2017-05-19T17:54:40.000Z&quot;,
+      &quot;invited_people&quot;: 0
     }
   ],
   &quot;future_events&quot;: [
     {
-      &quot;id&quot;: 76,
-      &quot;user_id&quot;: 168,
+      &quot;id&quot;: 7,
+      &quot;user_id&quot;: 7,
       &quot;name&quot;: &quot;event 5&quot;,
       &quot;descripcion&quot;: null,
       &quot;lat&quot;: null,
       &quot;lng&quot;: null,
-      &quot;date&quot;: &quot;2017-06-05T12:58:46.000Z&quot;
+      &quot;date&quot;: &quot;2017-06-06T16:23:16.000Z&quot;,
+      &quot;invited_people&quot;: 0
     }
   ]
 }
@@ -141,42 +167,42 @@ X-XSS-Protection: 1; mode=block
 
 <h4>Request</h4>
 
-<pre><code>POST /api/events/78/invitees HTTP/1.1
+<pre><code>POST /api/events/9/invitees HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: 5AO2OX-utH5I3M_oq_p7Fg
-Client: pzYz-SAB2brM37jMwbGSrw
-Content-Length: 14
+Access-Token: 2wdGD1vPgg-WThnSb6JgYw
+Client: wmqMHE516kKpb76Ln75B0w
+Content-Length: 12
 Content-Type: application/x-www-form-urlencoded
-Expiry: 1497105289
+Expiry: 1497340411
 Host: www.example.com
 Token-Type: Bearer
-Uid: person6@email.com
+Uid: person5@email.com
 
-user_ids[]=170
+user_ids[]=9
 </code></pre>
 
 <h4>Response</h4>
 
 <pre><code>HTTP/1.1 201
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 84
+Content-Length: 91
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;f2bddcaed609c9ad44d8ab94fe20b517&quot;
+ETag: W/&quot;0db3c5b12633a7d865c817fe22125003&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: dc3e0751-8b80-41c1-9063-f01bcb13aedd
-X-Runtime: 0.133633
+X-Request-Id: 040532a6-3d36-49c9-a3cc-ed266b701522
+X-Runtime: 0.147122
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;invitees&quot;: [
     {
-      &quot;id&quot;: 74,
-      &quot;event_id&quot;: 78,
+      &quot;id&quot;: 1,
+      &quot;event_id&quot;: 9,
       &quot;user&quot;: {
-        &quot;id&quot;: 170,
-        &quot;name&quot;: &quot;José Arias Gurule&quot;
+        &quot;id&quot;: 9,
+        &quot;name&quot;: &quot;Sta. Andrés Arevalo Figueroa&quot;
       }
     }
   ]
@@ -190,50 +216,50 @@ X-XSS-Protection: 1; mode=block
 
 <h4>Request</h4>
 
-<pre><code>POST /api/events/79/invitees HTTP/1.1
+<pre><code>POST /api/events/10/invitees HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: 6tcEmo-VuFNV3mWmbkgDcw
-Client: YG7kRfWcQlpI_ylHXLEJgQ
-Content-Length: 29
+Access-Token: 55gozzRQT5xQtypRqRKysA
+Client: Tnvve6NN0NMLmYkpmLhXOw
+Content-Length: 27
 Content-Type: application/x-www-form-urlencoded
-Expiry: 1497105290
+Expiry: 1497340411
 Host: www.example.com
 Token-Type: Bearer
-Uid: person8@email.com
+Uid: person7@email.com
 
-user_ids[]=172&amp;user_ids[]=173
+user_ids[]=11&amp;user_ids[]=12
 </code></pre>
 
 <h4>Response</h4>
 
 <pre><code>HTTP/1.1 201
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 168
+Content-Length: 165
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;cc372916d98579ce11426c6e2b9beb39&quot;
+ETag: W/&quot;bcc1386d1d1e76a210c48e6320f56be7&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 2fcc41dc-94cd-4367-aa4a-4bb56d9034b4
-X-Runtime: 0.121490
+X-Request-Id: d487b65b-c4c6-4d7b-8ae8-2615fc9106e5
+X-Runtime: 0.120908
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;invitees&quot;: [
     {
-      &quot;id&quot;: 75,
-      &quot;event_id&quot;: 79,
+      &quot;id&quot;: 2,
+      &quot;event_id&quot;: 10,
       &quot;user&quot;: {
-        &quot;id&quot;: 172,
-        &quot;name&quot;: &quot;Cristobal Armas Ríos&quot;
+        &quot;id&quot;: 11,
+        &quot;name&quot;: &quot;Sta. Ana Luisa Garay Cepeda&quot;
       }
     },
     {
-      &quot;id&quot;: 76,
-      &quot;event_id&quot;: 79,
+      &quot;id&quot;: 3,
+      &quot;event_id&quot;: 10,
       &quot;user&quot;: {
-        &quot;id&quot;: 173,
-        &quot;name&quot;: &quot;Benito Mascareñas Marroquín&quot;
+        &quot;id&quot;: 12,
+        &quot;name&quot;: &quot;Sr. Laura Cardona Lucero&quot;
       }
     }
   ]
@@ -242,48 +268,48 @@ X-XSS-Protection: 1; mode=block
 </div><div class="api-action"><h2>POST /api/events/:event_id/invitees</h2>
 
 <p>when a friend has already been invited.
-In this case, user with id 175 is already an invitee</p>
+In this case, user with id 14 is already an invitee</p>
 
 <h3>Example</h3>
 
 <h4>Request</h4>
 
-<pre><code>POST /api/events/80/invitees HTTP/1.1
+<pre><code>POST /api/events/11/invitees HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: 69GlypE0zDDhLBOFciVZrw
-Client: 7EB2jkMWIBpfghtGYRatQQ
-Content-Length: 29
+Access-Token: 8kQnP3woUz3HThPL7Z6x3g
+Client: 0xih2VBlZr3_hZ6Opo4RJQ
+Content-Length: 27
 Content-Type: application/x-www-form-urlencoded
-Expiry: 1497105290
+Expiry: 1497340411
 Host: www.example.com
 Token-Type: Bearer
-Uid: person11@email.com
+Uid: person10@email.com
 
-user_ids[]=175&amp;user_ids[]=176
+user_ids[]=14&amp;user_ids[]=15
 </code></pre>
 
 <h4>Response</h4>
 
 <pre><code>HTTP/1.1 201
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 86
+Content-Length: 92
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;3d6cc32c5cc268397f12359a0daf2973&quot;
+ETag: W/&quot;fd34ac12ab52d90c4df596b2425540c0&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: dc5a6192-1e3b-4fde-b797-9c3bf9737f0b
-X-Runtime: 0.127455
+X-Request-Id: 888326c6-3ebc-47d2-8f62-1a842718c59c
+X-Runtime: 0.118706
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;invitees&quot;: [
     {
-      &quot;id&quot;: 78,
-      &quot;event_id&quot;: 80,
+      &quot;id&quot;: 5,
+      &quot;event_id&quot;: 11,
       &quot;user&quot;: {
-        &quot;id&quot;: 176,
-        &quot;name&quot;: &quot;Julio Fierro Badillo&quot;
+        &quot;id&quot;: 15,
+        &quot;name&quot;: &quot;María Teresa Pedroza Arroyo&quot;
       }
     }
   ]
@@ -297,42 +323,243 @@ X-XSS-Protection: 1; mode=block
 
 <h4>Request</h4>
 
-<pre><code>GET /api/events/81/invitees HTTP/1.1
+<pre><code>GET /api/events/12/invitees HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: _Xy4tAw8ZUFH0vDhF-P2cw
-Client: U4OkARbpTcQcwMlI8_0b6Q
+Access-Token: iLaR_WXXRcyzFpeLDey5JA
+Client: 0p1fy1Pew8Qw0QjP7fJaIA
 Content-Length: 0
-Expiry: 1497105290
+Expiry: 1497340412
 Host: www.example.com
 Token-Type: Bearer
-Uid: person14@email.com
+Uid: person13@email.com
 </code></pre>
 
 <h4>Response</h4>
 
 <pre><code>HTTP/1.1 200
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 96
+Content-Length: 94
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;326dfd903d427ce7aece541d8c0b299e&quot;
+ETag: W/&quot;9305a189a5f35652af5ddfeecfac8d29&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 93377279-48b8-4966-9dc9-47735b134389
-X-Runtime: 0.105139
+X-Request-Id: 4ba3af3f-3aef-4a21-a27e-c24afa89d7a9
+X-Runtime: 0.110612
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;invitees&quot;: [
     {
-      &quot;id&quot;: 79,
-      &quot;event_id&quot;: 81,
+      &quot;id&quot;: 6,
+      &quot;event_id&quot;: 12,
       &quot;user&quot;: {
-        &quot;id&quot;: 178,
-        &quot;name&quot;: &quot;María Soledad Olivárez Garay&quot;
+        &quot;id&quot;: 17,
+        &quot;name&quot;: &quot;Sr. Lucas Carrasquillo Mendoza&quot;
       }
     }
   ]
+}
+</code></pre>
+</div></div><div id="public/api/doc/api/events/songs/create.md" class="api-resource"><div class="api-action"><h2>POST /api/events/:event_id/songs</h2>
+
+<p>Add a song to an event&#39;s playlist.</p>
+
+<h3>Example</h3>
+
+<h4>Request</h4>
+
+<pre><code>POST /api/events/14/songs HTTP/1.1
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Access-Token: 5aq9BevcQzkywmy6rRyTsg
+Client: ANr8y_NBqbsS4nBZ3hHEAQ
+Content-Length: 33
+Content-Type: application/x-www-form-urlencoded
+Expiry: 1497340412
+Host: www.example.com
+Token-Type: Bearer
+Uid: person16@email.com
+
+spotify_id=2vVc2G9w2JteBgxpSUVwX5
+</code></pre>
+
+<h4>Response</h4>
+
+<pre><code>HTTP/1.1 201
+Cache-Control: max-age=0, private, must-revalidate
+Content-Length: 2370
+Content-Type: application/json; charset=utf-8
+ETag: W/&quot;bac01836083cbe2215c865478dbcf368&quot;
+Vary: Origin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Request-Id: cd522807-2745-4e32-9c7a-a6e7f85c0dc2
+X-Runtime: 0.188270
+X-XSS-Protection: 1; mode=block
+
+{
+  &quot;spotify_id&quot;: &quot;2vVc2G9w2JteBgxpSUVwX5&quot;,
+  &quot;spotify_track&quot;: {
+    &quot;available_markets&quot;: [
+      &quot;CA&quot;,
+      &quot;MX&quot;,
+      &quot;US&quot;
+    ],
+    &quot;disc_number&quot;: 1,
+    &quot;duration_ms&quot;: 232520,
+    &quot;explicit&quot;: true,
+    &quot;external_ids&quot;: {
+      &quot;isrc&quot;: &quot;USCM50800823&quot;
+    },
+    &quot;name&quot;: &quot;Let It Rock&quot;,
+    &quot;popularity&quot;: 52,
+    &quot;preview_url&quot;: null,
+    &quot;track_number&quot;: 1,
+    &quot;album&quot;: {
+      &quot;album_type&quot;: &quot;single&quot;,
+      &quot;available_markets&quot;: [
+        &quot;CA&quot;,
+        &quot;MX&quot;,
+        &quot;US&quot;
+      ],
+      &quot;copyrights&quot;: null,
+      &quot;external_ids&quot;: null,
+      &quot;genres&quot;: null,
+      &quot;images&quot;: [
+        {
+          &quot;height&quot;: 640,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/b02c052d78d9b5fb228924383fd1484ef6e130d3&quot;,
+          &quot;width&quot;: 640
+        },
+        {
+          &quot;height&quot;: 300,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/712d2ac5e6e093085f406bf98e2ecce8ce3c461e&quot;,
+          &quot;width&quot;: 300
+        },
+        {
+          &quot;height&quot;: 64,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/72e5bca9d58cc69914bd65bf402aaf7626d500ee&quot;,
+          &quot;width&quot;: 64
+        }
+      ],
+      &quot;name&quot;: &quot;Let It Rock (Remixes)&quot;,
+      &quot;popularity&quot;: null,
+      &quot;release_date&quot;: null,
+      &quot;release_date_precision&quot;: null,
+      &quot;artists&quot;: [
+        {
+          &quot;followers&quot;: null,
+          &quot;genres&quot;: null,
+          &quot;images&quot;: null,
+          &quot;name&quot;: &quot;Kevin Rudolf&quot;,
+          &quot;popularity&quot;: null,
+          &quot;top_tracks&quot;: {
+          },
+          &quot;external_urls&quot;: {
+            &quot;spotify&quot;: &quot;https://open.spotify.com/artist/0Chxmm4XMM87mJOHvyiUzL&quot;
+          },
+          &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/0Chxmm4XMM87mJOHvyiUzL&quot;,
+          &quot;id&quot;: &quot;0Chxmm4XMM87mJOHvyiUzL&quot;,
+          &quot;type&quot;: &quot;artist&quot;,
+          &quot;uri&quot;: &quot;spotify:artist:0Chxmm4XMM87mJOHvyiUzL&quot;
+        }
+      ],
+      &quot;tracks_cache&quot;: null,
+      &quot;total_tracks&quot;: null,
+      &quot;external_urls&quot;: {
+        &quot;spotify&quot;: &quot;https://open.spotify.com/album/2YYAJxfw9pfWdMbuTBgtRc&quot;
+      },
+      &quot;href&quot;: &quot;https://api.spotify.com/v1/albums/2YYAJxfw9pfWdMbuTBgtRc&quot;,
+      &quot;id&quot;: &quot;2YYAJxfw9pfWdMbuTBgtRc&quot;,
+      &quot;type&quot;: &quot;album&quot;,
+      &quot;uri&quot;: &quot;spotify:album:2YYAJxfw9pfWdMbuTBgtRc&quot;
+    },
+    &quot;artists&quot;: [
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;Kevin Rudolf&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/0Chxmm4XMM87mJOHvyiUzL&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/0Chxmm4XMM87mJOHvyiUzL&quot;,
+        &quot;id&quot;: &quot;0Chxmm4XMM87mJOHvyiUzL&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:0Chxmm4XMM87mJOHvyiUzL&quot;
+      },
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;Lil Wayne&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/55Aa2cqylxrFIXC767Z865&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/55Aa2cqylxrFIXC767Z865&quot;,
+        &quot;id&quot;: &quot;55Aa2cqylxrFIXC767Z865&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:55Aa2cqylxrFIXC767Z865&quot;
+      }
+    ],
+    &quot;external_urls&quot;: {
+      &quot;spotify&quot;: &quot;https://open.spotify.com/track/2vVc2G9w2JteBgxpSUVwX5&quot;
+    },
+    &quot;href&quot;: &quot;https://api.spotify.com/v1/tracks/2vVc2G9w2JteBgxpSUVwX5&quot;,
+    &quot;id&quot;: &quot;2vVc2G9w2JteBgxpSUVwX5&quot;,
+    &quot;type&quot;: &quot;track&quot;,
+    &quot;uri&quot;: &quot;spotify:track:2vVc2G9w2JteBgxpSUVwX5&quot;
+  }
+}
+</code></pre>
+</div></div><div id="public/api/doc/api/events/tasks/create.md" class="api-resource"><div class="api-action"><h2>POST /api/events/:event_id/tasks</h2>
+
+<p>Create task.</p>
+
+<h3>Example</h3>
+
+<h4>Request</h4>
+
+<pre><code>POST /api/events/15/tasks HTTP/1.1
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Access-Token: 9UWm9O0QcKRc5aLlCZfG8Q
+Client: ZCRiw7Wc862BD7sZJT21FQ
+Content-Length: 42
+Content-Type: application/x-www-form-urlencoded
+Expiry: 1497340412
+Host: www.example.com
+Token-Type: Bearer
+Uid: person17@email.com
+
+description=traer+bebidas+alcoh%C3%B3licas
+</code></pre>
+
+<h4>Response</h4>
+
+<pre><code>HTTP/1.1 201
+Cache-Control: max-age=0, private, must-revalidate
+Content-Length: 100
+Content-Type: application/json; charset=utf-8
+ETag: W/&quot;95275ac7f36412ea082aa8ad13bb5a13&quot;
+Vary: Origin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Request-Id: 6b13f895-167b-466c-9e57-32bcade26178
+X-Runtime: 0.131475
+X-XSS-Protection: 1; mode=block
+
+{
+  &quot;task&quot;: {
+    &quot;id&quot;: 3,
+    &quot;description&quot;: &quot;traer bebidas alcohólicas&quot;,
+    &quot;created_at&quot;: &quot;2017-05-30T07:53:32.863Z&quot;
+  }
 }
 </code></pre>
 </div></div><div id="public/api/doc/api/friends/index.md" class="api-resource"><div class="api-action"><h2>GET /api/friends</h2>
@@ -345,34 +572,34 @@ X-XSS-Protection: 1; mode=block
 
 <pre><code>GET /api/friends HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: gSO0nnoSY4W2kWfJC6djsw
-Client: gpmG_MNARWWJ4-HEqvoc_w
+Access-Token: 0gKtp5nb-uxl0mFHq9rTZw
+Client: 9iTnEm5tUXMrYJpMNr-BsA
 Content-Length: 0
-Expiry: 1497105291
+Expiry: 1497340412
 Host: www.example.com
 Token-Type: Bearer
-Uid: person17@email.com
+Uid: person18@email.com
 </code></pre>
 
 <h4>Response</h4>
 
 <pre><code>HTTP/1.1 200
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 59
+Content-Length: 56
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;00a0fc6763b28fb6c8bb30903b5f20e0&quot;
+ETag: W/&quot;094bcf8896ebed093d45b0b0f87a5249&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 24e58c38-5e1d-4c7a-8994-1fb35527fc0a
-X-Runtime: 0.115232
+X-Request-Id: e8f094cd-675a-46d3-8e2a-056e5bce44e5
+X-Runtime: 0.119322
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;friends&quot;: [
     {
-      &quot;id&quot;: 181,
-      &quot;name&quot;: &quot;Mercedes Sandoval Arreola&quot;
+      &quot;id&quot;: 22,
+      &quot;name&quot;: &quot;Ana Luisa Almonte Amaya&quot;
     }
   ]
 }
@@ -387,37 +614,3914 @@ X-XSS-Protection: 1; mode=block
 
 <pre><code>GET /api/friends?q=Cebollas HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: Pm8RGRV3ShEiv6srxAxPIg
-Client: GwxWOJynqTf3IXnN2TL3Kw
+Access-Token: 6UQJAcAA9HI0UMEkOsz7-Q
+Client: sCEundqiqDIRqIrwaw7Hzw
 Content-Length: 0
-Expiry: 1497105291
+Expiry: 1497340413
 Host: www.example.com
 Token-Type: Bearer
-Uid: person19@email.com
+Uid: person20@email.com
 </code></pre>
 
 <h4>Response</h4>
 
 <pre><code>HTTP/1.1 200
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 55
+Content-Length: 54
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;35290a2004ef69ad24aa49cabb5ad127&quot;
+ETag: W/&quot;26f6d1b592b493f0e42323c5fb996b80&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: a78c9860-0ef8-4d49-ba6d-faddc2e58b33
-X-Runtime: 0.110215
+X-Request-Id: dabfdaaa-da96-40c8-bda1-914043bf1590
+X-Runtime: 0.111734
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;friends&quot;: [
     {
-      &quot;id&quot;: 183,
+      &quot;id&quot;: 24,
       &quot;name&quot;: &quot;Peter Parker Cebollas&quot;
     }
   ]
 }
+</code></pre>
+</div></div><div id="public/api/doc/api/invites/accept.md" class="api-resource"><div class="api-action"><h2>POST /api/invites/:id/accept</h2>
+
+<p>Accepts a pending invitation.</p>
+
+<h3>Example</h3>
+
+<h4>Request</h4>
+
+<pre><code>POST /api/invites/7/accept HTTP/1.1
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Access-Token: ot5Q7YdS5Cp0DfGa7JJiXw
+Client: jfiFccj4OkLA9u3rYGmyjQ
+Content-Length: 0
+Content-Type: application/x-www-form-urlencoded
+Expiry: 1497340413
+Host: www.example.com
+Token-Type: Bearer
+Uid: person23@email.com
+</code></pre>
+
+<h4>Response</h4>
+
+<pre><code>HTTP/1.1 202
+Cache-Control: no-cache
+Content-Length: 222
+Content-Type: application/json; charset=utf-8
+Vary: Origin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Request-Id: 9303d969-da67-4c1b-8525-c84eff3f2af7
+X-Runtime: 0.152540
+X-XSS-Protection: 1; mode=block
+
+{
+  &quot;invite&quot;: {
+    &quot;id&quot;: 7,
+    &quot;status&quot;: &quot;accepted&quot;,
+    &quot;created_at&quot;: &quot;2017-05-30T07:53:33.340Z&quot;,
+    &quot;event&quot;: {
+      &quot;id&quot;: 16,
+      &quot;user_id&quot;: 27,
+      &quot;name&quot;: &quot;event 14&quot;,
+      &quot;descripcion&quot;: null,
+      &quot;lat&quot;: null,
+      &quot;lng&quot;: null,
+      &quot;date&quot;: &quot;2017-06-08T12:38:59.000Z&quot;,
+      &quot;invited_people&quot;: 1
+    }
+  }
+}
+</code></pre>
+</div></div><div id="public/api/doc/api/invites/index.md" class="api-resource"><div class="api-action"><h2>GET /api/invites</h2>
+
+<p>Lists my accepted / pending invitations.</p>
+
+<h3>Example</h3>
+
+<h4>Request</h4>
+
+<pre><code>GET /api/invites HTTP/1.1
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Access-Token: zzfZr4KTUdDeh9kTE3Jr0g
+Client: H-j6_Yj9K0DVajBFOS_YNQ
+Content-Length: 0
+Expiry: 1497340413
+Host: www.example.com
+Token-Type: Bearer
+Uid: person25@email.com
+</code></pre>
+
+<h4>Response</h4>
+
+<pre><code>HTTP/1.1 200
+Cache-Control: max-age=0, private, must-revalidate
+Content-Length: 699
+Content-Type: application/json; charset=utf-8
+ETag: W/&quot;74b86918cf3aab0eed77b1a97aa046dd&quot;
+Vary: Origin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Request-Id: 66dae434-1aca-4eef-a426-e49eaaedbdd4
+X-Runtime: 0.143214
+X-XSS-Protection: 1; mode=block
+
+{
+  &quot;pending_invites&quot;: [
+    {
+      &quot;id&quot;: 8,
+      &quot;status&quot;: &quot;pending&quot;,
+      &quot;created_at&quot;: &quot;2017-05-30T07:53:33.594Z&quot;,
+      &quot;event&quot;: {
+        &quot;id&quot;: 17,
+        &quot;user_id&quot;: 29,
+        &quot;name&quot;: &quot;event 15&quot;,
+        &quot;descripcion&quot;: null,
+        &quot;lat&quot;: null,
+        &quot;lng&quot;: null,
+        &quot;date&quot;: &quot;2017-06-15T15:53:49.000Z&quot;,
+        &quot;invited_people&quot;: 1
+      }
+    }
+  ],
+  &quot;accepted_invites&quot;: [
+    {
+      &quot;id&quot;: 9,
+      &quot;status&quot;: &quot;accepted&quot;,
+      &quot;created_at&quot;: &quot;2017-05-30T07:53:33.609Z&quot;,
+      &quot;event&quot;: {
+        &quot;id&quot;: 18,
+        &quot;user_id&quot;: 30,
+        &quot;name&quot;: &quot;event 16&quot;,
+        &quot;descripcion&quot;: null,
+        &quot;lat&quot;: null,
+        &quot;lng&quot;: null,
+        &quot;date&quot;: &quot;2017-06-11T13:49:46.000Z&quot;,
+        &quot;invited_people&quot;: 1
+      }
+    }
+  ],
+  &quot;rejected_invites&quot;: [
+    {
+      &quot;id&quot;: 10,
+      &quot;status&quot;: &quot;rejected&quot;,
+      &quot;created_at&quot;: &quot;2017-05-30T07:53:33.626Z&quot;,
+      &quot;event&quot;: {
+        &quot;id&quot;: 19,
+        &quot;user_id&quot;: 31,
+        &quot;name&quot;: &quot;event 17&quot;,
+        &quot;descripcion&quot;: null,
+        &quot;lat&quot;: null,
+        &quot;lng&quot;: null,
+        &quot;date&quot;: &quot;2017-06-21T15:17:28.000Z&quot;,
+        &quot;invited_people&quot;: 1
+      }
+    }
+  ]
+}
+</code></pre>
+</div></div><div id="public/api/doc/api/invites/reject.md" class="api-resource"><div class="api-action"><h2>POST /api/invites/:id/reject</h2>
+
+<p>Rejects a pending invitation.</p>
+
+<h3>Example</h3>
+
+<h4>Request</h4>
+
+<pre><code>POST /api/invites/11/reject HTTP/1.1
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Access-Token: KDQ181pqlC8is8C6Jkvw7Q
+Client: nAr8MGYCC6ShbRgOIHzEfg
+Content-Length: 0
+Content-Type: application/x-www-form-urlencoded
+Expiry: 1497340413
+Host: www.example.com
+Token-Type: Bearer
+Uid: person29@email.com
+</code></pre>
+
+<h4>Response</h4>
+
+<pre><code>HTTP/1.1 202
+Cache-Control: no-cache
+Content-Length: 223
+Content-Type: application/json; charset=utf-8
+Vary: Origin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Request-Id: 23850a76-05a4-4cad-b5ae-f4a1998ef7e6
+X-Runtime: 0.115932
+X-XSS-Protection: 1; mode=block
+
+{
+  &quot;invite&quot;: {
+    &quot;id&quot;: 11,
+    &quot;status&quot;: &quot;rejected&quot;,
+    &quot;created_at&quot;: &quot;2017-05-30T07:53:33.870Z&quot;,
+    &quot;event&quot;: {
+      &quot;id&quot;: 20,
+      &quot;user_id&quot;: 33,
+      &quot;name&quot;: &quot;event 18&quot;,
+      &quot;descripcion&quot;: null,
+      &quot;lat&quot;: null,
+      &quot;lng&quot;: null,
+      &quot;date&quot;: &quot;2017-06-14T16:59:51.000Z&quot;,
+      &quot;invited_people&quot;: 1
+    }
+  }
+}
+</code></pre>
+</div></div><div id="public/api/doc/api/search_songs.md" class="api-resource"><div class="api-action"><h2>GET /api/search</h2>
+
+<p>I can search songs.</p>
+
+<h3>Example</h3>
+
+<h4>Request</h4>
+
+<pre><code>GET /api/search?q=rock+it HTTP/1.1
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Access-Token: 7T7dAsQaBYlQpiQIs23xJA
+Client: R-KuZu3Kk9udjsOrIjz6dA
+Content-Length: 0
+Expiry: 1497340414
+Host: www.example.com
+Token-Type: Bearer
+Uid: person31@email.com
+</code></pre>
+
+<h4>Response</h4>
+
+<pre><code>HTTP/1.1 200
+Cache-Control: max-age=0, private, must-revalidate
+Content-Length: 52385
+Content-Type: application/json; charset=utf-8
+ETag: W/&quot;ba7d8c4938de8234904fa6b7989f26c0&quot;
+Vary: Origin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Request-Id: 3c42dea4-e9c7-4a10-82f6-41c0ab058607
+X-Runtime: 0.137641
+X-XSS-Protection: 1; mode=block
+
+[
+  {
+    &quot;available_markets&quot;: [
+      &quot;CA&quot;,
+      &quot;MX&quot;,
+      &quot;US&quot;
+    ],
+    &quot;disc_number&quot;: 1,
+    &quot;duration_ms&quot;: 232520,
+    &quot;explicit&quot;: true,
+    &quot;external_ids&quot;: {
+      &quot;isrc&quot;: &quot;USCM50800823&quot;
+    },
+    &quot;name&quot;: &quot;Let It Rock&quot;,
+    &quot;popularity&quot;: 52,
+    &quot;preview_url&quot;: null,
+    &quot;track_number&quot;: 1,
+    &quot;album&quot;: {
+      &quot;album_type&quot;: &quot;single&quot;,
+      &quot;available_markets&quot;: [
+        &quot;CA&quot;,
+        &quot;MX&quot;,
+        &quot;US&quot;
+      ],
+      &quot;copyrights&quot;: null,
+      &quot;external_ids&quot;: null,
+      &quot;genres&quot;: null,
+      &quot;images&quot;: [
+        {
+          &quot;height&quot;: 640,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/b02c052d78d9b5fb228924383fd1484ef6e130d3&quot;,
+          &quot;width&quot;: 640
+        },
+        {
+          &quot;height&quot;: 300,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/712d2ac5e6e093085f406bf98e2ecce8ce3c461e&quot;,
+          &quot;width&quot;: 300
+        },
+        {
+          &quot;height&quot;: 64,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/72e5bca9d58cc69914bd65bf402aaf7626d500ee&quot;,
+          &quot;width&quot;: 64
+        }
+      ],
+      &quot;name&quot;: &quot;Let It Rock (Remixes)&quot;,
+      &quot;popularity&quot;: null,
+      &quot;release_date&quot;: null,
+      &quot;release_date_precision&quot;: null,
+      &quot;artists&quot;: [
+        {
+          &quot;followers&quot;: null,
+          &quot;genres&quot;: null,
+          &quot;images&quot;: null,
+          &quot;name&quot;: &quot;Kevin Rudolf&quot;,
+          &quot;popularity&quot;: null,
+          &quot;top_tracks&quot;: {
+          },
+          &quot;external_urls&quot;: {
+            &quot;spotify&quot;: &quot;https://open.spotify.com/artist/0Chxmm4XMM87mJOHvyiUzL&quot;
+          },
+          &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/0Chxmm4XMM87mJOHvyiUzL&quot;,
+          &quot;id&quot;: &quot;0Chxmm4XMM87mJOHvyiUzL&quot;,
+          &quot;type&quot;: &quot;artist&quot;,
+          &quot;uri&quot;: &quot;spotify:artist:0Chxmm4XMM87mJOHvyiUzL&quot;
+        }
+      ],
+      &quot;tracks_cache&quot;: null,
+      &quot;total_tracks&quot;: null,
+      &quot;external_urls&quot;: {
+        &quot;spotify&quot;: &quot;https://open.spotify.com/album/2YYAJxfw9pfWdMbuTBgtRc&quot;
+      },
+      &quot;href&quot;: &quot;https://api.spotify.com/v1/albums/2YYAJxfw9pfWdMbuTBgtRc&quot;,
+      &quot;id&quot;: &quot;2YYAJxfw9pfWdMbuTBgtRc&quot;,
+      &quot;type&quot;: &quot;album&quot;,
+      &quot;uri&quot;: &quot;spotify:album:2YYAJxfw9pfWdMbuTBgtRc&quot;
+    },
+    &quot;artists&quot;: [
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;Kevin Rudolf&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/0Chxmm4XMM87mJOHvyiUzL&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/0Chxmm4XMM87mJOHvyiUzL&quot;,
+        &quot;id&quot;: &quot;0Chxmm4XMM87mJOHvyiUzL&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:0Chxmm4XMM87mJOHvyiUzL&quot;
+      },
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;Lil Wayne&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/55Aa2cqylxrFIXC767Z865&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/55Aa2cqylxrFIXC767Z865&quot;,
+        &quot;id&quot;: &quot;55Aa2cqylxrFIXC767Z865&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:55Aa2cqylxrFIXC767Z865&quot;
+      }
+    ],
+    &quot;external_urls&quot;: {
+      &quot;spotify&quot;: &quot;https://open.spotify.com/track/2vVc2G9w2JteBgxpSUVwX5&quot;
+    },
+    &quot;href&quot;: &quot;https://api.spotify.com/v1/tracks/2vVc2G9w2JteBgxpSUVwX5&quot;,
+    &quot;id&quot;: &quot;2vVc2G9w2JteBgxpSUVwX5&quot;,
+    &quot;type&quot;: &quot;track&quot;,
+    &quot;uri&quot;: &quot;spotify:track:2vVc2G9w2JteBgxpSUVwX5&quot;
+  },
+  {
+    &quot;available_markets&quot;: [
+      &quot;AD&quot;,
+      &quot;AR&quot;,
+      &quot;AT&quot;,
+      &quot;AU&quot;,
+      &quot;BE&quot;,
+      &quot;BG&quot;,
+      &quot;BO&quot;,
+      &quot;BR&quot;,
+      &quot;CA&quot;,
+      &quot;CH&quot;,
+      &quot;CL&quot;,
+      &quot;CO&quot;,
+      &quot;CR&quot;,
+      &quot;CY&quot;,
+      &quot;CZ&quot;,
+      &quot;DE&quot;,
+      &quot;DK&quot;,
+      &quot;DO&quot;,
+      &quot;EC&quot;,
+      &quot;EE&quot;,
+      &quot;ES&quot;,
+      &quot;FI&quot;,
+      &quot;FR&quot;,
+      &quot;GB&quot;,
+      &quot;GR&quot;,
+      &quot;GT&quot;,
+      &quot;HK&quot;,
+      &quot;HN&quot;,
+      &quot;HU&quot;,
+      &quot;ID&quot;,
+      &quot;IE&quot;,
+      &quot;IS&quot;,
+      &quot;IT&quot;,
+      &quot;JP&quot;,
+      &quot;LI&quot;,
+      &quot;LT&quot;,
+      &quot;LU&quot;,
+      &quot;LV&quot;,
+      &quot;MC&quot;,
+      &quot;MT&quot;,
+      &quot;MX&quot;,
+      &quot;MY&quot;,
+      &quot;NI&quot;,
+      &quot;NL&quot;,
+      &quot;NO&quot;,
+      &quot;NZ&quot;,
+      &quot;PA&quot;,
+      &quot;PE&quot;,
+      &quot;PH&quot;,
+      &quot;PL&quot;,
+      &quot;PT&quot;,
+      &quot;PY&quot;,
+      &quot;SE&quot;,
+      &quot;SG&quot;,
+      &quot;SK&quot;,
+      &quot;SV&quot;,
+      &quot;TR&quot;,
+      &quot;TW&quot;,
+      &quot;US&quot;,
+      &quot;UY&quot;
+    ],
+    &quot;disc_number&quot;: 1,
+    &quot;duration_ms&quot;: 245466,
+    &quot;explicit&quot;: true,
+    &quot;external_ids&quot;: {
+      &quot;isrc&quot;: &quot;TCACB1453826&quot;
+    },
+    &quot;name&quot;: &quot;Hood Gone Love It (feat. Kendrick Lamar)&quot;,
+    &quot;popularity&quot;: 61,
+    &quot;preview_url&quot;: &quot;https://p.scdn.co/mp3-preview/9a6e3788dd78c14f5896856724e1af0207838dd1?cid=e16acd3a7ef344789b1a6cac6c2c8881&quot;,
+    &quot;track_number&quot;: 5,
+    &quot;album&quot;: {
+      &quot;album_type&quot;: &quot;album&quot;,
+      &quot;available_markets&quot;: [
+        &quot;AD&quot;,
+        &quot;AR&quot;,
+        &quot;AT&quot;,
+        &quot;AU&quot;,
+        &quot;BE&quot;,
+        &quot;BG&quot;,
+        &quot;BO&quot;,
+        &quot;BR&quot;,
+        &quot;CA&quot;,
+        &quot;CH&quot;,
+        &quot;CL&quot;,
+        &quot;CO&quot;,
+        &quot;CR&quot;,
+        &quot;CY&quot;,
+        &quot;CZ&quot;,
+        &quot;DE&quot;,
+        &quot;DK&quot;,
+        &quot;DO&quot;,
+        &quot;EC&quot;,
+        &quot;EE&quot;,
+        &quot;ES&quot;,
+        &quot;FI&quot;,
+        &quot;FR&quot;,
+        &quot;GB&quot;,
+        &quot;GR&quot;,
+        &quot;GT&quot;,
+        &quot;HK&quot;,
+        &quot;HN&quot;,
+        &quot;HU&quot;,
+        &quot;ID&quot;,
+        &quot;IE&quot;,
+        &quot;IS&quot;,
+        &quot;IT&quot;,
+        &quot;JP&quot;,
+        &quot;LI&quot;,
+        &quot;LT&quot;,
+        &quot;LU&quot;,
+        &quot;LV&quot;,
+        &quot;MC&quot;,
+        &quot;MT&quot;,
+        &quot;MX&quot;,
+        &quot;MY&quot;,
+        &quot;NI&quot;,
+        &quot;NL&quot;,
+        &quot;NO&quot;,
+        &quot;NZ&quot;,
+        &quot;PA&quot;,
+        &quot;PE&quot;,
+        &quot;PH&quot;,
+        &quot;PL&quot;,
+        &quot;PT&quot;,
+        &quot;PY&quot;,
+        &quot;SE&quot;,
+        &quot;SG&quot;,
+        &quot;SK&quot;,
+        &quot;SV&quot;,
+        &quot;TR&quot;,
+        &quot;TW&quot;,
+        &quot;US&quot;,
+        &quot;UY&quot;
+      ],
+      &quot;copyrights&quot;: null,
+      &quot;external_ids&quot;: null,
+      &quot;genres&quot;: null,
+      &quot;images&quot;: [
+        {
+          &quot;height&quot;: 640,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/69ffe2c5b5119bd8721babf4e7e321fe5a2158cf&quot;,
+          &quot;width&quot;: 640
+        },
+        {
+          &quot;height&quot;: 300,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/a3336e021fd71485eebea2d51e7c4274db949010&quot;,
+          &quot;width&quot;: 300
+        },
+        {
+          &quot;height&quot;: 64,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/054a1a47ead97811775fb6beae59ef81f0d21e8f&quot;,
+          &quot;width&quot;: 64
+        }
+      ],
+      &quot;name&quot;: &quot;Follow Me Home&quot;,
+      &quot;popularity&quot;: null,
+      &quot;release_date&quot;: null,
+      &quot;release_date_precision&quot;: null,
+      &quot;artists&quot;: [
+        {
+          &quot;followers&quot;: null,
+          &quot;genres&quot;: null,
+          &quot;images&quot;: null,
+          &quot;name&quot;: &quot;Jay Rock&quot;,
+          &quot;popularity&quot;: null,
+          &quot;top_tracks&quot;: {
+          },
+          &quot;external_urls&quot;: {
+            &quot;spotify&quot;: &quot;https://open.spotify.com/artist/28ExwzUQsvgJooOI0X1mr3&quot;
+          },
+          &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/28ExwzUQsvgJooOI0X1mr3&quot;,
+          &quot;id&quot;: &quot;28ExwzUQsvgJooOI0X1mr3&quot;,
+          &quot;type&quot;: &quot;artist&quot;,
+          &quot;uri&quot;: &quot;spotify:artist:28ExwzUQsvgJooOI0X1mr3&quot;
+        }
+      ],
+      &quot;tracks_cache&quot;: null,
+      &quot;total_tracks&quot;: null,
+      &quot;external_urls&quot;: {
+        &quot;spotify&quot;: &quot;https://open.spotify.com/album/6bPbKuFNW6Vausf1PExvd9&quot;
+      },
+      &quot;href&quot;: &quot;https://api.spotify.com/v1/albums/6bPbKuFNW6Vausf1PExvd9&quot;,
+      &quot;id&quot;: &quot;6bPbKuFNW6Vausf1PExvd9&quot;,
+      &quot;type&quot;: &quot;album&quot;,
+      &quot;uri&quot;: &quot;spotify:album:6bPbKuFNW6Vausf1PExvd9&quot;
+    },
+    &quot;artists&quot;: [
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;Jay Rock&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/28ExwzUQsvgJooOI0X1mr3&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/28ExwzUQsvgJooOI0X1mr3&quot;,
+        &quot;id&quot;: &quot;28ExwzUQsvgJooOI0X1mr3&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:28ExwzUQsvgJooOI0X1mr3&quot;
+      },
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;Kendrick Lamar&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/2YZyLoL8N0Wb9xBt1NhZWg&quot;,
+        &quot;id&quot;: &quot;2YZyLoL8N0Wb9xBt1NhZWg&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg&quot;
+      }
+    ],
+    &quot;external_urls&quot;: {
+      &quot;spotify&quot;: &quot;https://open.spotify.com/track/6i6cWTCYBOKEdJnWjzm2yk&quot;
+    },
+    &quot;href&quot;: &quot;https://api.spotify.com/v1/tracks/6i6cWTCYBOKEdJnWjzm2yk&quot;,
+    &quot;id&quot;: &quot;6i6cWTCYBOKEdJnWjzm2yk&quot;,
+    &quot;type&quot;: &quot;track&quot;,
+    &quot;uri&quot;: &quot;spotify:track:6i6cWTCYBOKEdJnWjzm2yk&quot;
+  },
+  {
+    &quot;available_markets&quot;: [
+      &quot;AD&quot;,
+      &quot;AR&quot;,
+      &quot;AT&quot;,
+      &quot;AU&quot;,
+      &quot;BE&quot;,
+      &quot;BG&quot;,
+      &quot;BO&quot;,
+      &quot;BR&quot;,
+      &quot;CA&quot;,
+      &quot;CH&quot;,
+      &quot;CL&quot;,
+      &quot;CO&quot;,
+      &quot;CR&quot;,
+      &quot;CY&quot;,
+      &quot;CZ&quot;,
+      &quot;DE&quot;,
+      &quot;DK&quot;,
+      &quot;DO&quot;,
+      &quot;EC&quot;,
+      &quot;EE&quot;,
+      &quot;ES&quot;,
+      &quot;FI&quot;,
+      &quot;FR&quot;,
+      &quot;GB&quot;,
+      &quot;GR&quot;,
+      &quot;GT&quot;,
+      &quot;HK&quot;,
+      &quot;HN&quot;,
+      &quot;HU&quot;,
+      &quot;ID&quot;,
+      &quot;IE&quot;,
+      &quot;IS&quot;,
+      &quot;IT&quot;,
+      &quot;LI&quot;,
+      &quot;LT&quot;,
+      &quot;LU&quot;,
+      &quot;LV&quot;,
+      &quot;MC&quot;,
+      &quot;MT&quot;,
+      &quot;MX&quot;,
+      &quot;MY&quot;,
+      &quot;NI&quot;,
+      &quot;NL&quot;,
+      &quot;NO&quot;,
+      &quot;NZ&quot;,
+      &quot;PA&quot;,
+      &quot;PE&quot;,
+      &quot;PH&quot;,
+      &quot;PL&quot;,
+      &quot;PT&quot;,
+      &quot;PY&quot;,
+      &quot;SE&quot;,
+      &quot;SG&quot;,
+      &quot;SK&quot;,
+      &quot;SV&quot;,
+      &quot;TW&quot;,
+      &quot;US&quot;,
+      &quot;UY&quot;
+    ],
+    &quot;disc_number&quot;: 1,
+    &quot;duration_ms&quot;: 301893,
+    &quot;explicit&quot;: false,
+    &quot;external_ids&quot;: {
+      &quot;isrc&quot;: &quot;USAR19900063&quot;
+    },
+    &quot;name&quot;: &quot;It Takes Two&quot;,
+    &quot;popularity&quot;: 56,
+    &quot;preview_url&quot;: &quot;https://p.scdn.co/mp3-preview/0930fa8d0a27d3780f655e67e16b6250abc780cf?cid=e16acd3a7ef344789b1a6cac6c2c8881&quot;,
+    &quot;track_number&quot;: 1,
+    &quot;album&quot;: {
+      &quot;album_type&quot;: &quot;album&quot;,
+      &quot;available_markets&quot;: [
+        &quot;AD&quot;,
+        &quot;AR&quot;,
+        &quot;AT&quot;,
+        &quot;AU&quot;,
+        &quot;BE&quot;,
+        &quot;BG&quot;,
+        &quot;BO&quot;,
+        &quot;BR&quot;,
+        &quot;CA&quot;,
+        &quot;CH&quot;,
+        &quot;CL&quot;,
+        &quot;CO&quot;,
+        &quot;CR&quot;,
+        &quot;CY&quot;,
+        &quot;CZ&quot;,
+        &quot;DE&quot;,
+        &quot;DK&quot;,
+        &quot;DO&quot;,
+        &quot;EC&quot;,
+        &quot;EE&quot;,
+        &quot;ES&quot;,
+        &quot;FI&quot;,
+        &quot;FR&quot;,
+        &quot;GB&quot;,
+        &quot;GR&quot;,
+        &quot;GT&quot;,
+        &quot;HK&quot;,
+        &quot;HN&quot;,
+        &quot;HU&quot;,
+        &quot;ID&quot;,
+        &quot;IE&quot;,
+        &quot;IS&quot;,
+        &quot;IT&quot;,
+        &quot;LI&quot;,
+        &quot;LT&quot;,
+        &quot;LU&quot;,
+        &quot;LV&quot;,
+        &quot;MC&quot;,
+        &quot;MT&quot;,
+        &quot;MX&quot;,
+        &quot;MY&quot;,
+        &quot;NI&quot;,
+        &quot;NL&quot;,
+        &quot;NO&quot;,
+        &quot;NZ&quot;,
+        &quot;PA&quot;,
+        &quot;PE&quot;,
+        &quot;PH&quot;,
+        &quot;PL&quot;,
+        &quot;PT&quot;,
+        &quot;PY&quot;,
+        &quot;SE&quot;,
+        &quot;SG&quot;,
+        &quot;SK&quot;,
+        &quot;SV&quot;,
+        &quot;TW&quot;,
+        &quot;US&quot;,
+        &quot;UY&quot;
+      ],
+      &quot;copyrights&quot;: null,
+      &quot;external_ids&quot;: null,
+      &quot;genres&quot;: null,
+      &quot;images&quot;: [
+        {
+          &quot;height&quot;: 623,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/891a63eb18b0dccad7252102d2d8e6fe1199fd5e&quot;,
+          &quot;width&quot;: 640
+        },
+        {
+          &quot;height&quot;: 292,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/5af6d4ce40b66052abc9a4148d9a10b9c3b6c823&quot;,
+          &quot;width&quot;: 300
+        },
+        {
+          &quot;height&quot;: 62,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/c160b96f95746287824ecd10b0f016c9844db3fc&quot;,
+          &quot;width&quot;: 64
+        }
+      ],
+      &quot;name&quot;: &quot;Profilin&#39;: The Hits&quot;,
+      &quot;popularity&quot;: null,
+      &quot;release_date&quot;: null,
+      &quot;release_date_precision&quot;: null,
+      &quot;artists&quot;: [
+        {
+          &quot;followers&quot;: null,
+          &quot;genres&quot;: null,
+          &quot;images&quot;: null,
+          &quot;name&quot;: &quot;Various Artists&quot;,
+          &quot;popularity&quot;: null,
+          &quot;top_tracks&quot;: {
+          },
+          &quot;external_urls&quot;: {
+            &quot;spotify&quot;: &quot;https://open.spotify.com/artist/0LyfQWJT6nXafLPZqxe9Of&quot;
+          },
+          &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/0LyfQWJT6nXafLPZqxe9Of&quot;,
+          &quot;id&quot;: &quot;0LyfQWJT6nXafLPZqxe9Of&quot;,
+          &quot;type&quot;: &quot;artist&quot;,
+          &quot;uri&quot;: &quot;spotify:artist:0LyfQWJT6nXafLPZqxe9Of&quot;
+        }
+      ],
+      &quot;tracks_cache&quot;: null,
+      &quot;total_tracks&quot;: null,
+      &quot;external_urls&quot;: {
+        &quot;spotify&quot;: &quot;https://open.spotify.com/album/6a6h1DRImqxSsXfn3bk6XU&quot;
+      },
+      &quot;href&quot;: &quot;https://api.spotify.com/v1/albums/6a6h1DRImqxSsXfn3bk6XU&quot;,
+      &quot;id&quot;: &quot;6a6h1DRImqxSsXfn3bk6XU&quot;,
+      &quot;type&quot;: &quot;album&quot;,
+      &quot;uri&quot;: &quot;spotify:album:6a6h1DRImqxSsXfn3bk6XU&quot;
+    },
+    &quot;artists&quot;: [
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;Rob Base &amp; DJ EZ Rock&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/6vwFR7NilfrQ4AX0d41fWu&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/6vwFR7NilfrQ4AX0d41fWu&quot;,
+        &quot;id&quot;: &quot;6vwFR7NilfrQ4AX0d41fWu&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:6vwFR7NilfrQ4AX0d41fWu&quot;
+      }
+    ],
+    &quot;external_urls&quot;: {
+      &quot;spotify&quot;: &quot;https://open.spotify.com/track/3Yxmpx64AdWAzG3qAD4Dty&quot;
+    },
+    &quot;href&quot;: &quot;https://api.spotify.com/v1/tracks/3Yxmpx64AdWAzG3qAD4Dty&quot;,
+    &quot;id&quot;: &quot;3Yxmpx64AdWAzG3qAD4Dty&quot;,
+    &quot;type&quot;: &quot;track&quot;,
+    &quot;uri&quot;: &quot;spotify:track:3Yxmpx64AdWAzG3qAD4Dty&quot;
+  },
+  {
+    &quot;available_markets&quot;: [
+      &quot;CA&quot;,
+      &quot;US&quot;
+    ],
+    &quot;disc_number&quot;: 1,
+    &quot;duration_ms&quot;: 231173,
+    &quot;explicit&quot;: true,
+    &quot;external_ids&quot;: {
+      &quot;isrc&quot;: &quot;USCM50800823&quot;
+    },
+    &quot;name&quot;: &quot;Let It Rock&quot;,
+    &quot;popularity&quot;: 49,
+    &quot;preview_url&quot;: null,
+    &quot;track_number&quot;: 2,
+    &quot;album&quot;: {
+      &quot;album_type&quot;: &quot;album&quot;,
+      &quot;available_markets&quot;: [
+        &quot;CA&quot;,
+        &quot;US&quot;
+      ],
+      &quot;copyrights&quot;: null,
+      &quot;external_ids&quot;: null,
+      &quot;genres&quot;: null,
+      &quot;images&quot;: [
+        {
+          &quot;height&quot;: 640,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/396ccedefc21580542c4689138eea2696906847a&quot;,
+          &quot;width&quot;: 640
+        },
+        {
+          &quot;height&quot;: 300,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/16d492f276a7c3110c59d760f7b8eb348d57f355&quot;,
+          &quot;width&quot;: 300
+        },
+        {
+          &quot;height&quot;: 64,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/4fd5a509754a3a5e38f8ed709a54235027b53f77&quot;,
+          &quot;width&quot;: 64
+        }
+      ],
+      &quot;name&quot;: &quot;In The City&quot;,
+      &quot;popularity&quot;: null,
+      &quot;release_date&quot;: null,
+      &quot;release_date_precision&quot;: null,
+      &quot;artists&quot;: [
+        {
+          &quot;followers&quot;: null,
+          &quot;genres&quot;: null,
+          &quot;images&quot;: null,
+          &quot;name&quot;: &quot;Kevin Rudolf&quot;,
+          &quot;popularity&quot;: null,
+          &quot;top_tracks&quot;: {
+          },
+          &quot;external_urls&quot;: {
+            &quot;spotify&quot;: &quot;https://open.spotify.com/artist/0Chxmm4XMM87mJOHvyiUzL&quot;
+          },
+          &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/0Chxmm4XMM87mJOHvyiUzL&quot;,
+          &quot;id&quot;: &quot;0Chxmm4XMM87mJOHvyiUzL&quot;,
+          &quot;type&quot;: &quot;artist&quot;,
+          &quot;uri&quot;: &quot;spotify:artist:0Chxmm4XMM87mJOHvyiUzL&quot;
+        }
+      ],
+      &quot;tracks_cache&quot;: null,
+      &quot;total_tracks&quot;: null,
+      &quot;external_urls&quot;: {
+        &quot;spotify&quot;: &quot;https://open.spotify.com/album/5bHhH3k4p4ugORIb3q9BHd&quot;
+      },
+      &quot;href&quot;: &quot;https://api.spotify.com/v1/albums/5bHhH3k4p4ugORIb3q9BHd&quot;,
+      &quot;id&quot;: &quot;5bHhH3k4p4ugORIb3q9BHd&quot;,
+      &quot;type&quot;: &quot;album&quot;,
+      &quot;uri&quot;: &quot;spotify:album:5bHhH3k4p4ugORIb3q9BHd&quot;
+    },
+    &quot;artists&quot;: [
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;Kevin Rudolf&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/0Chxmm4XMM87mJOHvyiUzL&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/0Chxmm4XMM87mJOHvyiUzL&quot;,
+        &quot;id&quot;: &quot;0Chxmm4XMM87mJOHvyiUzL&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:0Chxmm4XMM87mJOHvyiUzL&quot;
+      },
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;Lil Wayne&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/55Aa2cqylxrFIXC767Z865&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/55Aa2cqylxrFIXC767Z865&quot;,
+        &quot;id&quot;: &quot;55Aa2cqylxrFIXC767Z865&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:55Aa2cqylxrFIXC767Z865&quot;
+      }
+    ],
+    &quot;external_urls&quot;: {
+      &quot;spotify&quot;: &quot;https://open.spotify.com/track/6TrNRd98WksT9Kkmx9uj6R&quot;
+    },
+    &quot;href&quot;: &quot;https://api.spotify.com/v1/tracks/6TrNRd98WksT9Kkmx9uj6R&quot;,
+    &quot;id&quot;: &quot;6TrNRd98WksT9Kkmx9uj6R&quot;,
+    &quot;type&quot;: &quot;track&quot;,
+    &quot;uri&quot;: &quot;spotify:track:6TrNRd98WksT9Kkmx9uj6R&quot;
+  },
+  {
+    &quot;available_markets&quot;: [
+      &quot;CA&quot;,
+      &quot;US&quot;
+    ],
+    &quot;disc_number&quot;: 1,
+    &quot;duration_ms&quot;: 181186,
+    &quot;explicit&quot;: false,
+    &quot;external_ids&quot;: {
+      &quot;isrc&quot;: &quot;USCM50900274&quot;
+    },
+    &quot;name&quot;: &quot;Let It Rock&quot;,
+    &quot;popularity&quot;: 45,
+    &quot;preview_url&quot;: null,
+    &quot;track_number&quot;: 1,
+    &quot;album&quot;: {
+      &quot;album_type&quot;: &quot;single&quot;,
+      &quot;available_markets&quot;: [
+        &quot;CA&quot;,
+        &quot;US&quot;
+      ],
+      &quot;copyrights&quot;: null,
+      &quot;external_ids&quot;: null,
+      &quot;genres&quot;: null,
+      &quot;images&quot;: [
+        {
+          &quot;height&quot;: 636,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/43df783e7b68448535dfcc691e871eaef5bea17b&quot;,
+          &quot;width&quot;: 640
+        },
+        {
+          &quot;height&quot;: 298,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/206e656c6762dfcd458c8c0b5b49ea2b75ca2cff&quot;,
+          &quot;width&quot;: 300
+        },
+        {
+          &quot;height&quot;: 64,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/f7df24646895146dcbfd9a0658777986b2e0b918&quot;,
+          &quot;width&quot;: 64
+        }
+      ],
+      &quot;name&quot;: &quot;Let It Rock&quot;,
+      &quot;popularity&quot;: null,
+      &quot;release_date&quot;: null,
+      &quot;release_date_precision&quot;: null,
+      &quot;artists&quot;: [
+        {
+          &quot;followers&quot;: null,
+          &quot;genres&quot;: null,
+          &quot;images&quot;: null,
+          &quot;name&quot;: &quot;Kevin Rudolf&quot;,
+          &quot;popularity&quot;: null,
+          &quot;top_tracks&quot;: {
+          },
+          &quot;external_urls&quot;: {
+            &quot;spotify&quot;: &quot;https://open.spotify.com/artist/0Chxmm4XMM87mJOHvyiUzL&quot;
+          },
+          &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/0Chxmm4XMM87mJOHvyiUzL&quot;,
+          &quot;id&quot;: &quot;0Chxmm4XMM87mJOHvyiUzL&quot;,
+          &quot;type&quot;: &quot;artist&quot;,
+          &quot;uri&quot;: &quot;spotify:artist:0Chxmm4XMM87mJOHvyiUzL&quot;
+        }
+      ],
+      &quot;tracks_cache&quot;: null,
+      &quot;total_tracks&quot;: null,
+      &quot;external_urls&quot;: {
+        &quot;spotify&quot;: &quot;https://open.spotify.com/album/67kCyHOuZYH0XntGYpdwTF&quot;
+      },
+      &quot;href&quot;: &quot;https://api.spotify.com/v1/albums/67kCyHOuZYH0XntGYpdwTF&quot;,
+      &quot;id&quot;: &quot;67kCyHOuZYH0XntGYpdwTF&quot;,
+      &quot;type&quot;: &quot;album&quot;,
+      &quot;uri&quot;: &quot;spotify:album:67kCyHOuZYH0XntGYpdwTF&quot;
+    },
+    &quot;artists&quot;: [
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;Kevin Rudolf&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/0Chxmm4XMM87mJOHvyiUzL&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/0Chxmm4XMM87mJOHvyiUzL&quot;,
+        &quot;id&quot;: &quot;0Chxmm4XMM87mJOHvyiUzL&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:0Chxmm4XMM87mJOHvyiUzL&quot;
+      }
+    ],
+    &quot;external_urls&quot;: {
+      &quot;spotify&quot;: &quot;https://open.spotify.com/track/7mGjaKYVo3dDs5B5wO0jB3&quot;
+    },
+    &quot;href&quot;: &quot;https://api.spotify.com/v1/tracks/7mGjaKYVo3dDs5B5wO0jB3&quot;,
+    &quot;id&quot;: &quot;7mGjaKYVo3dDs5B5wO0jB3&quot;,
+    &quot;type&quot;: &quot;track&quot;,
+    &quot;uri&quot;: &quot;spotify:track:7mGjaKYVo3dDs5B5wO0jB3&quot;
+  },
+  {
+    &quot;available_markets&quot;: [
+      &quot;AD&quot;,
+      &quot;AR&quot;,
+      &quot;AT&quot;,
+      &quot;AU&quot;,
+      &quot;BE&quot;,
+      &quot;BG&quot;,
+      &quot;BO&quot;,
+      &quot;BR&quot;,
+      &quot;CA&quot;,
+      &quot;CH&quot;,
+      &quot;CL&quot;,
+      &quot;CO&quot;,
+      &quot;CR&quot;,
+      &quot;CY&quot;,
+      &quot;CZ&quot;,
+      &quot;DE&quot;,
+      &quot;DK&quot;,
+      &quot;DO&quot;,
+      &quot;EC&quot;,
+      &quot;EE&quot;,
+      &quot;ES&quot;,
+      &quot;FI&quot;,
+      &quot;FR&quot;,
+      &quot;GB&quot;,
+      &quot;GR&quot;,
+      &quot;GT&quot;,
+      &quot;HK&quot;,
+      &quot;HN&quot;,
+      &quot;HU&quot;,
+      &quot;ID&quot;,
+      &quot;IE&quot;,
+      &quot;IS&quot;,
+      &quot;IT&quot;,
+      &quot;LI&quot;,
+      &quot;LT&quot;,
+      &quot;LU&quot;,
+      &quot;LV&quot;,
+      &quot;MC&quot;,
+      &quot;MT&quot;,
+      &quot;MX&quot;,
+      &quot;MY&quot;,
+      &quot;NI&quot;,
+      &quot;NL&quot;,
+      &quot;NO&quot;,
+      &quot;NZ&quot;,
+      &quot;PA&quot;,
+      &quot;PE&quot;,
+      &quot;PH&quot;,
+      &quot;PL&quot;,
+      &quot;PT&quot;,
+      &quot;PY&quot;,
+      &quot;SE&quot;,
+      &quot;SG&quot;,
+      &quot;SK&quot;,
+      &quot;SV&quot;,
+      &quot;TR&quot;,
+      &quot;TW&quot;,
+      &quot;US&quot;,
+      &quot;UY&quot;
+    ],
+    &quot;disc_number&quot;: 1,
+    &quot;duration_ms&quot;: 229813,
+    &quot;explicit&quot;: true,
+    &quot;external_ids&quot;: {
+      &quot;isrc&quot;: &quot;USVI20500536&quot;
+    },
+    &quot;name&quot;: &quot;Lean Wit It, Rock Wit It - feat. Peanut &amp; Charlay&quot;,
+    &quot;popularity&quot;: 52,
+    &quot;preview_url&quot;: null,
+    &quot;track_number&quot;: 6,
+    &quot;album&quot;: {
+      &quot;album_type&quot;: &quot;album&quot;,
+      &quot;available_markets&quot;: [
+        &quot;AD&quot;,
+        &quot;AR&quot;,
+        &quot;AT&quot;,
+        &quot;AU&quot;,
+        &quot;BE&quot;,
+        &quot;BG&quot;,
+        &quot;BO&quot;,
+        &quot;BR&quot;,
+        &quot;CA&quot;,
+        &quot;CH&quot;,
+        &quot;CL&quot;,
+        &quot;CO&quot;,
+        &quot;CR&quot;,
+        &quot;CY&quot;,
+        &quot;CZ&quot;,
+        &quot;DE&quot;,
+        &quot;DK&quot;,
+        &quot;DO&quot;,
+        &quot;EC&quot;,
+        &quot;EE&quot;,
+        &quot;ES&quot;,
+        &quot;FI&quot;,
+        &quot;FR&quot;,
+        &quot;GB&quot;,
+        &quot;GR&quot;,
+        &quot;GT&quot;,
+        &quot;HK&quot;,
+        &quot;HN&quot;,
+        &quot;HU&quot;,
+        &quot;ID&quot;,
+        &quot;IE&quot;,
+        &quot;IS&quot;,
+        &quot;IT&quot;,
+        &quot;LI&quot;,
+        &quot;LT&quot;,
+        &quot;LU&quot;,
+        &quot;LV&quot;,
+        &quot;MC&quot;,
+        &quot;MT&quot;,
+        &quot;MX&quot;,
+        &quot;MY&quot;,
+        &quot;NI&quot;,
+        &quot;NL&quot;,
+        &quot;NO&quot;,
+        &quot;NZ&quot;,
+        &quot;PA&quot;,
+        &quot;PE&quot;,
+        &quot;PH&quot;,
+        &quot;PL&quot;,
+        &quot;PT&quot;,
+        &quot;PY&quot;,
+        &quot;SE&quot;,
+        &quot;SG&quot;,
+        &quot;SK&quot;,
+        &quot;SV&quot;,
+        &quot;TR&quot;,
+        &quot;TW&quot;,
+        &quot;US&quot;,
+        &quot;UY&quot;
+      ],
+      &quot;copyrights&quot;: null,
+      &quot;external_ids&quot;: null,
+      &quot;genres&quot;: null,
+      &quot;images&quot;: [
+        {
+          &quot;height&quot;: 640,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/8b4f57e4d91f428e29e6611e0a3bfb4dd2350365&quot;,
+          &quot;width&quot;: 640
+        },
+        {
+          &quot;height&quot;: 300,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/025d4c61f18b5b1308a2d547919cfc4594c0fe23&quot;,
+          &quot;width&quot;: 300
+        },
+        {
+          &quot;height&quot;: 64,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/fcbef1b2248313743a4160d6cebac33b493b74fc&quot;,
+          &quot;width&quot;: 64
+        }
+      ],
+      &quot;name&quot;: &quot;On Top Of Our Game&quot;,
+      &quot;popularity&quot;: null,
+      &quot;release_date&quot;: null,
+      &quot;release_date_precision&quot;: null,
+      &quot;artists&quot;: [
+        {
+          &quot;followers&quot;: null,
+          &quot;genres&quot;: null,
+          &quot;images&quot;: null,
+          &quot;name&quot;: &quot;Dem Franchize Boyz&quot;,
+          &quot;popularity&quot;: null,
+          &quot;top_tracks&quot;: {
+          },
+          &quot;external_urls&quot;: {
+            &quot;spotify&quot;: &quot;https://open.spotify.com/artist/0VKTLKamj4IH8OfQbUL0kq&quot;
+          },
+          &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/0VKTLKamj4IH8OfQbUL0kq&quot;,
+          &quot;id&quot;: &quot;0VKTLKamj4IH8OfQbUL0kq&quot;,
+          &quot;type&quot;: &quot;artist&quot;,
+          &quot;uri&quot;: &quot;spotify:artist:0VKTLKamj4IH8OfQbUL0kq&quot;
+        }
+      ],
+      &quot;tracks_cache&quot;: null,
+      &quot;total_tracks&quot;: null,
+      &quot;external_urls&quot;: {
+        &quot;spotify&quot;: &quot;https://open.spotify.com/album/0e0ks1xlvQBOsC3Gsw2EgA&quot;
+      },
+      &quot;href&quot;: &quot;https://api.spotify.com/v1/albums/0e0ks1xlvQBOsC3Gsw2EgA&quot;,
+      &quot;id&quot;: &quot;0e0ks1xlvQBOsC3Gsw2EgA&quot;,
+      &quot;type&quot;: &quot;album&quot;,
+      &quot;uri&quot;: &quot;spotify:album:0e0ks1xlvQBOsC3Gsw2EgA&quot;
+    },
+    &quot;artists&quot;: [
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;Dem Franchize Boyz&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/0VKTLKamj4IH8OfQbUL0kq&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/0VKTLKamj4IH8OfQbUL0kq&quot;,
+        &quot;id&quot;: &quot;0VKTLKamj4IH8OfQbUL0kq&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:0VKTLKamj4IH8OfQbUL0kq&quot;
+      }
+    ],
+    &quot;external_urls&quot;: {
+      &quot;spotify&quot;: &quot;https://open.spotify.com/track/7cVmKBwzPsh4Fmb6SplfEm&quot;
+    },
+    &quot;href&quot;: &quot;https://api.spotify.com/v1/tracks/7cVmKBwzPsh4Fmb6SplfEm&quot;,
+    &quot;id&quot;: &quot;7cVmKBwzPsh4Fmb6SplfEm&quot;,
+    &quot;type&quot;: &quot;track&quot;,
+    &quot;uri&quot;: &quot;spotify:track:7cVmKBwzPsh4Fmb6SplfEm&quot;
+  },
+  {
+    &quot;available_markets&quot;: [
+      &quot;AR&quot;,
+      &quot;AU&quot;,
+      &quot;BG&quot;,
+      &quot;BO&quot;,
+      &quot;BR&quot;,
+      &quot;CL&quot;,
+      &quot;CO&quot;,
+      &quot;CR&quot;,
+      &quot;CY&quot;,
+      &quot;CZ&quot;,
+      &quot;DK&quot;,
+      &quot;DO&quot;,
+      &quot;EC&quot;,
+      &quot;EE&quot;,
+      &quot;ES&quot;,
+      &quot;FI&quot;,
+      &quot;GR&quot;,
+      &quot;GT&quot;,
+      &quot;HK&quot;,
+      &quot;HN&quot;,
+      &quot;HU&quot;,
+      &quot;ID&quot;,
+      &quot;IS&quot;,
+      &quot;IT&quot;,
+      &quot;JP&quot;,
+      &quot;LI&quot;,
+      &quot;LT&quot;,
+      &quot;LU&quot;,
+      &quot;LV&quot;,
+      &quot;MT&quot;,
+      &quot;MX&quot;,
+      &quot;MY&quot;,
+      &quot;NI&quot;,
+      &quot;NL&quot;,
+      &quot;NO&quot;,
+      &quot;NZ&quot;,
+      &quot;PA&quot;,
+      &quot;PE&quot;,
+      &quot;PH&quot;,
+      &quot;PT&quot;,
+      &quot;PY&quot;,
+      &quot;SE&quot;,
+      &quot;SG&quot;,
+      &quot;SK&quot;,
+      &quot;SV&quot;,
+      &quot;TR&quot;,
+      &quot;TW&quot;,
+      &quot;US&quot;,
+      &quot;UY&quot;
+    ],
+    &quot;disc_number&quot;: 1,
+    &quot;duration_ms&quot;: 191493,
+    &quot;explicit&quot;: false,
+    &quot;external_ids&quot;: {
+      &quot;isrc&quot;: &quot;FR89R1100005&quot;
+    },
+    &quot;name&quot;: &quot;Rock It for Me&quot;,
+    &quot;popularity&quot;: 54,
+    &quot;preview_url&quot;: &quot;https://p.scdn.co/mp3-preview/097019d16f7135066cb9e8d4b3e854d2f1c7825b?cid=e16acd3a7ef344789b1a6cac6c2c8881&quot;,
+    &quot;track_number&quot;: 5,
+    &quot;album&quot;: {
+      &quot;album_type&quot;: &quot;album&quot;,
+      &quot;available_markets&quot;: [
+        &quot;AR&quot;,
+        &quot;AU&quot;,
+        &quot;BG&quot;,
+        &quot;BO&quot;,
+        &quot;BR&quot;,
+        &quot;CL&quot;,
+        &quot;CO&quot;,
+        &quot;CR&quot;,
+        &quot;CY&quot;,
+        &quot;CZ&quot;,
+        &quot;DK&quot;,
+        &quot;DO&quot;,
+        &quot;EC&quot;,
+        &quot;EE&quot;,
+        &quot;ES&quot;,
+        &quot;FI&quot;,
+        &quot;GR&quot;,
+        &quot;GT&quot;,
+        &quot;HK&quot;,
+        &quot;HN&quot;,
+        &quot;HU&quot;,
+        &quot;ID&quot;,
+        &quot;IS&quot;,
+        &quot;IT&quot;,
+        &quot;JP&quot;,
+        &quot;LI&quot;,
+        &quot;LT&quot;,
+        &quot;LU&quot;,
+        &quot;LV&quot;,
+        &quot;MT&quot;,
+        &quot;MX&quot;,
+        &quot;MY&quot;,
+        &quot;NI&quot;,
+        &quot;NL&quot;,
+        &quot;NO&quot;,
+        &quot;NZ&quot;,
+        &quot;PA&quot;,
+        &quot;PE&quot;,
+        &quot;PH&quot;,
+        &quot;PT&quot;,
+        &quot;PY&quot;,
+        &quot;SE&quot;,
+        &quot;SG&quot;,
+        &quot;SK&quot;,
+        &quot;SV&quot;,
+        &quot;TR&quot;,
+        &quot;TW&quot;,
+        &quot;US&quot;,
+        &quot;UY&quot;
+      ],
+      &quot;copyrights&quot;: null,
+      &quot;external_ids&quot;: null,
+      &quot;genres&quot;: null,
+      &quot;images&quot;: [
+        {
+          &quot;height&quot;: 640,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/6917af0c3b16f1ab644869e499984f1390ef32d4&quot;,
+          &quot;width&quot;: 640
+        },
+        {
+          &quot;height&quot;: 300,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/f3a71337ffe114b7f350939da826db2839607ca2&quot;,
+          &quot;width&quot;: 300
+        },
+        {
+          &quot;height&quot;: 64,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/08ad159ad1ab07501d6229e18051139b6367c420&quot;,
+          &quot;width&quot;: 64
+        }
+      ],
+      &quot;name&quot;: &quot;Panic&quot;,
+      &quot;popularity&quot;: null,
+      &quot;release_date&quot;: null,
+      &quot;release_date_precision&quot;: null,
+      &quot;artists&quot;: [
+        {
+          &quot;followers&quot;: null,
+          &quot;genres&quot;: null,
+          &quot;images&quot;: null,
+          &quot;name&quot;: &quot;Caravan Palace&quot;,
+          &quot;popularity&quot;: null,
+          &quot;top_tracks&quot;: {
+          },
+          &quot;external_urls&quot;: {
+            &quot;spotify&quot;: &quot;https://open.spotify.com/artist/37J1PlAkhRK7yrZUtqaUpQ&quot;
+          },
+          &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/37J1PlAkhRK7yrZUtqaUpQ&quot;,
+          &quot;id&quot;: &quot;37J1PlAkhRK7yrZUtqaUpQ&quot;,
+          &quot;type&quot;: &quot;artist&quot;,
+          &quot;uri&quot;: &quot;spotify:artist:37J1PlAkhRK7yrZUtqaUpQ&quot;
+        }
+      ],
+      &quot;tracks_cache&quot;: null,
+      &quot;total_tracks&quot;: null,
+      &quot;external_urls&quot;: {
+        &quot;spotify&quot;: &quot;https://open.spotify.com/album/38ojnzxpPFT09ee03aCTK7&quot;
+      },
+      &quot;href&quot;: &quot;https://api.spotify.com/v1/albums/38ojnzxpPFT09ee03aCTK7&quot;,
+      &quot;id&quot;: &quot;38ojnzxpPFT09ee03aCTK7&quot;,
+      &quot;type&quot;: &quot;album&quot;,
+      &quot;uri&quot;: &quot;spotify:album:38ojnzxpPFT09ee03aCTK7&quot;
+    },
+    &quot;artists&quot;: [
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;Caravan Palace&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/37J1PlAkhRK7yrZUtqaUpQ&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/37J1PlAkhRK7yrZUtqaUpQ&quot;,
+        &quot;id&quot;: &quot;37J1PlAkhRK7yrZUtqaUpQ&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:37J1PlAkhRK7yrZUtqaUpQ&quot;
+      }
+    ],
+    &quot;external_urls&quot;: {
+      &quot;spotify&quot;: &quot;https://open.spotify.com/track/7gHkDNieGzYmyuC7E1Xbxw&quot;
+    },
+    &quot;href&quot;: &quot;https://api.spotify.com/v1/tracks/7gHkDNieGzYmyuC7E1Xbxw&quot;,
+    &quot;id&quot;: &quot;7gHkDNieGzYmyuC7E1Xbxw&quot;,
+    &quot;type&quot;: &quot;track&quot;,
+    &quot;uri&quot;: &quot;spotify:track:7gHkDNieGzYmyuC7E1Xbxw&quot;
+  },
+  {
+    &quot;available_markets&quot;: [
+      &quot;AD&quot;,
+      &quot;AR&quot;,
+      &quot;AT&quot;,
+      &quot;BE&quot;,
+      &quot;BG&quot;,
+      &quot;BO&quot;,
+      &quot;BR&quot;,
+      &quot;CA&quot;,
+      &quot;CH&quot;,
+      &quot;CL&quot;,
+      &quot;CO&quot;,
+      &quot;CR&quot;,
+      &quot;CY&quot;,
+      &quot;CZ&quot;,
+      &quot;DE&quot;,
+      &quot;DK&quot;,
+      &quot;DO&quot;,
+      &quot;EC&quot;,
+      &quot;EE&quot;,
+      &quot;ES&quot;,
+      &quot;FI&quot;,
+      &quot;FR&quot;,
+      &quot;GB&quot;,
+      &quot;GR&quot;,
+      &quot;GT&quot;,
+      &quot;HK&quot;,
+      &quot;HN&quot;,
+      &quot;HU&quot;,
+      &quot;ID&quot;,
+      &quot;IE&quot;,
+      &quot;IS&quot;,
+      &quot;IT&quot;,
+      &quot;JP&quot;,
+      &quot;LI&quot;,
+      &quot;LT&quot;,
+      &quot;LU&quot;,
+      &quot;LV&quot;,
+      &quot;MC&quot;,
+      &quot;MT&quot;,
+      &quot;MX&quot;,
+      &quot;MY&quot;,
+      &quot;NI&quot;,
+      &quot;NL&quot;,
+      &quot;NO&quot;,
+      &quot;PA&quot;,
+      &quot;PE&quot;,
+      &quot;PH&quot;,
+      &quot;PL&quot;,
+      &quot;PT&quot;,
+      &quot;PY&quot;,
+      &quot;SE&quot;,
+      &quot;SG&quot;,
+      &quot;SK&quot;,
+      &quot;SV&quot;,
+      &quot;TR&quot;,
+      &quot;TW&quot;,
+      &quot;US&quot;,
+      &quot;UY&quot;
+    ],
+    &quot;disc_number&quot;: 1,
+    &quot;duration_ms&quot;: 132810,
+    &quot;explicit&quot;: true,
+    &quot;external_ids&quot;: {
+      &quot;isrc&quot;: &quot;QMCE71300062&quot;
+    },
+    &quot;name&quot;: &quot;Rock Bottom&quot;,
+    &quot;popularity&quot;: 51,
+    &quot;preview_url&quot;: &quot;https://p.scdn.co/mp3-preview/175a8088e4afaa2955a8c29b9272023ef0173129?cid=e16acd3a7ef344789b1a6cac6c2c8881&quot;,
+    &quot;track_number&quot;: 3,
+    &quot;album&quot;: {
+      &quot;album_type&quot;: &quot;album&quot;,
+      &quot;available_markets&quot;: [
+        &quot;AD&quot;,
+        &quot;AR&quot;,
+        &quot;AT&quot;,
+        &quot;BE&quot;,
+        &quot;BG&quot;,
+        &quot;BO&quot;,
+        &quot;BR&quot;,
+        &quot;CA&quot;,
+        &quot;CH&quot;,
+        &quot;CL&quot;,
+        &quot;CO&quot;,
+        &quot;CR&quot;,
+        &quot;CY&quot;,
+        &quot;CZ&quot;,
+        &quot;DE&quot;,
+        &quot;DK&quot;,
+        &quot;DO&quot;,
+        &quot;EC&quot;,
+        &quot;EE&quot;,
+        &quot;ES&quot;,
+        &quot;FI&quot;,
+        &quot;FR&quot;,
+        &quot;GB&quot;,
+        &quot;GR&quot;,
+        &quot;GT&quot;,
+        &quot;HK&quot;,
+        &quot;HN&quot;,
+        &quot;HU&quot;,
+        &quot;ID&quot;,
+        &quot;IE&quot;,
+        &quot;IS&quot;,
+        &quot;IT&quot;,
+        &quot;JP&quot;,
+        &quot;LI&quot;,
+        &quot;LT&quot;,
+        &quot;LU&quot;,
+        &quot;LV&quot;,
+        &quot;MC&quot;,
+        &quot;MT&quot;,
+        &quot;MX&quot;,
+        &quot;MY&quot;,
+        &quot;NI&quot;,
+        &quot;NL&quot;,
+        &quot;NO&quot;,
+        &quot;PA&quot;,
+        &quot;PE&quot;,
+        &quot;PH&quot;,
+        &quot;PL&quot;,
+        &quot;PT&quot;,
+        &quot;PY&quot;,
+        &quot;SE&quot;,
+        &quot;SG&quot;,
+        &quot;SK&quot;,
+        &quot;SV&quot;,
+        &quot;TR&quot;,
+        &quot;TW&quot;,
+        &quot;US&quot;,
+        &quot;UY&quot;
+      ],
+      &quot;copyrights&quot;: null,
+      &quot;external_ids&quot;: null,
+      &quot;genres&quot;: null,
+      &quot;images&quot;: [
+        {
+          &quot;height&quot;: 640,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/29070a32807bd1e1c11408cfc2056bfbf8e003c2&quot;,
+          &quot;width&quot;: 640
+        },
+        {
+          &quot;height&quot;: 300,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/e584db48d510767467a109c0de3ddc7f9582c370&quot;,
+          &quot;width&quot;: 300
+        },
+        {
+          &quot;height&quot;: 64,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/5768709811896ffe303f49e55afde0981c9eaf5e&quot;,
+          &quot;width&quot;: 64
+        }
+      ],
+      &quot;name&quot;: &quot;You&#39;re Gonna Miss It All&quot;,
+      &quot;popularity&quot;: null,
+      &quot;release_date&quot;: null,
+      &quot;release_date_precision&quot;: null,
+      &quot;artists&quot;: [
+        {
+          &quot;followers&quot;: null,
+          &quot;genres&quot;: null,
+          &quot;images&quot;: null,
+          &quot;name&quot;: &quot;Modern Baseball&quot;,
+          &quot;popularity&quot;: null,
+          &quot;top_tracks&quot;: {
+          },
+          &quot;external_urls&quot;: {
+            &quot;spotify&quot;: &quot;https://open.spotify.com/artist/1HxXNvsraqrsgfmju1yKk8&quot;
+          },
+          &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/1HxXNvsraqrsgfmju1yKk8&quot;,
+          &quot;id&quot;: &quot;1HxXNvsraqrsgfmju1yKk8&quot;,
+          &quot;type&quot;: &quot;artist&quot;,
+          &quot;uri&quot;: &quot;spotify:artist:1HxXNvsraqrsgfmju1yKk8&quot;
+        }
+      ],
+      &quot;tracks_cache&quot;: null,
+      &quot;total_tracks&quot;: null,
+      &quot;external_urls&quot;: {
+        &quot;spotify&quot;: &quot;https://open.spotify.com/album/7Jg2tDzP6qZQHO2A37m2ab&quot;
+      },
+      &quot;href&quot;: &quot;https://api.spotify.com/v1/albums/7Jg2tDzP6qZQHO2A37m2ab&quot;,
+      &quot;id&quot;: &quot;7Jg2tDzP6qZQHO2A37m2ab&quot;,
+      &quot;type&quot;: &quot;album&quot;,
+      &quot;uri&quot;: &quot;spotify:album:7Jg2tDzP6qZQHO2A37m2ab&quot;
+    },
+    &quot;artists&quot;: [
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;Modern Baseball&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/1HxXNvsraqrsgfmju1yKk8&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/1HxXNvsraqrsgfmju1yKk8&quot;,
+        &quot;id&quot;: &quot;1HxXNvsraqrsgfmju1yKk8&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:1HxXNvsraqrsgfmju1yKk8&quot;
+      }
+    ],
+    &quot;external_urls&quot;: {
+      &quot;spotify&quot;: &quot;https://open.spotify.com/track/2fz0ZdAu8kcqdXQ3IuN3YP&quot;
+    },
+    &quot;href&quot;: &quot;https://api.spotify.com/v1/tracks/2fz0ZdAu8kcqdXQ3IuN3YP&quot;,
+    &quot;id&quot;: &quot;2fz0ZdAu8kcqdXQ3IuN3YP&quot;,
+    &quot;type&quot;: &quot;track&quot;,
+    &quot;uri&quot;: &quot;spotify:track:2fz0ZdAu8kcqdXQ3IuN3YP&quot;
+  },
+  {
+    &quot;available_markets&quot;: [
+      &quot;CA&quot;,
+      &quot;MX&quot;,
+      &quot;US&quot;
+    ],
+    &quot;disc_number&quot;: 1,
+    &quot;duration_ms&quot;: 302720,
+    &quot;explicit&quot;: false,
+    &quot;external_ids&quot;: {
+      &quot;isrc&quot;: &quot;USIR10120441&quot;
+    },
+    &quot;name&quot;: &quot;Underneath It All&quot;,
+    &quot;popularity&quot;: 47,
+    &quot;preview_url&quot;: null,
+    &quot;track_number&quot;: 5,
+    &quot;album&quot;: {
+      &quot;album_type&quot;: &quot;album&quot;,
+      &quot;available_markets&quot;: [
+        &quot;CA&quot;,
+        &quot;MX&quot;,
+        &quot;US&quot;
+      ],
+      &quot;copyrights&quot;: null,
+      &quot;external_ids&quot;: null,
+      &quot;genres&quot;: null,
+      &quot;images&quot;: [
+        {
+          &quot;height&quot;: 639,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/957159977cdcd62627b66639f999669ceb9b239f&quot;,
+          &quot;width&quot;: 640
+        },
+        {
+          &quot;height&quot;: 300,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/09ebb728d8e125ff3e090ceff4fb33693fff7d15&quot;,
+          &quot;width&quot;: 300
+        },
+        {
+          &quot;height&quot;: 64,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/994ac9707bb7de7fe0b407b55800d185164db9e2&quot;,
+          &quot;width&quot;: 64
+        }
+      ],
+      &quot;name&quot;: &quot;Rock Steady&quot;,
+      &quot;popularity&quot;: null,
+      &quot;release_date&quot;: null,
+      &quot;release_date_precision&quot;: null,
+      &quot;artists&quot;: [
+        {
+          &quot;followers&quot;: null,
+          &quot;genres&quot;: null,
+          &quot;images&quot;: null,
+          &quot;name&quot;: &quot;No Doubt&quot;,
+          &quot;popularity&quot;: null,
+          &quot;top_tracks&quot;: {
+          },
+          &quot;external_urls&quot;: {
+            &quot;spotify&quot;: &quot;https://open.spotify.com/artist/0cQbJU1aAzvbEmTuljWLlF&quot;
+          },
+          &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/0cQbJU1aAzvbEmTuljWLlF&quot;,
+          &quot;id&quot;: &quot;0cQbJU1aAzvbEmTuljWLlF&quot;,
+          &quot;type&quot;: &quot;artist&quot;,
+          &quot;uri&quot;: &quot;spotify:artist:0cQbJU1aAzvbEmTuljWLlF&quot;
+        }
+      ],
+      &quot;tracks_cache&quot;: null,
+      &quot;total_tracks&quot;: null,
+      &quot;external_urls&quot;: {
+        &quot;spotify&quot;: &quot;https://open.spotify.com/album/4Nj9jd59T3gzHiuDpY9VNY&quot;
+      },
+      &quot;href&quot;: &quot;https://api.spotify.com/v1/albums/4Nj9jd59T3gzHiuDpY9VNY&quot;,
+      &quot;id&quot;: &quot;4Nj9jd59T3gzHiuDpY9VNY&quot;,
+      &quot;type&quot;: &quot;album&quot;,
+      &quot;uri&quot;: &quot;spotify:album:4Nj9jd59T3gzHiuDpY9VNY&quot;
+    },
+    &quot;artists&quot;: [
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;No Doubt&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/0cQbJU1aAzvbEmTuljWLlF&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/0cQbJU1aAzvbEmTuljWLlF&quot;,
+        &quot;id&quot;: &quot;0cQbJU1aAzvbEmTuljWLlF&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:0cQbJU1aAzvbEmTuljWLlF&quot;
+      },
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;Lady Saw&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/2X1VgNqQOiSbkyel3a9rjK&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/2X1VgNqQOiSbkyel3a9rjK&quot;,
+        &quot;id&quot;: &quot;2X1VgNqQOiSbkyel3a9rjK&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:2X1VgNqQOiSbkyel3a9rjK&quot;
+      }
+    ],
+    &quot;external_urls&quot;: {
+      &quot;spotify&quot;: &quot;https://open.spotify.com/track/4Ctmbw1hJks6cPrr6x8FbC&quot;
+    },
+    &quot;href&quot;: &quot;https://api.spotify.com/v1/tracks/4Ctmbw1hJks6cPrr6x8FbC&quot;,
+    &quot;id&quot;: &quot;4Ctmbw1hJks6cPrr6x8FbC&quot;,
+    &quot;type&quot;: &quot;track&quot;,
+    &quot;uri&quot;: &quot;spotify:track:4Ctmbw1hJks6cPrr6x8FbC&quot;
+  },
+  {
+    &quot;available_markets&quot;: [
+      &quot;AD&quot;,
+      &quot;AR&quot;,
+      &quot;AT&quot;,
+      &quot;AU&quot;,
+      &quot;BE&quot;,
+      &quot;BG&quot;,
+      &quot;BO&quot;,
+      &quot;BR&quot;,
+      &quot;CA&quot;,
+      &quot;CH&quot;,
+      &quot;CL&quot;,
+      &quot;CO&quot;,
+      &quot;CR&quot;,
+      &quot;CY&quot;,
+      &quot;CZ&quot;,
+      &quot;DE&quot;,
+      &quot;DK&quot;,
+      &quot;DO&quot;,
+      &quot;EC&quot;,
+      &quot;EE&quot;,
+      &quot;ES&quot;,
+      &quot;FI&quot;,
+      &quot;FR&quot;,
+      &quot;GB&quot;,
+      &quot;GR&quot;,
+      &quot;GT&quot;,
+      &quot;HK&quot;,
+      &quot;HN&quot;,
+      &quot;HU&quot;,
+      &quot;ID&quot;,
+      &quot;IE&quot;,
+      &quot;IS&quot;,
+      &quot;IT&quot;,
+      &quot;JP&quot;,
+      &quot;LI&quot;,
+      &quot;LT&quot;,
+      &quot;LU&quot;,
+      &quot;LV&quot;,
+      &quot;MC&quot;,
+      &quot;MT&quot;,
+      &quot;MX&quot;,
+      &quot;MY&quot;,
+      &quot;NI&quot;,
+      &quot;NL&quot;,
+      &quot;NO&quot;,
+      &quot;NZ&quot;,
+      &quot;PA&quot;,
+      &quot;PE&quot;,
+      &quot;PH&quot;,
+      &quot;PL&quot;,
+      &quot;PT&quot;,
+      &quot;PY&quot;,
+      &quot;SE&quot;,
+      &quot;SG&quot;,
+      &quot;SK&quot;,
+      &quot;SV&quot;,
+      &quot;TR&quot;,
+      &quot;TW&quot;,
+      &quot;US&quot;,
+      &quot;UY&quot;
+    ],
+    &quot;disc_number&quot;: 1,
+    &quot;duration_ms&quot;: 300373,
+    &quot;explicit&quot;: false,
+    &quot;external_ids&quot;: {
+      &quot;isrc&quot;: &quot;USAR19800570&quot;
+    },
+    &quot;name&quot;: &quot;It Takes Two&quot;,
+    &quot;popularity&quot;: 46,
+    &quot;preview_url&quot;: &quot;https://p.scdn.co/mp3-preview/862841bd49dcde0c0cedab15cf43d4d4237681e6?cid=e16acd3a7ef344789b1a6cac6c2c8881&quot;,
+    &quot;track_number&quot;: 1,
+    &quot;album&quot;: {
+      &quot;album_type&quot;: &quot;album&quot;,
+      &quot;available_markets&quot;: [
+        &quot;AD&quot;,
+        &quot;AR&quot;,
+        &quot;AT&quot;,
+        &quot;AU&quot;,
+        &quot;BE&quot;,
+        &quot;BG&quot;,
+        &quot;BO&quot;,
+        &quot;BR&quot;,
+        &quot;CA&quot;,
+        &quot;CH&quot;,
+        &quot;CL&quot;,
+        &quot;CO&quot;,
+        &quot;CR&quot;,
+        &quot;CY&quot;,
+        &quot;CZ&quot;,
+        &quot;DE&quot;,
+        &quot;DK&quot;,
+        &quot;DO&quot;,
+        &quot;EC&quot;,
+        &quot;EE&quot;,
+        &quot;ES&quot;,
+        &quot;FI&quot;,
+        &quot;FR&quot;,
+        &quot;GB&quot;,
+        &quot;GR&quot;,
+        &quot;GT&quot;,
+        &quot;HK&quot;,
+        &quot;HN&quot;,
+        &quot;HU&quot;,
+        &quot;ID&quot;,
+        &quot;IE&quot;,
+        &quot;IS&quot;,
+        &quot;IT&quot;,
+        &quot;JP&quot;,
+        &quot;LI&quot;,
+        &quot;LT&quot;,
+        &quot;LU&quot;,
+        &quot;LV&quot;,
+        &quot;MC&quot;,
+        &quot;MT&quot;,
+        &quot;MX&quot;,
+        &quot;MY&quot;,
+        &quot;NI&quot;,
+        &quot;NL&quot;,
+        &quot;NO&quot;,
+        &quot;NZ&quot;,
+        &quot;PA&quot;,
+        &quot;PE&quot;,
+        &quot;PH&quot;,
+        &quot;PL&quot;,
+        &quot;PT&quot;,
+        &quot;PY&quot;,
+        &quot;SE&quot;,
+        &quot;SG&quot;,
+        &quot;SK&quot;,
+        &quot;SV&quot;,
+        &quot;TR&quot;,
+        &quot;TW&quot;,
+        &quot;US&quot;,
+        &quot;UY&quot;
+      ],
+      &quot;copyrights&quot;: null,
+      &quot;external_ids&quot;: null,
+      &quot;genres&quot;: null,
+      &quot;images&quot;: [
+        {
+          &quot;height&quot;: 640,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/2c0b483d250e052182bbcd6475958675c6dec199&quot;,
+          &quot;width&quot;: 640
+        },
+        {
+          &quot;height&quot;: 300,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/525bf268bc55555f48611e1d08c29fcac240acc9&quot;,
+          &quot;width&quot;: 300
+        },
+        {
+          &quot;height&quot;: 64,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/fae44afd6ff0d80156330e0cf8beaf53090ef342&quot;,
+          &quot;width&quot;: 64
+        }
+      ],
+      &quot;name&quot;: &quot;It Takes Two&quot;,
+      &quot;popularity&quot;: null,
+      &quot;release_date&quot;: null,
+      &quot;release_date_precision&quot;: null,
+      &quot;artists&quot;: [
+        {
+          &quot;followers&quot;: null,
+          &quot;genres&quot;: null,
+          &quot;images&quot;: null,
+          &quot;name&quot;: &quot;Rob Base &amp; DJ EZ Rock&quot;,
+          &quot;popularity&quot;: null,
+          &quot;top_tracks&quot;: {
+          },
+          &quot;external_urls&quot;: {
+            &quot;spotify&quot;: &quot;https://open.spotify.com/artist/6vwFR7NilfrQ4AX0d41fWu&quot;
+          },
+          &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/6vwFR7NilfrQ4AX0d41fWu&quot;,
+          &quot;id&quot;: &quot;6vwFR7NilfrQ4AX0d41fWu&quot;,
+          &quot;type&quot;: &quot;artist&quot;,
+          &quot;uri&quot;: &quot;spotify:artist:6vwFR7NilfrQ4AX0d41fWu&quot;
+        }
+      ],
+      &quot;tracks_cache&quot;: null,
+      &quot;total_tracks&quot;: null,
+      &quot;external_urls&quot;: {
+        &quot;spotify&quot;: &quot;https://open.spotify.com/album/5tocCryeqWvFXn65seo0p6&quot;
+      },
+      &quot;href&quot;: &quot;https://api.spotify.com/v1/albums/5tocCryeqWvFXn65seo0p6&quot;,
+      &quot;id&quot;: &quot;5tocCryeqWvFXn65seo0p6&quot;,
+      &quot;type&quot;: &quot;album&quot;,
+      &quot;uri&quot;: &quot;spotify:album:5tocCryeqWvFXn65seo0p6&quot;
+    },
+    &quot;artists&quot;: [
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;Rob Base &amp; DJ EZ Rock&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/6vwFR7NilfrQ4AX0d41fWu&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/6vwFR7NilfrQ4AX0d41fWu&quot;,
+        &quot;id&quot;: &quot;6vwFR7NilfrQ4AX0d41fWu&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:6vwFR7NilfrQ4AX0d41fWu&quot;
+      }
+    ],
+    &quot;external_urls&quot;: {
+      &quot;spotify&quot;: &quot;https://open.spotify.com/track/0gFB5H3pHN13ERt2FyMuWi&quot;
+    },
+    &quot;href&quot;: &quot;https://api.spotify.com/v1/tracks/0gFB5H3pHN13ERt2FyMuWi&quot;,
+    &quot;id&quot;: &quot;0gFB5H3pHN13ERt2FyMuWi&quot;,
+    &quot;type&quot;: &quot;track&quot;,
+    &quot;uri&quot;: &quot;spotify:track:0gFB5H3pHN13ERt2FyMuWi&quot;
+  },
+  {
+    &quot;available_markets&quot;: [
+      &quot;US&quot;
+    ],
+    &quot;disc_number&quot;: 1,
+    &quot;duration_ms&quot;: 225520,
+    &quot;explicit&quot;: false,
+    &quot;external_ids&quot;: {
+      &quot;isrc&quot;: &quot;USCJ80600135&quot;
+    },
+    &quot;name&quot;: &quot;Shove It (feat. Spank Rock)&quot;,
+    &quot;popularity&quot;: 45,
+    &quot;preview_url&quot;: &quot;https://p.scdn.co/mp3-preview/c490d3cc94b969a2a91f6da0faa31767f6488ba7?cid=e16acd3a7ef344789b1a6cac6c2c8881&quot;,
+    &quot;track_number&quot;: 3,
+    &quot;album&quot;: {
+      &quot;album_type&quot;: &quot;album&quot;,
+      &quot;available_markets&quot;: [
+        &quot;US&quot;
+      ],
+      &quot;copyrights&quot;: null,
+      &quot;external_ids&quot;: null,
+      &quot;genres&quot;: null,
+      &quot;images&quot;: [
+        {
+          &quot;height&quot;: 640,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/da1dbb712529e2cf93d12c1d2073f6217fe7c03e&quot;,
+          &quot;width&quot;: 640
+        },
+        {
+          &quot;height&quot;: 300,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/65ee0e62f4538a5cb176137d34ae0c623f4cbba1&quot;,
+          &quot;width&quot;: 300
+        },
+        {
+          &quot;height&quot;: 64,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/0a46e564e3629a0471f2a6ee31b41d5589762c98&quot;,
+          &quot;width&quot;: 64
+        }
+      ],
+      &quot;name&quot;: &quot;Santigold&quot;,
+      &quot;popularity&quot;: null,
+      &quot;release_date&quot;: null,
+      &quot;release_date_precision&quot;: null,
+      &quot;artists&quot;: [
+        {
+          &quot;followers&quot;: null,
+          &quot;genres&quot;: null,
+          &quot;images&quot;: null,
+          &quot;name&quot;: &quot;Santigold&quot;,
+          &quot;popularity&quot;: null,
+          &quot;top_tracks&quot;: {
+          },
+          &quot;external_urls&quot;: {
+            &quot;spotify&quot;: &quot;https://open.spotify.com/artist/6Jrxnp0JgqmeUX1veU591p&quot;
+          },
+          &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/6Jrxnp0JgqmeUX1veU591p&quot;,
+          &quot;id&quot;: &quot;6Jrxnp0JgqmeUX1veU591p&quot;,
+          &quot;type&quot;: &quot;artist&quot;,
+          &quot;uri&quot;: &quot;spotify:artist:6Jrxnp0JgqmeUX1veU591p&quot;
+        }
+      ],
+      &quot;tracks_cache&quot;: null,
+      &quot;total_tracks&quot;: null,
+      &quot;external_urls&quot;: {
+        &quot;spotify&quot;: &quot;https://open.spotify.com/album/4yATru0hY3VgRHSreswbGj&quot;
+      },
+      &quot;href&quot;: &quot;https://api.spotify.com/v1/albums/4yATru0hY3VgRHSreswbGj&quot;,
+      &quot;id&quot;: &quot;4yATru0hY3VgRHSreswbGj&quot;,
+      &quot;type&quot;: &quot;album&quot;,
+      &quot;uri&quot;: &quot;spotify:album:4yATru0hY3VgRHSreswbGj&quot;
+    },
+    &quot;artists&quot;: [
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;Santigold&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/6Jrxnp0JgqmeUX1veU591p&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/6Jrxnp0JgqmeUX1veU591p&quot;,
+        &quot;id&quot;: &quot;6Jrxnp0JgqmeUX1veU591p&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:6Jrxnp0JgqmeUX1veU591p&quot;
+      },
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;Spank Rock&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/1LcLsIWOl1Z8vo1wl6bxg2&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/1LcLsIWOl1Z8vo1wl6bxg2&quot;,
+        &quot;id&quot;: &quot;1LcLsIWOl1Z8vo1wl6bxg2&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:1LcLsIWOl1Z8vo1wl6bxg2&quot;
+      }
+    ],
+    &quot;external_urls&quot;: {
+      &quot;spotify&quot;: &quot;https://open.spotify.com/track/2RBmWAhs6yX4SDYQX4zgF1&quot;
+    },
+    &quot;href&quot;: &quot;https://api.spotify.com/v1/tracks/2RBmWAhs6yX4SDYQX4zgF1&quot;,
+    &quot;id&quot;: &quot;2RBmWAhs6yX4SDYQX4zgF1&quot;,
+    &quot;type&quot;: &quot;track&quot;,
+    &quot;uri&quot;: &quot;spotify:track:2RBmWAhs6yX4SDYQX4zgF1&quot;
+  },
+  {
+    &quot;available_markets&quot;: [
+      &quot;AD&quot;,
+      &quot;AR&quot;,
+      &quot;AT&quot;,
+      &quot;AU&quot;,
+      &quot;BE&quot;,
+      &quot;BG&quot;,
+      &quot;BO&quot;,
+      &quot;BR&quot;,
+      &quot;CA&quot;,
+      &quot;CH&quot;,
+      &quot;CL&quot;,
+      &quot;CO&quot;,
+      &quot;CR&quot;,
+      &quot;CY&quot;,
+      &quot;CZ&quot;,
+      &quot;DE&quot;,
+      &quot;DK&quot;,
+      &quot;DO&quot;,
+      &quot;EC&quot;,
+      &quot;EE&quot;,
+      &quot;ES&quot;,
+      &quot;FI&quot;,
+      &quot;FR&quot;,
+      &quot;GB&quot;,
+      &quot;GR&quot;,
+      &quot;GT&quot;,
+      &quot;HK&quot;,
+      &quot;HN&quot;,
+      &quot;HU&quot;,
+      &quot;ID&quot;,
+      &quot;IE&quot;,
+      &quot;IS&quot;,
+      &quot;IT&quot;,
+      &quot;JP&quot;,
+      &quot;LI&quot;,
+      &quot;LT&quot;,
+      &quot;LU&quot;,
+      &quot;LV&quot;,
+      &quot;MC&quot;,
+      &quot;MT&quot;,
+      &quot;MX&quot;,
+      &quot;MY&quot;,
+      &quot;NI&quot;,
+      &quot;NL&quot;,
+      &quot;NO&quot;,
+      &quot;NZ&quot;,
+      &quot;PA&quot;,
+      &quot;PE&quot;,
+      &quot;PH&quot;,
+      &quot;PL&quot;,
+      &quot;PT&quot;,
+      &quot;PY&quot;,
+      &quot;SE&quot;,
+      &quot;SG&quot;,
+      &quot;SK&quot;,
+      &quot;SV&quot;,
+      &quot;TR&quot;,
+      &quot;TW&quot;,
+      &quot;US&quot;,
+      &quot;UY&quot;
+    ],
+    &quot;disc_number&quot;: 1,
+    &quot;duration_ms&quot;: 204750,
+    &quot;explicit&quot;: false,
+    &quot;external_ids&quot;: {
+      &quot;isrc&quot;: &quot;GBDMT1400313&quot;
+    },
+    &quot;name&quot;: &quot;Bye Bye Bye - Rock&quot;,
+    &quot;popularity&quot;: 48,
+    &quot;preview_url&quot;: &quot;https://p.scdn.co/mp3-preview/0985eb3d9c9faf986a80644eebcd1a8231950b1e?cid=e16acd3a7ef344789b1a6cac6c2c8881&quot;,
+    &quot;track_number&quot;: 1,
+    &quot;album&quot;: {
+      &quot;album_type&quot;: &quot;single&quot;,
+      &quot;available_markets&quot;: [
+        &quot;AD&quot;,
+        &quot;AR&quot;,
+        &quot;AT&quot;,
+        &quot;AU&quot;,
+        &quot;BE&quot;,
+        &quot;BG&quot;,
+        &quot;BO&quot;,
+        &quot;BR&quot;,
+        &quot;CA&quot;,
+        &quot;CH&quot;,
+        &quot;CL&quot;,
+        &quot;CO&quot;,
+        &quot;CR&quot;,
+        &quot;CY&quot;,
+        &quot;CZ&quot;,
+        &quot;DE&quot;,
+        &quot;DK&quot;,
+        &quot;DO&quot;,
+        &quot;EC&quot;,
+        &quot;EE&quot;,
+        &quot;ES&quot;,
+        &quot;FI&quot;,
+        &quot;FR&quot;,
+        &quot;GB&quot;,
+        &quot;GR&quot;,
+        &quot;GT&quot;,
+        &quot;HK&quot;,
+        &quot;HN&quot;,
+        &quot;HU&quot;,
+        &quot;ID&quot;,
+        &quot;IE&quot;,
+        &quot;IS&quot;,
+        &quot;IT&quot;,
+        &quot;JP&quot;,
+        &quot;LI&quot;,
+        &quot;LT&quot;,
+        &quot;LU&quot;,
+        &quot;LV&quot;,
+        &quot;MC&quot;,
+        &quot;MT&quot;,
+        &quot;MX&quot;,
+        &quot;MY&quot;,
+        &quot;NI&quot;,
+        &quot;NL&quot;,
+        &quot;NO&quot;,
+        &quot;NZ&quot;,
+        &quot;PA&quot;,
+        &quot;PE&quot;,
+        &quot;PH&quot;,
+        &quot;PL&quot;,
+        &quot;PT&quot;,
+        &quot;PY&quot;,
+        &quot;SE&quot;,
+        &quot;SG&quot;,
+        &quot;SK&quot;,
+        &quot;SV&quot;,
+        &quot;TR&quot;,
+        &quot;TW&quot;,
+        &quot;US&quot;,
+        &quot;UY&quot;
+      ],
+      &quot;copyrights&quot;: null,
+      &quot;external_ids&quot;: null,
+      &quot;genres&quot;: null,
+      &quot;images&quot;: [
+        {
+          &quot;height&quot;: 640,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/4cc97e32cd8681a6fdfc3986b2dba050422cf3e5&quot;,
+          &quot;width&quot;: 640
+        },
+        {
+          &quot;height&quot;: 300,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/6530699d9453756b4ab67ace1e32b01934c507ec&quot;,
+          &quot;width&quot;: 300
+        },
+        {
+          &quot;height&quot;: 64,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/15a4db4bae8b4c7023064a824b5afd8fd11a7469&quot;,
+          &quot;width&quot;: 64
+        }
+      ],
+      &quot;name&quot;: &quot;Bye Bye Bye (Rock)&quot;,
+      &quot;popularity&quot;: null,
+      &quot;release_date&quot;: null,
+      &quot;release_date_precision&quot;: null,
+      &quot;artists&quot;: [
+        {
+          &quot;followers&quot;: null,
+          &quot;genres&quot;: null,
+          &quot;images&quot;: null,
+          &quot;name&quot;: &quot;Our Last Night&quot;,
+          &quot;popularity&quot;: null,
+          &quot;top_tracks&quot;: {
+          },
+          &quot;external_urls&quot;: {
+            &quot;spotify&quot;: &quot;https://open.spotify.com/artist/00YTqRClk82aMchQQpYMd5&quot;
+          },
+          &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/00YTqRClk82aMchQQpYMd5&quot;,
+          &quot;id&quot;: &quot;00YTqRClk82aMchQQpYMd5&quot;,
+          &quot;type&quot;: &quot;artist&quot;,
+          &quot;uri&quot;: &quot;spotify:artist:00YTqRClk82aMchQQpYMd5&quot;
+        },
+        {
+          &quot;followers&quot;: null,
+          &quot;genres&quot;: null,
+          &quot;images&quot;: null,
+          &quot;name&quot;: &quot;Cody Carson of Set It Off&quot;,
+          &quot;popularity&quot;: null,
+          &quot;top_tracks&quot;: {
+          },
+          &quot;external_urls&quot;: {
+            &quot;spotify&quot;: &quot;https://open.spotify.com/artist/46diavNEqLFH7j46nwIOyr&quot;
+          },
+          &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/46diavNEqLFH7j46nwIOyr&quot;,
+          &quot;id&quot;: &quot;46diavNEqLFH7j46nwIOyr&quot;,
+          &quot;type&quot;: &quot;artist&quot;,
+          &quot;uri&quot;: &quot;spotify:artist:46diavNEqLFH7j46nwIOyr&quot;
+        }
+      ],
+      &quot;tracks_cache&quot;: null,
+      &quot;total_tracks&quot;: null,
+      &quot;external_urls&quot;: {
+        &quot;spotify&quot;: &quot;https://open.spotify.com/album/32vwxFdKTJzjbEiMEdE01C&quot;
+      },
+      &quot;href&quot;: &quot;https://api.spotify.com/v1/albums/32vwxFdKTJzjbEiMEdE01C&quot;,
+      &quot;id&quot;: &quot;32vwxFdKTJzjbEiMEdE01C&quot;,
+      &quot;type&quot;: &quot;album&quot;,
+      &quot;uri&quot;: &quot;spotify:album:32vwxFdKTJzjbEiMEdE01C&quot;
+    },
+    &quot;artists&quot;: [
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;Our Last Night&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/00YTqRClk82aMchQQpYMd5&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/00YTqRClk82aMchQQpYMd5&quot;,
+        &quot;id&quot;: &quot;00YTqRClk82aMchQQpYMd5&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:00YTqRClk82aMchQQpYMd5&quot;
+      },
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;Cody Carson of Set It Off&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/46diavNEqLFH7j46nwIOyr&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/46diavNEqLFH7j46nwIOyr&quot;,
+        &quot;id&quot;: &quot;46diavNEqLFH7j46nwIOyr&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:46diavNEqLFH7j46nwIOyr&quot;
+      }
+    ],
+    &quot;external_urls&quot;: {
+      &quot;spotify&quot;: &quot;https://open.spotify.com/track/0xBM3pJ8bwpFFWelb20Zjg&quot;
+    },
+    &quot;href&quot;: &quot;https://api.spotify.com/v1/tracks/0xBM3pJ8bwpFFWelb20Zjg&quot;,
+    &quot;id&quot;: &quot;0xBM3pJ8bwpFFWelb20Zjg&quot;,
+    &quot;type&quot;: &quot;track&quot;,
+    &quot;uri&quot;: &quot;spotify:track:0xBM3pJ8bwpFFWelb20Zjg&quot;
+  },
+  {
+    &quot;available_markets&quot;: [
+      &quot;AD&quot;,
+      &quot;AR&quot;,
+      &quot;AT&quot;,
+      &quot;AU&quot;,
+      &quot;BE&quot;,
+      &quot;BG&quot;,
+      &quot;BO&quot;,
+      &quot;BR&quot;,
+      &quot;CA&quot;,
+      &quot;CH&quot;,
+      &quot;CL&quot;,
+      &quot;CO&quot;,
+      &quot;CR&quot;,
+      &quot;CY&quot;,
+      &quot;CZ&quot;,
+      &quot;DE&quot;,
+      &quot;DK&quot;,
+      &quot;DO&quot;,
+      &quot;EC&quot;,
+      &quot;EE&quot;,
+      &quot;ES&quot;,
+      &quot;FI&quot;,
+      &quot;FR&quot;,
+      &quot;GB&quot;,
+      &quot;GR&quot;,
+      &quot;GT&quot;,
+      &quot;HK&quot;,
+      &quot;HN&quot;,
+      &quot;HU&quot;,
+      &quot;ID&quot;,
+      &quot;IE&quot;,
+      &quot;IS&quot;,
+      &quot;IT&quot;,
+      &quot;JP&quot;,
+      &quot;LI&quot;,
+      &quot;LT&quot;,
+      &quot;LU&quot;,
+      &quot;LV&quot;,
+      &quot;MC&quot;,
+      &quot;MT&quot;,
+      &quot;MX&quot;,
+      &quot;MY&quot;,
+      &quot;NI&quot;,
+      &quot;NL&quot;,
+      &quot;NO&quot;,
+      &quot;NZ&quot;,
+      &quot;PA&quot;,
+      &quot;PE&quot;,
+      &quot;PH&quot;,
+      &quot;PL&quot;,
+      &quot;PT&quot;,
+      &quot;PY&quot;,
+      &quot;SE&quot;,
+      &quot;SG&quot;,
+      &quot;SK&quot;,
+      &quot;SV&quot;,
+      &quot;TR&quot;,
+      &quot;TW&quot;,
+      &quot;US&quot;,
+      &quot;UY&quot;
+    ],
+    &quot;disc_number&quot;: 1,
+    &quot;duration_ms&quot;: 193186,
+    &quot;explicit&quot;: false,
+    &quot;external_ids&quot;: {
+      &quot;isrc&quot;: &quot;USRHD0430708&quot;
+    },
+    &quot;name&quot;: &quot;Let It Rock&quot;,
+    &quot;popularity&quot;: 43,
+    &quot;preview_url&quot;: &quot;https://p.scdn.co/mp3-preview/949d0863cd53192af882d4350e4509880b4f6a19?cid=e16acd3a7ef344789b1a6cac6c2c8881&quot;,
+    &quot;track_number&quot;: 6,
+    &quot;album&quot;: {
+      &quot;album_type&quot;: &quot;album&quot;,
+      &quot;available_markets&quot;: [
+        &quot;AD&quot;,
+        &quot;AR&quot;,
+        &quot;AT&quot;,
+        &quot;AU&quot;,
+        &quot;BE&quot;,
+        &quot;BG&quot;,
+        &quot;BO&quot;,
+        &quot;BR&quot;,
+        &quot;CA&quot;,
+        &quot;CH&quot;,
+        &quot;CL&quot;,
+        &quot;CO&quot;,
+        &quot;CR&quot;,
+        &quot;CY&quot;,
+        &quot;CZ&quot;,
+        &quot;DE&quot;,
+        &quot;DK&quot;,
+        &quot;DO&quot;,
+        &quot;EC&quot;,
+        &quot;EE&quot;,
+        &quot;ES&quot;,
+        &quot;FI&quot;,
+        &quot;FR&quot;,
+        &quot;GB&quot;,
+        &quot;GR&quot;,
+        &quot;GT&quot;,
+        &quot;HK&quot;,
+        &quot;HN&quot;,
+        &quot;HU&quot;,
+        &quot;ID&quot;,
+        &quot;IE&quot;,
+        &quot;IS&quot;,
+        &quot;IT&quot;,
+        &quot;JP&quot;,
+        &quot;LI&quot;,
+        &quot;LT&quot;,
+        &quot;LU&quot;,
+        &quot;LV&quot;,
+        &quot;MC&quot;,
+        &quot;MT&quot;,
+        &quot;MX&quot;,
+        &quot;MY&quot;,
+        &quot;NI&quot;,
+        &quot;NL&quot;,
+        &quot;NO&quot;,
+        &quot;NZ&quot;,
+        &quot;PA&quot;,
+        &quot;PE&quot;,
+        &quot;PH&quot;,
+        &quot;PL&quot;,
+        &quot;PT&quot;,
+        &quot;PY&quot;,
+        &quot;SE&quot;,
+        &quot;SG&quot;,
+        &quot;SK&quot;,
+        &quot;SV&quot;,
+        &quot;TR&quot;,
+        &quot;TW&quot;,
+        &quot;US&quot;,
+        &quot;UY&quot;
+      ],
+      &quot;copyrights&quot;: null,
+      &quot;external_ids&quot;: null,
+      &quot;genres&quot;: null,
+      &quot;images&quot;: [
+        {
+          &quot;height&quot;: 640,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/74d4eaf2bc05b5019c0cfab75349384fd8bf1f22&quot;,
+          &quot;width&quot;: 640
+        },
+        {
+          &quot;height&quot;: 300,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/27a187231d9ebfd8271e266850650ce8117917b1&quot;,
+          &quot;width&quot;: 300
+        },
+        {
+          &quot;height&quot;: 64,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/c6e6c15c876e9104bca6aa80d8bcd73cdffcf974&quot;,
+          &quot;width&quot;: 64
+        }
+      ],
+      &quot;name&quot;: &quot;The Very Best of Jerry Garcia&quot;,
+      &quot;popularity&quot;: null,
+      &quot;release_date&quot;: null,
+      &quot;release_date_precision&quot;: null,
+      &quot;artists&quot;: [
+        {
+          &quot;followers&quot;: null,
+          &quot;genres&quot;: null,
+          &quot;images&quot;: null,
+          &quot;name&quot;: &quot;Jerry Garcia&quot;,
+          &quot;popularity&quot;: null,
+          &quot;top_tracks&quot;: {
+          },
+          &quot;external_urls&quot;: {
+            &quot;spotify&quot;: &quot;https://open.spotify.com/artist/3QDaXfnxfQqqJQK5lSdjLN&quot;
+          },
+          &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/3QDaXfnxfQqqJQK5lSdjLN&quot;,
+          &quot;id&quot;: &quot;3QDaXfnxfQqqJQK5lSdjLN&quot;,
+          &quot;type&quot;: &quot;artist&quot;,
+          &quot;uri&quot;: &quot;spotify:artist:3QDaXfnxfQqqJQK5lSdjLN&quot;
+        }
+      ],
+      &quot;tracks_cache&quot;: null,
+      &quot;total_tracks&quot;: null,
+      &quot;external_urls&quot;: {
+        &quot;spotify&quot;: &quot;https://open.spotify.com/album/1YdrVBpEJWLnMvdmQBzfuo&quot;
+      },
+      &quot;href&quot;: &quot;https://api.spotify.com/v1/albums/1YdrVBpEJWLnMvdmQBzfuo&quot;,
+      &quot;id&quot;: &quot;1YdrVBpEJWLnMvdmQBzfuo&quot;,
+      &quot;type&quot;: &quot;album&quot;,
+      &quot;uri&quot;: &quot;spotify:album:1YdrVBpEJWLnMvdmQBzfuo&quot;
+    },
+    &quot;artists&quot;: [
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;Jerry Garcia&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/3QDaXfnxfQqqJQK5lSdjLN&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/3QDaXfnxfQqqJQK5lSdjLN&quot;,
+        &quot;id&quot;: &quot;3QDaXfnxfQqqJQK5lSdjLN&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:3QDaXfnxfQqqJQK5lSdjLN&quot;
+      }
+    ],
+    &quot;external_urls&quot;: {
+      &quot;spotify&quot;: &quot;https://open.spotify.com/track/0SDPAqbWH5P5XGBY1wL7Wc&quot;
+    },
+    &quot;href&quot;: &quot;https://api.spotify.com/v1/tracks/0SDPAqbWH5P5XGBY1wL7Wc&quot;,
+    &quot;id&quot;: &quot;0SDPAqbWH5P5XGBY1wL7Wc&quot;,
+    &quot;type&quot;: &quot;track&quot;,
+    &quot;uri&quot;: &quot;spotify:track:0SDPAqbWH5P5XGBY1wL7Wc&quot;
+  },
+  {
+    &quot;available_markets&quot;: [
+      &quot;AD&quot;,
+      &quot;AR&quot;,
+      &quot;AT&quot;,
+      &quot;AU&quot;,
+      &quot;BE&quot;,
+      &quot;BG&quot;,
+      &quot;BO&quot;,
+      &quot;BR&quot;,
+      &quot;CA&quot;,
+      &quot;CH&quot;,
+      &quot;CL&quot;,
+      &quot;CO&quot;,
+      &quot;CR&quot;,
+      &quot;CY&quot;,
+      &quot;CZ&quot;,
+      &quot;DE&quot;,
+      &quot;DK&quot;,
+      &quot;DO&quot;,
+      &quot;EC&quot;,
+      &quot;EE&quot;,
+      &quot;ES&quot;,
+      &quot;FI&quot;,
+      &quot;FR&quot;,
+      &quot;GB&quot;,
+      &quot;GR&quot;,
+      &quot;GT&quot;,
+      &quot;HK&quot;,
+      &quot;HN&quot;,
+      &quot;HU&quot;,
+      &quot;ID&quot;,
+      &quot;IE&quot;,
+      &quot;IS&quot;,
+      &quot;IT&quot;,
+      &quot;JP&quot;,
+      &quot;LI&quot;,
+      &quot;LT&quot;,
+      &quot;LU&quot;,
+      &quot;LV&quot;,
+      &quot;MC&quot;,
+      &quot;MT&quot;,
+      &quot;MX&quot;,
+      &quot;MY&quot;,
+      &quot;NI&quot;,
+      &quot;NL&quot;,
+      &quot;NO&quot;,
+      &quot;NZ&quot;,
+      &quot;PA&quot;,
+      &quot;PE&quot;,
+      &quot;PH&quot;,
+      &quot;PL&quot;,
+      &quot;PT&quot;,
+      &quot;PY&quot;,
+      &quot;SE&quot;,
+      &quot;SG&quot;,
+      &quot;SK&quot;,
+      &quot;SV&quot;,
+      &quot;TR&quot;,
+      &quot;TW&quot;,
+      &quot;US&quot;,
+      &quot;UY&quot;
+    ],
+    &quot;disc_number&quot;: 1,
+    &quot;duration_ms&quot;: 230031,
+    &quot;explicit&quot;: false,
+    &quot;external_ids&quot;: {
+      &quot;isrc&quot;: &quot;GBDMT1500053&quot;
+    },
+    &quot;name&quot;: &quot;The Heart Wants What It Wants - Rock&quot;,
+    &quot;popularity&quot;: 45,
+    &quot;preview_url&quot;: &quot;https://p.scdn.co/mp3-preview/e74af35d226462d7f681f7c2f36b062b3bfef5da?cid=e16acd3a7ef344789b1a6cac6c2c8881&quot;,
+    &quot;track_number&quot;: 1,
+    &quot;album&quot;: {
+      &quot;album_type&quot;: &quot;single&quot;,
+      &quot;available_markets&quot;: [
+        &quot;AD&quot;,
+        &quot;AR&quot;,
+        &quot;AT&quot;,
+        &quot;AU&quot;,
+        &quot;BE&quot;,
+        &quot;BG&quot;,
+        &quot;BO&quot;,
+        &quot;BR&quot;,
+        &quot;CA&quot;,
+        &quot;CH&quot;,
+        &quot;CL&quot;,
+        &quot;CO&quot;,
+        &quot;CR&quot;,
+        &quot;CY&quot;,
+        &quot;CZ&quot;,
+        &quot;DE&quot;,
+        &quot;DK&quot;,
+        &quot;DO&quot;,
+        &quot;EC&quot;,
+        &quot;EE&quot;,
+        &quot;ES&quot;,
+        &quot;FI&quot;,
+        &quot;FR&quot;,
+        &quot;GB&quot;,
+        &quot;GR&quot;,
+        &quot;GT&quot;,
+        &quot;HK&quot;,
+        &quot;HN&quot;,
+        &quot;HU&quot;,
+        &quot;ID&quot;,
+        &quot;IE&quot;,
+        &quot;IS&quot;,
+        &quot;IT&quot;,
+        &quot;JP&quot;,
+        &quot;LI&quot;,
+        &quot;LT&quot;,
+        &quot;LU&quot;,
+        &quot;LV&quot;,
+        &quot;MC&quot;,
+        &quot;MT&quot;,
+        &quot;MX&quot;,
+        &quot;MY&quot;,
+        &quot;NI&quot;,
+        &quot;NL&quot;,
+        &quot;NO&quot;,
+        &quot;NZ&quot;,
+        &quot;PA&quot;,
+        &quot;PE&quot;,
+        &quot;PH&quot;,
+        &quot;PL&quot;,
+        &quot;PT&quot;,
+        &quot;PY&quot;,
+        &quot;SE&quot;,
+        &quot;SG&quot;,
+        &quot;SK&quot;,
+        &quot;SV&quot;,
+        &quot;TR&quot;,
+        &quot;TW&quot;,
+        &quot;US&quot;,
+        &quot;UY&quot;
+      ],
+      &quot;copyrights&quot;: null,
+      &quot;external_ids&quot;: null,
+      &quot;genres&quot;: null,
+      &quot;images&quot;: [
+        {
+          &quot;height&quot;: 640,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/c69976608b0e38551aa27c43454a171a59e408ef&quot;,
+          &quot;width&quot;: 640
+        },
+        {
+          &quot;height&quot;: 300,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/c0f77164a153ccb46e3d7c6e3b20d3dc01d44592&quot;,
+          &quot;width&quot;: 300
+        },
+        {
+          &quot;height&quot;: 64,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/05e6d14146e5f297c9b05118e487568fcd3e1ffb&quot;,
+          &quot;width&quot;: 64
+        }
+      ],
+      &quot;name&quot;: &quot;The Heart Wants What It Wants (Rock)&quot;,
+      &quot;popularity&quot;: null,
+      &quot;release_date&quot;: null,
+      &quot;release_date_precision&quot;: null,
+      &quot;artists&quot;: [
+        {
+          &quot;followers&quot;: null,
+          &quot;genres&quot;: null,
+          &quot;images&quot;: null,
+          &quot;name&quot;: &quot;Our Last Night&quot;,
+          &quot;popularity&quot;: null,
+          &quot;top_tracks&quot;: {
+          },
+          &quot;external_urls&quot;: {
+            &quot;spotify&quot;: &quot;https://open.spotify.com/artist/00YTqRClk82aMchQQpYMd5&quot;
+          },
+          &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/00YTqRClk82aMchQQpYMd5&quot;,
+          &quot;id&quot;: &quot;00YTqRClk82aMchQQpYMd5&quot;,
+          &quot;type&quot;: &quot;artist&quot;,
+          &quot;uri&quot;: &quot;spotify:artist:00YTqRClk82aMchQQpYMd5&quot;
+        },
+        {
+          &quot;followers&quot;: null,
+          &quot;genres&quot;: null,
+          &quot;images&quot;: null,
+          &quot;name&quot;: &quot;Craig Owens&quot;,
+          &quot;popularity&quot;: null,
+          &quot;top_tracks&quot;: {
+          },
+          &quot;external_urls&quot;: {
+            &quot;spotify&quot;: &quot;https://open.spotify.com/artist/5aYf0AInMznHfXGaemKEBv&quot;
+          },
+          &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/5aYf0AInMznHfXGaemKEBv&quot;,
+          &quot;id&quot;: &quot;5aYf0AInMznHfXGaemKEBv&quot;,
+          &quot;type&quot;: &quot;artist&quot;,
+          &quot;uri&quot;: &quot;spotify:artist:5aYf0AInMznHfXGaemKEBv&quot;
+        }
+      ],
+      &quot;tracks_cache&quot;: null,
+      &quot;total_tracks&quot;: null,
+      &quot;external_urls&quot;: {
+        &quot;spotify&quot;: &quot;https://open.spotify.com/album/65wGPS0BCZxD77HzKl2Tr9&quot;
+      },
+      &quot;href&quot;: &quot;https://api.spotify.com/v1/albums/65wGPS0BCZxD77HzKl2Tr9&quot;,
+      &quot;id&quot;: &quot;65wGPS0BCZxD77HzKl2Tr9&quot;,
+      &quot;type&quot;: &quot;album&quot;,
+      &quot;uri&quot;: &quot;spotify:album:65wGPS0BCZxD77HzKl2Tr9&quot;
+    },
+    &quot;artists&quot;: [
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;Our Last Night&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/00YTqRClk82aMchQQpYMd5&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/00YTqRClk82aMchQQpYMd5&quot;,
+        &quot;id&quot;: &quot;00YTqRClk82aMchQQpYMd5&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:00YTqRClk82aMchQQpYMd5&quot;
+      },
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;Craig Owens&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/5aYf0AInMznHfXGaemKEBv&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/5aYf0AInMznHfXGaemKEBv&quot;,
+        &quot;id&quot;: &quot;5aYf0AInMznHfXGaemKEBv&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:5aYf0AInMznHfXGaemKEBv&quot;
+      }
+    ],
+    &quot;external_urls&quot;: {
+      &quot;spotify&quot;: &quot;https://open.spotify.com/track/6JDbCovEY0pteAIThDsA35&quot;
+    },
+    &quot;href&quot;: &quot;https://api.spotify.com/v1/tracks/6JDbCovEY0pteAIThDsA35&quot;,
+    &quot;id&quot;: &quot;6JDbCovEY0pteAIThDsA35&quot;,
+    &quot;type&quot;: &quot;track&quot;,
+    &quot;uri&quot;: &quot;spotify:track:6JDbCovEY0pteAIThDsA35&quot;
+  },
+  {
+    &quot;available_markets&quot;: [
+      &quot;AD&quot;,
+      &quot;AR&quot;,
+      &quot;AT&quot;,
+      &quot;AU&quot;,
+      &quot;BE&quot;,
+      &quot;BG&quot;,
+      &quot;BO&quot;,
+      &quot;BR&quot;,
+      &quot;CA&quot;,
+      &quot;CH&quot;,
+      &quot;CL&quot;,
+      &quot;CO&quot;,
+      &quot;CR&quot;,
+      &quot;CY&quot;,
+      &quot;CZ&quot;,
+      &quot;DE&quot;,
+      &quot;DK&quot;,
+      &quot;DO&quot;,
+      &quot;EC&quot;,
+      &quot;EE&quot;,
+      &quot;ES&quot;,
+      &quot;FI&quot;,
+      &quot;FR&quot;,
+      &quot;GB&quot;,
+      &quot;GR&quot;,
+      &quot;GT&quot;,
+      &quot;HK&quot;,
+      &quot;HN&quot;,
+      &quot;HU&quot;,
+      &quot;ID&quot;,
+      &quot;IE&quot;,
+      &quot;IS&quot;,
+      &quot;IT&quot;,
+      &quot;JP&quot;,
+      &quot;LI&quot;,
+      &quot;LT&quot;,
+      &quot;LU&quot;,
+      &quot;LV&quot;,
+      &quot;MC&quot;,
+      &quot;MT&quot;,
+      &quot;MX&quot;,
+      &quot;MY&quot;,
+      &quot;NI&quot;,
+      &quot;NL&quot;,
+      &quot;NO&quot;,
+      &quot;NZ&quot;,
+      &quot;PA&quot;,
+      &quot;PE&quot;,
+      &quot;PH&quot;,
+      &quot;PL&quot;,
+      &quot;PT&quot;,
+      &quot;PY&quot;,
+      &quot;SE&quot;,
+      &quot;SG&quot;,
+      &quot;SK&quot;,
+      &quot;SV&quot;,
+      &quot;TR&quot;,
+      &quot;TW&quot;,
+      &quot;US&quot;,
+      &quot;UY&quot;
+    ],
+    &quot;disc_number&quot;: 1,
+    &quot;duration_ms&quot;: 242733,
+    &quot;explicit&quot;: true,
+    &quot;external_ids&quot;: {
+      &quot;isrc&quot;: &quot;TCACB1407358&quot;
+    },
+    &quot;name&quot;: &quot;Pay for It (feat. Kendrick Lamar &amp; Chantal)&quot;,
+    &quot;popularity&quot;: 47,
+    &quot;preview_url&quot;: &quot;https://p.scdn.co/mp3-preview/60697048a3cc96c8e5e99512b60af3688bf84fae?cid=e16acd3a7ef344789b1a6cac6c2c8881&quot;,
+    &quot;track_number&quot;: 1,
+    &quot;album&quot;: {
+      &quot;album_type&quot;: &quot;single&quot;,
+      &quot;available_markets&quot;: [
+        &quot;AD&quot;,
+        &quot;AR&quot;,
+        &quot;AT&quot;,
+        &quot;AU&quot;,
+        &quot;BE&quot;,
+        &quot;BG&quot;,
+        &quot;BO&quot;,
+        &quot;BR&quot;,
+        &quot;CA&quot;,
+        &quot;CH&quot;,
+        &quot;CL&quot;,
+        &quot;CO&quot;,
+        &quot;CR&quot;,
+        &quot;CY&quot;,
+        &quot;CZ&quot;,
+        &quot;DE&quot;,
+        &quot;DK&quot;,
+        &quot;DO&quot;,
+        &quot;EC&quot;,
+        &quot;EE&quot;,
+        &quot;ES&quot;,
+        &quot;FI&quot;,
+        &quot;FR&quot;,
+        &quot;GB&quot;,
+        &quot;GR&quot;,
+        &quot;GT&quot;,
+        &quot;HK&quot;,
+        &quot;HN&quot;,
+        &quot;HU&quot;,
+        &quot;ID&quot;,
+        &quot;IE&quot;,
+        &quot;IS&quot;,
+        &quot;IT&quot;,
+        &quot;JP&quot;,
+        &quot;LI&quot;,
+        &quot;LT&quot;,
+        &quot;LU&quot;,
+        &quot;LV&quot;,
+        &quot;MC&quot;,
+        &quot;MT&quot;,
+        &quot;MX&quot;,
+        &quot;MY&quot;,
+        &quot;NI&quot;,
+        &quot;NL&quot;,
+        &quot;NO&quot;,
+        &quot;NZ&quot;,
+        &quot;PA&quot;,
+        &quot;PE&quot;,
+        &quot;PH&quot;,
+        &quot;PL&quot;,
+        &quot;PT&quot;,
+        &quot;PY&quot;,
+        &quot;SE&quot;,
+        &quot;SG&quot;,
+        &quot;SK&quot;,
+        &quot;SV&quot;,
+        &quot;TR&quot;,
+        &quot;TW&quot;,
+        &quot;US&quot;,
+        &quot;UY&quot;
+      ],
+      &quot;copyrights&quot;: null,
+      &quot;external_ids&quot;: null,
+      &quot;genres&quot;: null,
+      &quot;images&quot;: [
+        {
+          &quot;height&quot;: 640,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/d148ae86177e34a45fa0b3c299fc3b99c8200382&quot;,
+          &quot;width&quot;: 640
+        },
+        {
+          &quot;height&quot;: 300,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/86cbdcdb2d19e9243e170cfdcaac39d49824bebc&quot;,
+          &quot;width&quot;: 300
+        },
+        {
+          &quot;height&quot;: 64,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/cbbca183e808adc9a1187178b95433df304a628c&quot;,
+          &quot;width&quot;: 64
+        }
+      ],
+      &quot;name&quot;: &quot;Pay for It (feat. Kendrick Lamar &amp; Chantal)&quot;,
+      &quot;popularity&quot;: null,
+      &quot;release_date&quot;: null,
+      &quot;release_date_precision&quot;: null,
+      &quot;artists&quot;: [
+        {
+          &quot;followers&quot;: null,
+          &quot;genres&quot;: null,
+          &quot;images&quot;: null,
+          &quot;name&quot;: &quot;Jay Rock&quot;,
+          &quot;popularity&quot;: null,
+          &quot;top_tracks&quot;: {
+          },
+          &quot;external_urls&quot;: {
+            &quot;spotify&quot;: &quot;https://open.spotify.com/artist/28ExwzUQsvgJooOI0X1mr3&quot;
+          },
+          &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/28ExwzUQsvgJooOI0X1mr3&quot;,
+          &quot;id&quot;: &quot;28ExwzUQsvgJooOI0X1mr3&quot;,
+          &quot;type&quot;: &quot;artist&quot;,
+          &quot;uri&quot;: &quot;spotify:artist:28ExwzUQsvgJooOI0X1mr3&quot;
+        }
+      ],
+      &quot;tracks_cache&quot;: null,
+      &quot;total_tracks&quot;: null,
+      &quot;external_urls&quot;: {
+        &quot;spotify&quot;: &quot;https://open.spotify.com/album/1BJQlvw5YQAq6gDrLxVb9y&quot;
+      },
+      &quot;href&quot;: &quot;https://api.spotify.com/v1/albums/1BJQlvw5YQAq6gDrLxVb9y&quot;,
+      &quot;id&quot;: &quot;1BJQlvw5YQAq6gDrLxVb9y&quot;,
+      &quot;type&quot;: &quot;album&quot;,
+      &quot;uri&quot;: &quot;spotify:album:1BJQlvw5YQAq6gDrLxVb9y&quot;
+    },
+    &quot;artists&quot;: [
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;Jay Rock&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/28ExwzUQsvgJooOI0X1mr3&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/28ExwzUQsvgJooOI0X1mr3&quot;,
+        &quot;id&quot;: &quot;28ExwzUQsvgJooOI0X1mr3&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:28ExwzUQsvgJooOI0X1mr3&quot;
+      },
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;Kendrick Lamar&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/2YZyLoL8N0Wb9xBt1NhZWg&quot;,
+        &quot;id&quot;: &quot;2YZyLoL8N0Wb9xBt1NhZWg&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:2YZyLoL8N0Wb9xBt1NhZWg&quot;
+      },
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;Chantal&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/4a3W4ra6783d4ohUqrD8pb&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/4a3W4ra6783d4ohUqrD8pb&quot;,
+        &quot;id&quot;: &quot;4a3W4ra6783d4ohUqrD8pb&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:4a3W4ra6783d4ohUqrD8pb&quot;
+      }
+    ],
+    &quot;external_urls&quot;: {
+      &quot;spotify&quot;: &quot;https://open.spotify.com/track/3uya2Ph2zB84JMR28vqWK0&quot;
+    },
+    &quot;href&quot;: &quot;https://api.spotify.com/v1/tracks/3uya2Ph2zB84JMR28vqWK0&quot;,
+    &quot;id&quot;: &quot;3uya2Ph2zB84JMR28vqWK0&quot;,
+    &quot;type&quot;: &quot;track&quot;,
+    &quot;uri&quot;: &quot;spotify:track:3uya2Ph2zB84JMR28vqWK0&quot;
+  },
+  {
+    &quot;available_markets&quot;: [
+      &quot;CA&quot;,
+      &quot;MX&quot;,
+      &quot;US&quot;
+    ],
+    &quot;disc_number&quot;: 1,
+    &quot;duration_ms&quot;: 209640,
+    &quot;explicit&quot;: false,
+    &quot;external_ids&quot;: {
+      &quot;isrc&quot;: &quot;USWD11038147&quot;
+    },
+    &quot;name&quot;: &quot;Tear it Down&quot;,
+    &quot;popularity&quot;: 42,
+    &quot;preview_url&quot;: null,
+    &quot;track_number&quot;: 9,
+    &quot;album&quot;: {
+      &quot;album_type&quot;: &quot;album&quot;,
+      &quot;available_markets&quot;: [
+        &quot;CA&quot;,
+        &quot;MX&quot;,
+        &quot;US&quot;
+      ],
+      &quot;copyrights&quot;: null,
+      &quot;external_ids&quot;: null,
+      &quot;genres&quot;: null,
+      &quot;images&quot;: [
+        {
+          &quot;height&quot;: 640,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/57cb7d75e6b74fb4b30ad4836cdbcbe9f35693e7&quot;,
+          &quot;width&quot;: 640
+        },
+        {
+          &quot;height&quot;: 300,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/83f13bc97a7cf3caffc5804212b586947d7d8616&quot;,
+          &quot;width&quot;: 300
+        },
+        {
+          &quot;height&quot;: 64,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/17946d088aefce2ff66cac4effe441f103373dd5&quot;,
+          &quot;width&quot;: 64
+        }
+      ],
+      &quot;name&quot;: &quot;Camp Rock 2: The Final Jam&quot;,
+      &quot;popularity&quot;: null,
+      &quot;release_date&quot;: null,
+      &quot;release_date_precision&quot;: null,
+      &quot;artists&quot;: [
+        {
+          &quot;followers&quot;: null,
+          &quot;genres&quot;: null,
+          &quot;images&quot;: null,
+          &quot;name&quot;: &quot;Cast Of &#39;Camp Rock 2&#39;&quot;,
+          &quot;popularity&quot;: null,
+          &quot;top_tracks&quot;: {
+          },
+          &quot;external_urls&quot;: {
+            &quot;spotify&quot;: &quot;https://open.spotify.com/artist/4iQHkms1GjFd7pjSHqs68B&quot;
+          },
+          &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/4iQHkms1GjFd7pjSHqs68B&quot;,
+          &quot;id&quot;: &quot;4iQHkms1GjFd7pjSHqs68B&quot;,
+          &quot;type&quot;: &quot;artist&quot;,
+          &quot;uri&quot;: &quot;spotify:artist:4iQHkms1GjFd7pjSHqs68B&quot;
+        }
+      ],
+      &quot;tracks_cache&quot;: null,
+      &quot;total_tracks&quot;: null,
+      &quot;external_urls&quot;: {
+        &quot;spotify&quot;: &quot;https://open.spotify.com/album/5iK842b9xnZblgZkRxWCFe&quot;
+      },
+      &quot;href&quot;: &quot;https://api.spotify.com/v1/albums/5iK842b9xnZblgZkRxWCFe&quot;,
+      &quot;id&quot;: &quot;5iK842b9xnZblgZkRxWCFe&quot;,
+      &quot;type&quot;: &quot;album&quot;,
+      &quot;uri&quot;: &quot;spotify:album:5iK842b9xnZblgZkRxWCFe&quot;
+    },
+    &quot;artists&quot;: [
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;Meaghan Martin&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/4D4d4SGHSnXy5TxqhfDl3H&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/4D4d4SGHSnXy5TxqhfDl3H&quot;,
+        &quot;id&quot;: &quot;4D4d4SGHSnXy5TxqhfDl3H&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:4D4d4SGHSnXy5TxqhfDl3H&quot;
+      },
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;Matthew \&quot;Mdot\&quot; Finley&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/6VlHZVWsWDe7xtzWk5HxCk&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/6VlHZVWsWDe7xtzWk5HxCk&quot;,
+        &quot;id&quot;: &quot;6VlHZVWsWDe7xtzWk5HxCk&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:6VlHZVWsWDe7xtzWk5HxCk&quot;
+      }
+    ],
+    &quot;external_urls&quot;: {
+      &quot;spotify&quot;: &quot;https://open.spotify.com/track/4CiIdZ7Eg4zzrifatjZDWG&quot;
+    },
+    &quot;href&quot;: &quot;https://api.spotify.com/v1/tracks/4CiIdZ7Eg4zzrifatjZDWG&quot;,
+    &quot;id&quot;: &quot;4CiIdZ7Eg4zzrifatjZDWG&quot;,
+    &quot;type&quot;: &quot;track&quot;,
+    &quot;uri&quot;: &quot;spotify:track:4CiIdZ7Eg4zzrifatjZDWG&quot;
+  },
+  {
+    &quot;available_markets&quot;: [
+      &quot;AD&quot;,
+      &quot;AR&quot;,
+      &quot;AT&quot;,
+      &quot;AU&quot;,
+      &quot;BE&quot;,
+      &quot;BG&quot;,
+      &quot;BO&quot;,
+      &quot;BR&quot;,
+      &quot;CA&quot;,
+      &quot;CH&quot;,
+      &quot;CL&quot;,
+      &quot;CO&quot;,
+      &quot;CR&quot;,
+      &quot;CY&quot;,
+      &quot;CZ&quot;,
+      &quot;DE&quot;,
+      &quot;DK&quot;,
+      &quot;DO&quot;,
+      &quot;EC&quot;,
+      &quot;EE&quot;,
+      &quot;ES&quot;,
+      &quot;FI&quot;,
+      &quot;FR&quot;,
+      &quot;GB&quot;,
+      &quot;GR&quot;,
+      &quot;GT&quot;,
+      &quot;HK&quot;,
+      &quot;HN&quot;,
+      &quot;HU&quot;,
+      &quot;ID&quot;,
+      &quot;IE&quot;,
+      &quot;IS&quot;,
+      &quot;IT&quot;,
+      &quot;JP&quot;,
+      &quot;LI&quot;,
+      &quot;LT&quot;,
+      &quot;LU&quot;,
+      &quot;LV&quot;,
+      &quot;MC&quot;,
+      &quot;MT&quot;,
+      &quot;MX&quot;,
+      &quot;MY&quot;,
+      &quot;NI&quot;,
+      &quot;NL&quot;,
+      &quot;NO&quot;,
+      &quot;NZ&quot;,
+      &quot;PA&quot;,
+      &quot;PE&quot;,
+      &quot;PH&quot;,
+      &quot;PL&quot;,
+      &quot;PT&quot;,
+      &quot;PY&quot;,
+      &quot;SE&quot;,
+      &quot;SG&quot;,
+      &quot;SK&quot;,
+      &quot;SV&quot;,
+      &quot;TR&quot;,
+      &quot;TW&quot;,
+      &quot;US&quot;,
+      &quot;UY&quot;
+    ],
+    &quot;disc_number&quot;: 1,
+    &quot;duration_ms&quot;: 228266,
+    &quot;explicit&quot;: false,
+    &quot;external_ids&quot;: {
+      &quot;isrc&quot;: &quot;USVI20500538&quot;
+    },
+    &quot;name&quot;: &quot;Lean Wit It, Rock Wit It&quot;,
+    &quot;popularity&quot;: 41,
+    &quot;preview_url&quot;: null,
+    &quot;track_number&quot;: 6,
+    &quot;album&quot;: {
+      &quot;album_type&quot;: &quot;album&quot;,
+      &quot;available_markets&quot;: [
+        &quot;AD&quot;,
+        &quot;AR&quot;,
+        &quot;AT&quot;,
+        &quot;AU&quot;,
+        &quot;BE&quot;,
+        &quot;BG&quot;,
+        &quot;BO&quot;,
+        &quot;BR&quot;,
+        &quot;CA&quot;,
+        &quot;CH&quot;,
+        &quot;CL&quot;,
+        &quot;CO&quot;,
+        &quot;CR&quot;,
+        &quot;CY&quot;,
+        &quot;CZ&quot;,
+        &quot;DE&quot;,
+        &quot;DK&quot;,
+        &quot;DO&quot;,
+        &quot;EC&quot;,
+        &quot;EE&quot;,
+        &quot;ES&quot;,
+        &quot;FI&quot;,
+        &quot;FR&quot;,
+        &quot;GB&quot;,
+        &quot;GR&quot;,
+        &quot;GT&quot;,
+        &quot;HK&quot;,
+        &quot;HN&quot;,
+        &quot;HU&quot;,
+        &quot;ID&quot;,
+        &quot;IE&quot;,
+        &quot;IS&quot;,
+        &quot;IT&quot;,
+        &quot;JP&quot;,
+        &quot;LI&quot;,
+        &quot;LT&quot;,
+        &quot;LU&quot;,
+        &quot;LV&quot;,
+        &quot;MC&quot;,
+        &quot;MT&quot;,
+        &quot;MX&quot;,
+        &quot;MY&quot;,
+        &quot;NI&quot;,
+        &quot;NL&quot;,
+        &quot;NO&quot;,
+        &quot;NZ&quot;,
+        &quot;PA&quot;,
+        &quot;PE&quot;,
+        &quot;PH&quot;,
+        &quot;PL&quot;,
+        &quot;PT&quot;,
+        &quot;PY&quot;,
+        &quot;SE&quot;,
+        &quot;SG&quot;,
+        &quot;SK&quot;,
+        &quot;SV&quot;,
+        &quot;TR&quot;,
+        &quot;TW&quot;,
+        &quot;US&quot;,
+        &quot;UY&quot;
+      ],
+      &quot;copyrights&quot;: null,
+      &quot;external_ids&quot;: null,
+      &quot;genres&quot;: null,
+      &quot;images&quot;: [
+        {
+          &quot;height&quot;: 640,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/c4d1cc87113dbd7b2aef8b43d6cb4517015e4df6&quot;,
+          &quot;width&quot;: 640
+        },
+        {
+          &quot;height&quot;: 300,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/f2143aadc63757198f64f5c7863a502f15e00884&quot;,
+          &quot;width&quot;: 300
+        },
+        {
+          &quot;height&quot;: 64,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/02c2ec8bc6ddced93ebbcd88f346d78a9ae4927c&quot;,
+          &quot;width&quot;: 64
+        }
+      ],
+      &quot;name&quot;: &quot;On Top Of Our Game&quot;,
+      &quot;popularity&quot;: null,
+      &quot;release_date&quot;: null,
+      &quot;release_date_precision&quot;: null,
+      &quot;artists&quot;: [
+        {
+          &quot;followers&quot;: null,
+          &quot;genres&quot;: null,
+          &quot;images&quot;: null,
+          &quot;name&quot;: &quot;Dem Franchize Boyz&quot;,
+          &quot;popularity&quot;: null,
+          &quot;top_tracks&quot;: {
+          },
+          &quot;external_urls&quot;: {
+            &quot;spotify&quot;: &quot;https://open.spotify.com/artist/0VKTLKamj4IH8OfQbUL0kq&quot;
+          },
+          &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/0VKTLKamj4IH8OfQbUL0kq&quot;,
+          &quot;id&quot;: &quot;0VKTLKamj4IH8OfQbUL0kq&quot;,
+          &quot;type&quot;: &quot;artist&quot;,
+          &quot;uri&quot;: &quot;spotify:artist:0VKTLKamj4IH8OfQbUL0kq&quot;
+        }
+      ],
+      &quot;tracks_cache&quot;: null,
+      &quot;total_tracks&quot;: null,
+      &quot;external_urls&quot;: {
+        &quot;spotify&quot;: &quot;https://open.spotify.com/album/3l61DQblWp99XFUVJZyWoo&quot;
+      },
+      &quot;href&quot;: &quot;https://api.spotify.com/v1/albums/3l61DQblWp99XFUVJZyWoo&quot;,
+      &quot;id&quot;: &quot;3l61DQblWp99XFUVJZyWoo&quot;,
+      &quot;type&quot;: &quot;album&quot;,
+      &quot;uri&quot;: &quot;spotify:album:3l61DQblWp99XFUVJZyWoo&quot;
+    },
+    &quot;artists&quot;: [
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;Dem Franchize Boyz&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/0VKTLKamj4IH8OfQbUL0kq&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/0VKTLKamj4IH8OfQbUL0kq&quot;,
+        &quot;id&quot;: &quot;0VKTLKamj4IH8OfQbUL0kq&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:0VKTLKamj4IH8OfQbUL0kq&quot;
+      }
+    ],
+    &quot;external_urls&quot;: {
+      &quot;spotify&quot;: &quot;https://open.spotify.com/track/79TFhBofOArJSoyuVbB68L&quot;
+    },
+    &quot;href&quot;: &quot;https://api.spotify.com/v1/tracks/79TFhBofOArJSoyuVbB68L&quot;,
+    &quot;id&quot;: &quot;79TFhBofOArJSoyuVbB68L&quot;,
+    &quot;type&quot;: &quot;track&quot;,
+    &quot;uri&quot;: &quot;spotify:track:79TFhBofOArJSoyuVbB68L&quot;
+  },
+  {
+    &quot;available_markets&quot;: [
+      &quot;AD&quot;,
+      &quot;AR&quot;,
+      &quot;AT&quot;,
+      &quot;AU&quot;,
+      &quot;BE&quot;,
+      &quot;BG&quot;,
+      &quot;BO&quot;,
+      &quot;BR&quot;,
+      &quot;CA&quot;,
+      &quot;CH&quot;,
+      &quot;CL&quot;,
+      &quot;CO&quot;,
+      &quot;CR&quot;,
+      &quot;CY&quot;,
+      &quot;CZ&quot;,
+      &quot;DE&quot;,
+      &quot;DK&quot;,
+      &quot;DO&quot;,
+      &quot;EC&quot;,
+      &quot;EE&quot;,
+      &quot;ES&quot;,
+      &quot;FI&quot;,
+      &quot;FR&quot;,
+      &quot;GB&quot;,
+      &quot;GR&quot;,
+      &quot;GT&quot;,
+      &quot;HK&quot;,
+      &quot;HN&quot;,
+      &quot;HU&quot;,
+      &quot;ID&quot;,
+      &quot;IE&quot;,
+      &quot;IS&quot;,
+      &quot;IT&quot;,
+      &quot;JP&quot;,
+      &quot;LI&quot;,
+      &quot;LT&quot;,
+      &quot;LU&quot;,
+      &quot;LV&quot;,
+      &quot;MC&quot;,
+      &quot;MT&quot;,
+      &quot;MX&quot;,
+      &quot;MY&quot;,
+      &quot;NI&quot;,
+      &quot;NL&quot;,
+      &quot;NO&quot;,
+      &quot;NZ&quot;,
+      &quot;PA&quot;,
+      &quot;PE&quot;,
+      &quot;PH&quot;,
+      &quot;PL&quot;,
+      &quot;PT&quot;,
+      &quot;PY&quot;,
+      &quot;SE&quot;,
+      &quot;SG&quot;,
+      &quot;SK&quot;,
+      &quot;SV&quot;,
+      &quot;TR&quot;,
+      &quot;TW&quot;,
+      &quot;US&quot;,
+      &quot;UY&quot;
+    ],
+    &quot;disc_number&quot;: 1,
+    &quot;duration_ms&quot;: 220525,
+    &quot;explicit&quot;: false,
+    &quot;external_ids&quot;: {
+      &quot;isrc&quot;: &quot;USUEM1122229&quot;
+    },
+    &quot;name&quot;: &quot;It Felt Good&quot;,
+    &quot;popularity&quot;: 7,
+    &quot;preview_url&quot;: &quot;https://p.scdn.co/mp3-preview/70889de260b2ece9db2c6b753e1ed53506e8c644?cid=e16acd3a7ef344789b1a6cac6c2c8881&quot;,
+    &quot;track_number&quot;: 6,
+    &quot;album&quot;: {
+      &quot;album_type&quot;: &quot;album&quot;,
+      &quot;available_markets&quot;: [
+        &quot;AD&quot;,
+        &quot;AR&quot;,
+        &quot;AT&quot;,
+        &quot;AU&quot;,
+        &quot;BE&quot;,
+        &quot;BG&quot;,
+        &quot;BO&quot;,
+        &quot;BR&quot;,
+        &quot;CA&quot;,
+        &quot;CH&quot;,
+        &quot;CL&quot;,
+        &quot;CO&quot;,
+        &quot;CR&quot;,
+        &quot;CY&quot;,
+        &quot;CZ&quot;,
+        &quot;DE&quot;,
+        &quot;DK&quot;,
+        &quot;DO&quot;,
+        &quot;EC&quot;,
+        &quot;EE&quot;,
+        &quot;ES&quot;,
+        &quot;FI&quot;,
+        &quot;FR&quot;,
+        &quot;GB&quot;,
+        &quot;GR&quot;,
+        &quot;GT&quot;,
+        &quot;HK&quot;,
+        &quot;HN&quot;,
+        &quot;HU&quot;,
+        &quot;ID&quot;,
+        &quot;IE&quot;,
+        &quot;IS&quot;,
+        &quot;IT&quot;,
+        &quot;JP&quot;,
+        &quot;LI&quot;,
+        &quot;LT&quot;,
+        &quot;LU&quot;,
+        &quot;LV&quot;,
+        &quot;MC&quot;,
+        &quot;MT&quot;,
+        &quot;MX&quot;,
+        &quot;MY&quot;,
+        &quot;NI&quot;,
+        &quot;NL&quot;,
+        &quot;NO&quot;,
+        &quot;NZ&quot;,
+        &quot;PA&quot;,
+        &quot;PE&quot;,
+        &quot;PH&quot;,
+        &quot;PL&quot;,
+        &quot;PT&quot;,
+        &quot;PY&quot;,
+        &quot;SE&quot;,
+        &quot;SG&quot;,
+        &quot;SK&quot;,
+        &quot;SV&quot;,
+        &quot;TR&quot;,
+        &quot;TW&quot;,
+        &quot;US&quot;,
+        &quot;UY&quot;
+      ],
+      &quot;copyrights&quot;: null,
+      &quot;external_ids&quot;: null,
+      &quot;genres&quot;: null,
+      &quot;images&quot;: [
+        {
+          &quot;height&quot;: 640,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/0d3fb7c71166ba8a118c7f37daa8b9ac9cd145e8&quot;,
+          &quot;width&quot;: 640
+        },
+        {
+          &quot;height&quot;: 300,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/c98e3137c1653f345900f286a793d27dd30d15ce&quot;,
+          &quot;width&quot;: 300
+        },
+        {
+          &quot;height&quot;: 64,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/bcd6419425f45f392f0b233663dcb07b08a6575a&quot;,
+          &quot;width&quot;: 64
+        }
+      ],
+      &quot;name&quot;: &quot;Dancehall Lovers Rock Vol. 2&quot;,
+      &quot;popularity&quot;: null,
+      &quot;release_date&quot;: null,
+      &quot;release_date_precision&quot;: null,
+      &quot;artists&quot;: [
+        {
+          &quot;followers&quot;: null,
+          &quot;genres&quot;: null,
+          &quot;images&quot;: null,
+          &quot;name&quot;: &quot;Beenie Man&quot;,
+          &quot;popularity&quot;: null,
+          &quot;top_tracks&quot;: {
+          },
+          &quot;external_urls&quot;: {
+            &quot;spotify&quot;: &quot;https://open.spotify.com/artist/4L3GTE04bW5N7azA9QPhjA&quot;
+          },
+          &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/4L3GTE04bW5N7azA9QPhjA&quot;,
+          &quot;id&quot;: &quot;4L3GTE04bW5N7azA9QPhjA&quot;,
+          &quot;type&quot;: &quot;artist&quot;,
+          &quot;uri&quot;: &quot;spotify:artist:4L3GTE04bW5N7azA9QPhjA&quot;
+        }
+      ],
+      &quot;tracks_cache&quot;: null,
+      &quot;total_tracks&quot;: null,
+      &quot;external_urls&quot;: {
+        &quot;spotify&quot;: &quot;https://open.spotify.com/album/1D1QGoQi7NAsPBL9iHM0Ue&quot;
+      },
+      &quot;href&quot;: &quot;https://api.spotify.com/v1/albums/1D1QGoQi7NAsPBL9iHM0Ue&quot;,
+      &quot;id&quot;: &quot;1D1QGoQi7NAsPBL9iHM0Ue&quot;,
+      &quot;type&quot;: &quot;album&quot;,
+      &quot;uri&quot;: &quot;spotify:album:1D1QGoQi7NAsPBL9iHM0Ue&quot;
+    },
+    &quot;artists&quot;: [
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;Sanchez&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/6550dJCDSrZ8Cv6IDAjHpf&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/6550dJCDSrZ8Cv6IDAjHpf&quot;,
+        &quot;id&quot;: &quot;6550dJCDSrZ8Cv6IDAjHpf&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:6550dJCDSrZ8Cv6IDAjHpf&quot;
+      }
+    ],
+    &quot;external_urls&quot;: {
+      &quot;spotify&quot;: &quot;https://open.spotify.com/track/73D3sIZuRkf7y1iOS0WSp4&quot;
+    },
+    &quot;href&quot;: &quot;https://api.spotify.com/v1/tracks/73D3sIZuRkf7y1iOS0WSp4&quot;,
+    &quot;id&quot;: &quot;73D3sIZuRkf7y1iOS0WSp4&quot;,
+    &quot;type&quot;: &quot;track&quot;,
+    &quot;uri&quot;: &quot;spotify:track:73D3sIZuRkf7y1iOS0WSp4&quot;
+  },
+  {
+    &quot;available_markets&quot;: [
+      &quot;AD&quot;,
+      &quot;AR&quot;,
+      &quot;AT&quot;,
+      &quot;AU&quot;,
+      &quot;BE&quot;,
+      &quot;BG&quot;,
+      &quot;BO&quot;,
+      &quot;BR&quot;,
+      &quot;CA&quot;,
+      &quot;CH&quot;,
+      &quot;CL&quot;,
+      &quot;CO&quot;,
+      &quot;CR&quot;,
+      &quot;CY&quot;,
+      &quot;CZ&quot;,
+      &quot;DE&quot;,
+      &quot;DK&quot;,
+      &quot;DO&quot;,
+      &quot;EC&quot;,
+      &quot;EE&quot;,
+      &quot;ES&quot;,
+      &quot;FI&quot;,
+      &quot;FR&quot;,
+      &quot;GB&quot;,
+      &quot;GR&quot;,
+      &quot;GT&quot;,
+      &quot;HK&quot;,
+      &quot;HN&quot;,
+      &quot;HU&quot;,
+      &quot;ID&quot;,
+      &quot;IE&quot;,
+      &quot;IS&quot;,
+      &quot;IT&quot;,
+      &quot;JP&quot;,
+      &quot;LI&quot;,
+      &quot;LT&quot;,
+      &quot;LU&quot;,
+      &quot;LV&quot;,
+      &quot;MC&quot;,
+      &quot;MT&quot;,
+      &quot;MX&quot;,
+      &quot;MY&quot;,
+      &quot;NI&quot;,
+      &quot;NL&quot;,
+      &quot;NO&quot;,
+      &quot;NZ&quot;,
+      &quot;PA&quot;,
+      &quot;PE&quot;,
+      &quot;PH&quot;,
+      &quot;PL&quot;,
+      &quot;PT&quot;,
+      &quot;PY&quot;,
+      &quot;SE&quot;,
+      &quot;SG&quot;,
+      &quot;SK&quot;,
+      &quot;SV&quot;,
+      &quot;TR&quot;,
+      &quot;TW&quot;,
+      &quot;US&quot;,
+      &quot;UY&quot;
+    ],
+    &quot;disc_number&quot;: 1,
+    &quot;duration_ms&quot;: 234976,
+    &quot;explicit&quot;: false,
+    &quot;external_ids&quot;: {
+      &quot;isrc&quot;: &quot;USUEM1122233&quot;
+    },
+    &quot;name&quot;: &quot;Cant take it&quot;,
+    &quot;popularity&quot;: 7,
+    &quot;preview_url&quot;: &quot;https://p.scdn.co/mp3-preview/1c6d606b2965e80ec99376808c43de183b0e4bb1?cid=e16acd3a7ef344789b1a6cac6c2c8881&quot;,
+    &quot;track_number&quot;: 10,
+    &quot;album&quot;: {
+      &quot;album_type&quot;: &quot;album&quot;,
+      &quot;available_markets&quot;: [
+        &quot;AD&quot;,
+        &quot;AR&quot;,
+        &quot;AT&quot;,
+        &quot;AU&quot;,
+        &quot;BE&quot;,
+        &quot;BG&quot;,
+        &quot;BO&quot;,
+        &quot;BR&quot;,
+        &quot;CA&quot;,
+        &quot;CH&quot;,
+        &quot;CL&quot;,
+        &quot;CO&quot;,
+        &quot;CR&quot;,
+        &quot;CY&quot;,
+        &quot;CZ&quot;,
+        &quot;DE&quot;,
+        &quot;DK&quot;,
+        &quot;DO&quot;,
+        &quot;EC&quot;,
+        &quot;EE&quot;,
+        &quot;ES&quot;,
+        &quot;FI&quot;,
+        &quot;FR&quot;,
+        &quot;GB&quot;,
+        &quot;GR&quot;,
+        &quot;GT&quot;,
+        &quot;HK&quot;,
+        &quot;HN&quot;,
+        &quot;HU&quot;,
+        &quot;ID&quot;,
+        &quot;IE&quot;,
+        &quot;IS&quot;,
+        &quot;IT&quot;,
+        &quot;JP&quot;,
+        &quot;LI&quot;,
+        &quot;LT&quot;,
+        &quot;LU&quot;,
+        &quot;LV&quot;,
+        &quot;MC&quot;,
+        &quot;MT&quot;,
+        &quot;MX&quot;,
+        &quot;MY&quot;,
+        &quot;NI&quot;,
+        &quot;NL&quot;,
+        &quot;NO&quot;,
+        &quot;NZ&quot;,
+        &quot;PA&quot;,
+        &quot;PE&quot;,
+        &quot;PH&quot;,
+        &quot;PL&quot;,
+        &quot;PT&quot;,
+        &quot;PY&quot;,
+        &quot;SE&quot;,
+        &quot;SG&quot;,
+        &quot;SK&quot;,
+        &quot;SV&quot;,
+        &quot;TR&quot;,
+        &quot;TW&quot;,
+        &quot;US&quot;,
+        &quot;UY&quot;
+      ],
+      &quot;copyrights&quot;: null,
+      &quot;external_ids&quot;: null,
+      &quot;genres&quot;: null,
+      &quot;images&quot;: [
+        {
+          &quot;height&quot;: 640,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/0d3fb7c71166ba8a118c7f37daa8b9ac9cd145e8&quot;,
+          &quot;width&quot;: 640
+        },
+        {
+          &quot;height&quot;: 300,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/c98e3137c1653f345900f286a793d27dd30d15ce&quot;,
+          &quot;width&quot;: 300
+        },
+        {
+          &quot;height&quot;: 64,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/bcd6419425f45f392f0b233663dcb07b08a6575a&quot;,
+          &quot;width&quot;: 64
+        }
+      ],
+      &quot;name&quot;: &quot;Dancehall Lovers Rock Vol. 2&quot;,
+      &quot;popularity&quot;: null,
+      &quot;release_date&quot;: null,
+      &quot;release_date_precision&quot;: null,
+      &quot;artists&quot;: [
+        {
+          &quot;followers&quot;: null,
+          &quot;genres&quot;: null,
+          &quot;images&quot;: null,
+          &quot;name&quot;: &quot;Beenie Man&quot;,
+          &quot;popularity&quot;: null,
+          &quot;top_tracks&quot;: {
+          },
+          &quot;external_urls&quot;: {
+            &quot;spotify&quot;: &quot;https://open.spotify.com/artist/4L3GTE04bW5N7azA9QPhjA&quot;
+          },
+          &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/4L3GTE04bW5N7azA9QPhjA&quot;,
+          &quot;id&quot;: &quot;4L3GTE04bW5N7azA9QPhjA&quot;,
+          &quot;type&quot;: &quot;artist&quot;,
+          &quot;uri&quot;: &quot;spotify:artist:4L3GTE04bW5N7azA9QPhjA&quot;
+        }
+      ],
+      &quot;tracks_cache&quot;: null,
+      &quot;total_tracks&quot;: null,
+      &quot;external_urls&quot;: {
+        &quot;spotify&quot;: &quot;https://open.spotify.com/album/1D1QGoQi7NAsPBL9iHM0Ue&quot;
+      },
+      &quot;href&quot;: &quot;https://api.spotify.com/v1/albums/1D1QGoQi7NAsPBL9iHM0Ue&quot;,
+      &quot;id&quot;: &quot;1D1QGoQi7NAsPBL9iHM0Ue&quot;,
+      &quot;type&quot;: &quot;album&quot;,
+      &quot;uri&quot;: &quot;spotify:album:1D1QGoQi7NAsPBL9iHM0Ue&quot;
+    },
+    &quot;artists&quot;: [
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;Glen Washington&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/6FIMr6j0L4adGGptnudPz1&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/6FIMr6j0L4adGGptnudPz1&quot;,
+        &quot;id&quot;: &quot;6FIMr6j0L4adGGptnudPz1&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:6FIMr6j0L4adGGptnudPz1&quot;
+      }
+    ],
+    &quot;external_urls&quot;: {
+      &quot;spotify&quot;: &quot;https://open.spotify.com/track/34cnlg1Mw3zCnmx2XqHsOp&quot;
+    },
+    &quot;href&quot;: &quot;https://api.spotify.com/v1/tracks/34cnlg1Mw3zCnmx2XqHsOp&quot;,
+    &quot;id&quot;: &quot;34cnlg1Mw3zCnmx2XqHsOp&quot;,
+    &quot;type&quot;: &quot;track&quot;,
+    &quot;uri&quot;: &quot;spotify:track:34cnlg1Mw3zCnmx2XqHsOp&quot;
+  },
+  {
+    &quot;available_markets&quot;: [
+      &quot;CA&quot;,
+      &quot;US&quot;
+    ],
+    &quot;disc_number&quot;: 1,
+    &quot;duration_ms&quot;: 285133,
+    &quot;explicit&quot;: false,
+    &quot;external_ids&quot;: {
+      &quot;isrc&quot;: &quot;USAT21002260&quot;
+    },
+    &quot;name&quot;: &quot;When It Rains&quot;,
+    &quot;popularity&quot;: 39,
+    &quot;preview_url&quot;: &quot;https://p.scdn.co/mp3-preview/56bf377b1f6e0c006035dbaa50f765de4774083c?cid=e16acd3a7ef344789b1a6cac6c2c8881&quot;,
+    &quot;track_number&quot;: 5,
+    &quot;album&quot;: {
+      &quot;album_type&quot;: &quot;album&quot;,
+      &quot;available_markets&quot;: [
+        &quot;CA&quot;,
+        &quot;US&quot;
+      ],
+      &quot;copyrights&quot;: null,
+      &quot;external_ids&quot;: null,
+      &quot;genres&quot;: null,
+      &quot;images&quot;: [
+        {
+          &quot;height&quot;: 640,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/33f473e86ebd555b47979b4fe71ebecd6cc0eb69&quot;,
+          &quot;width&quot;: 640
+        },
+        {
+          &quot;height&quot;: 300,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/b407ebfbd3b4adecbf275c574715e6931c27520a&quot;,
+          &quot;width&quot;: 300
+        },
+        {
+          &quot;height&quot;: 64,
+          &quot;url&quot;: &quot;https://i.scdn.co/image/3bf4a6636cfe4ff4c2f6641a06e02e7bd1d2f929&quot;,
+          &quot;width&quot;: 64
+        }
+      ],
+      &quot;name&quot;: &quot;Born Free&quot;,
+      &quot;popularity&quot;: null,
+      &quot;release_date&quot;: null,
+      &quot;release_date_precision&quot;: null,
+      &quot;artists&quot;: [
+        {
+          &quot;followers&quot;: null,
+          &quot;genres&quot;: null,
+          &quot;images&quot;: null,
+          &quot;name&quot;: &quot;Kid Rock&quot;,
+          &quot;popularity&quot;: null,
+          &quot;top_tracks&quot;: {
+          },
+          &quot;external_urls&quot;: {
+            &quot;spotify&quot;: &quot;https://open.spotify.com/artist/7dOBabd5O4CvKrg4iriHTM&quot;
+          },
+          &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/7dOBabd5O4CvKrg4iriHTM&quot;,
+          &quot;id&quot;: &quot;7dOBabd5O4CvKrg4iriHTM&quot;,
+          &quot;type&quot;: &quot;artist&quot;,
+          &quot;uri&quot;: &quot;spotify:artist:7dOBabd5O4CvKrg4iriHTM&quot;
+        }
+      ],
+      &quot;tracks_cache&quot;: null,
+      &quot;total_tracks&quot;: null,
+      &quot;external_urls&quot;: {
+        &quot;spotify&quot;: &quot;https://open.spotify.com/album/5zYwSRllQRaJFdQEcvCO8l&quot;
+      },
+      &quot;href&quot;: &quot;https://api.spotify.com/v1/albums/5zYwSRllQRaJFdQEcvCO8l&quot;,
+      &quot;id&quot;: &quot;5zYwSRllQRaJFdQEcvCO8l&quot;,
+      &quot;type&quot;: &quot;album&quot;,
+      &quot;uri&quot;: &quot;spotify:album:5zYwSRllQRaJFdQEcvCO8l&quot;
+    },
+    &quot;artists&quot;: [
+      {
+        &quot;followers&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: null,
+        &quot;name&quot;: &quot;Kid Rock&quot;,
+        &quot;popularity&quot;: null,
+        &quot;top_tracks&quot;: {
+        },
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/7dOBabd5O4CvKrg4iriHTM&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/7dOBabd5O4CvKrg4iriHTM&quot;,
+        &quot;id&quot;: &quot;7dOBabd5O4CvKrg4iriHTM&quot;,
+        &quot;type&quot;: &quot;artist&quot;,
+        &quot;uri&quot;: &quot;spotify:artist:7dOBabd5O4CvKrg4iriHTM&quot;
+      }
+    ],
+    &quot;external_urls&quot;: {
+      &quot;spotify&quot;: &quot;https://open.spotify.com/track/60QllOQ1ZhF2BTa2k3zZ16&quot;
+    },
+    &quot;href&quot;: &quot;https://api.spotify.com/v1/tracks/60QllOQ1ZhF2BTa2k3zZ16&quot;,
+    &quot;id&quot;: &quot;60QllOQ1ZhF2BTa2k3zZ16&quot;,
+    &quot;type&quot;: &quot;track&quot;,
+    &quot;uri&quot;: &quot;spotify:track:60QllOQ1ZhF2BTa2k3zZ16&quot;
+  }
+]
 </code></pre>
 </div></div></div>
 </html>

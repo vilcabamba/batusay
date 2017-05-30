@@ -5,42 +5,42 @@ Invite a friend with id.
 
 #### Request
 ```
-POST /api/events/62/invitees HTTP/1.1
+POST /api/events/38/invitees HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: VggX1w3bOEt38QVG4FrnIg
-Client: -YgNl9lSajBm9wDoiosAtQ
-Content-Length: 14
+Access-Token: 1md7r8is67gcnkZmInYL6A
+Client: V7gJzS2cx-lkoCABfEJ0pg
+Content-Length: 13
 Content-Type: application/x-www-form-urlencoded
-Expiry: 1496881337
+Expiry: 1497334937
 Host: www.example.com
 Token-Type: Bearer
-Uid: person6@email.com
+Uid: person5@email.com
 
-user_ids[]=144
+user_ids[]=56
 ```
 
 #### Response
 ```
 HTTP/1.1 201
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 86
+Content-Length: 88
 Content-Type: application/json; charset=utf-8
-ETag: W/"a429de7e5cad2fcda5e7fc3709aeafe4"
+ETag: W/"e6a154fe7ce281227d90032073716d17"
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 4ca80f78-a6da-45f7-8474-e84828cd6a5e
-X-Runtime: 0.134223
+X-Request-Id: cbb32ce3-ae7d-4ddb-9fd4-61c61f642888
+X-Runtime: 0.141577
 X-XSS-Protection: 1; mode=block
 
 {
   "invitees": [
     {
-      "id": 68,
-      "event_id": 62,
+      "id": 28,
+      "event_id": 38,
       "user": {
-        "id": 144,
-        "name": "Clara Cerda Santiago"
+        "id": 56,
+        "name": "Ana Luisa Tirado Malave"
       }
     }
   ]
@@ -54,50 +54,50 @@ Renders created invitees.
 
 #### Request
 ```
-POST /api/events/63/invitees HTTP/1.1
+POST /api/events/39/invitees HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: ZQdz9OwHxbalaeAQjesdrw
-Client: fZ_Wq2c4P_32EthlDIycrQ
-Content-Length: 29
+Access-Token: fxE9DDFIck-WsMAmyEGEVg
+Client: AM52ljt5m2sOasm3JGBiBg
+Content-Length: 27
 Content-Type: application/x-www-form-urlencoded
-Expiry: 1496881337
+Expiry: 1497334937
 Host: www.example.com
 Token-Type: Bearer
-Uid: person8@email.com
+Uid: person7@email.com
 
-user_ids[]=146&user_ids[]=147
+user_ids[]=58&user_ids[]=59
 ```
 
 #### Response
 ```
 HTTP/1.1 201
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 165
+Content-Length: 167
 Content-Type: application/json; charset=utf-8
-ETag: W/"b2cfb3ef71ee2e1ad9e603ba87b3aa49"
+ETag: W/"179dccad44e4fd12813a71eb844a2264"
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: b563b478-06ef-48d4-a60e-7562377ccab0
-X-Runtime: 0.124946
+X-Request-Id: 6b559cdc-d63a-423c-bad6-d3e6bd86a40f
+X-Runtime: 0.120090
 X-XSS-Protection: 1; mode=block
 
 {
   "invitees": [
     {
-      "id": 69,
-      "event_id": 63,
+      "id": 29,
+      "event_id": 39,
       "user": {
-        "id": 146,
-        "name": "Francisco Valadez Banda"
+        "id": 58,
+        "name": "Lucia Armijo Delafuente"
       }
     },
     {
-      "id": 70,
-      "event_id": 63,
+      "id": 30,
+      "event_id": 39,
       "user": {
-        "id": 147,
-        "name": "Fernando Alva Altamirano"
+        "id": 59,
+        "name": "Sra. Antonia Amador Estévez"
       }
     }
   ]
@@ -106,48 +106,48 @@ X-XSS-Protection: 1; mode=block
 
 ## POST /api/events/:event_id/invitees
 when a friend has already been invited.
-In this case, user with id 149 is already an invitee
+In this case, user with id 61 is already an invitee
 
 ### Example
 
 #### Request
 ```
-POST /api/events/64/invitees HTTP/1.1
+POST /api/events/40/invitees HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: SRNXk2zYrwT7pub5Ldl5OQ
-Client: l6NYujUEwKwq6JuGE-LeyQ
-Content-Length: 29
+Access-Token: j_JyS3PHBzp0kdLJukYWEQ
+Client: HjttygznP5HnVJVXmj-pUg
+Content-Length: 27
 Content-Type: application/x-www-form-urlencoded
-Expiry: 1496881337
+Expiry: 1497334937
 Host: www.example.com
 Token-Type: Bearer
-Uid: person11@email.com
+Uid: person10@email.com
 
-user_ids[]=149&user_ids[]=150
+user_ids[]=61&user_ids[]=62
 ```
 
 #### Response
 ```
 HTTP/1.1 201
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 92
+Content-Length: 88
 Content-Type: application/json; charset=utf-8
-ETag: W/"8a571c9fcc398cacfd4f1ce71c3d5724"
+ETag: W/"1a17815855d89ee6d2ab41b2752e0fff"
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 28da6b3d-4825-4c59-923e-d599d05d7d36
-X-Runtime: 0.120916
+X-Request-Id: c7f09ba1-af00-4e78-84b1-7ca89c1f2f6b
+X-Runtime: 0.121951
 X-XSS-Protection: 1; mode=block
 
 {
   "invitees": [
     {
-      "id": 72,
-      "event_id": 64,
+      "id": 32,
+      "event_id": 40,
       "user": {
-        "id": 150,
-        "name": "Sta. Daniel Orellana Casas"
+        "id": 62,
+        "name": "Magdalena García Mares"
       }
     }
   ]

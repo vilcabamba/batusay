@@ -1,7 +1,0 @@
-.place-public-view
-  h1 = @place.name
-  .place-image = image_tag @place.picture_url
-
-  h2 Canciones en cola
-  - @place.playlist_songs.each do |song|
-    = render "song", song: song

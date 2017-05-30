@@ -1,0 +1,153 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://e16acd3a7ef344789b1a6cac6c2c8881:70e0aefbaf15487d9604a956f60aa86c@accounts.spotify.com/api/token
+    body:
+      encoding: UTF-8
+      string: grant_type=client_credentials
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Length:
+      - '29'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 30 May 2017 06:22:19 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=600
+      Vary:
+      - Accept-Encoding
+      X-Ua-Compatible:
+      - IE=edge
+      X-Frame-Options:
+      - deny
+      Content-Security-Policy:
+      - 'default-src ''self''; script-src ''self'' https://d2d1dxiu3v1f2i.cloudfront.net
+        https://www.google-analytics.com; img-src ''self'' https://d2d1dxiu3v1f2i.cloudfront.net
+        https://i.imgur.com https://d2mv8tnci56s9d.cloudfront.net https://aci.scdn.co
+        https://graph.facebook.com https://fbcdn-profile-a.akamaihd.net https://scontent.xx.fbcdn.net
+        https://www.google-analytics.com https://stats.g.doubleclick.net data: d2d1dxiu3v1f2i.cloudfront.net;
+        font-src ''self'' https://d2d1dxiu3v1f2i.cloudfront.net https://sp-bootstrap.global.ssl.fastly.net;
+        style-src ''self'' ''unsafe-inline'' https://d2d1dxiu3v1f2i.cloudfront.net;
+        frame-src ''self'' https://www.spotify.com https://app.adjust.com https://itunes.apple.com
+        itms-apps:;'
+      X-Content-Security-Policy:
+      - 'default-src ''self''; script-src ''self'' https://d2d1dxiu3v1f2i.cloudfront.net
+        https://www.google-analytics.com; img-src ''self'' https://d2d1dxiu3v1f2i.cloudfront.net
+        https://i.imgur.com https://d2mv8tnci56s9d.cloudfront.net https://aci.scdn.co
+        https://graph.facebook.com https://fbcdn-profile-a.akamaihd.net https://scontent.xx.fbcdn.net
+        https://www.google-analytics.com https://stats.g.doubleclick.net data: d2d1dxiu3v1f2i.cloudfront.net;
+        font-src ''self'' https://d2d1dxiu3v1f2i.cloudfront.net https://sp-bootstrap.global.ssl.fastly.net;
+        style-src ''self'' ''unsafe-inline'' https://d2d1dxiu3v1f2i.cloudfront.net;
+        frame-src ''self'' https://www.spotify.com https://app.adjust.com https://itunes.apple.com
+        itms-apps:;'
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Pragma:
+      - no-cache
+      Content-Encoding:
+      - gzip
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000;
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAx3NTQuCMBgA4P+yc4ImiHTLqVE0Qm2tTmONF1JRN7f8KPrv
+        Wdfn8ryRkBKM4baroUUbFGVb1qSjj0+jHg7tlWt9ZMZp87NNKKPlHndT5rDi
+        SeZHcA8SG+O8jkOZRhdKPB5WFXklDZHUE2qYVLXDt2I9ohX6B9zOCn4LiB76
+        RWFSZQ+Gl8vtB677+QKyldZ0kQAAAA==
+    http_version: 
+  recorded_at: Tue, 30 May 2017 06:22:19 GMT
+- request:
+    method: get
+    uri: https://api.spotify.com/v1/tracks/2vVc2G9w2JteBgxpSUVwX5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - "*/*; q=0.5, application/xml"
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer BQAWmFw3COwqvJnX_qqLWs-nRTtEUWUiICoxQ-WSuMyh6b6EtDCRkD8cFBVUM1_8jjMzEmMcU1apvxpjGCYS2w
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 30 May 2017 06:22:20 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Keep-Alive:
+      - timeout=600
+      Cache-Control:
+      - public, max-age=7200
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS, PUT, DELETE
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '604800'
+      Access-Control-Allow-Headers:
+      - Accept, Authorization, Origin, Content-Type
+      Content-Encoding:
+      - gzip
+      X-Content-Type-Options:
+      - nosniff
+      Strict-Transport-Security:
+      - max-age=31536000;
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        H4sIAAAAAAAAAKxV226bQBB971cgnlopKnhhMfgtsdQ2aaxKTp04rSpr2R3s
+        VbgVFl8a5d8Ly9rEiXFI2hckZpYzZ8+ZGe7faZpOQr+IdG2g3Zdv2/eZ2KRQ
+        BfWcx/MQ9BOVzATPRV5lfqoPyiisBWQxCWdFFuYNlMzlaSJ4sJFYCyHSfGAY
+        SQrxR5X4SJPIqGENc7hYR5E9HY3cfnTx7ctywyd/LnUF9nCyrbfIINgDJCnf
+        w1v2FGTehrnD4kwivXQsJlGtx1dY8lgbFywJgya9k6su2ySKjNcy1uwGdX5w
+        7KYP2q+t2kvCQ+KHMItIdgdb3fXhqX6i6aNp9Zxc6bvzrT50dKFy3kC3t6cX
+        62DlpcENG/nF97O5GFNFTRXqZECFlrfBKSCl/guHIjKHpz23AD5fiCro2OYj
+        ucM9XiUryuKSkiFBDN9E1MSI9V3m+TjwEXI9ZFuuFbCe7doQONCzTGY1Bq44
+        EwtVRmlwiIRldifR7yGGCMXggOlZposD23T8wHMBAaXgUrCo7fTgAImyzBES
+        jt2dAwLsU+Ix7FLqeF7P9pmD/ZIJIiToO8hh2DThEAfHftKmu9m4BKGdC22c
+        0Dvt/Rgivob8w9bFZkTkwlHRZ/NRJQftPSg78NAa+ufmf3kFvar7u6yfTsvn
+        6OppWTyvXzu7hvpPOmJ8ShD9vQnX2afz6bDv9H+4Dn67ji14+zoeP9S0KQ+1
+        G7KJ4W0itl9NjcTr9rbOeE5ncRH5kFXnenWwyIjgSTyL5MfIQhjJDVP6k4ac
+        cjnwIitABZVpnD3yTOd5RuUVJlfDETZd03SR1YxRi9XdjBYZoXcGWl5T9Nlb
+        oQsBZ/N1ejW5Xk1xU6KLxxIpb4OSMNv/xJEjh7ZQnUmTtAhJxoW8EUZ1MCun
+        CVYztSjjIgxlXJJ5ZseuQ2S6hn3aHjI1aBPk4S8AAAD//wMAnVICkG0JAAA=
+    http_version: 
+  recorded_at: Tue, 30 May 2017 06:22:20 GMT
+recorded_with: VCR 2.9.3

@@ -1,7 +1,6 @@
 module Api
   class EventsController < ResourceableController
     before_action :authenticate_api_user!
-    respond_to :json # does this actually do anything?
 
     def index
       index! do
@@ -40,13 +39,7 @@ module Api
 
     def destroy
       destroy! do
-        status = :no_content
-        template_name = resource_instance_name
-        return render(
-          body: nil,
-          formats: :json,
-          status: status
-        )
+        return head(:no_content)
       end
     end
 

@@ -1,17 +1,23 @@
 module Api
-  class SongsController < BaseController
+  class SongsController < ResourceableController
     before_action :authenticate_api_user!
+    belongs_to :event
 
     def create
-      @song = current_api_user.current_place.songs.create(
-        user: current_api_user,
-        spotify_id: params[:spotify_id],
-        spotify_track: spotify_song
-      )
-      render :song, formats: :json
+      super
     end
 
     private
+
+    def create_resource(object)
+      object.spotify_track = spotify_song
+      object.user = current_api_user
+      object.save
+    end
+
+    def begin_of_association_chain
+      current_api_user
+    end
 
     def spotify_song
       SongRepositoryService.by_id(params[:spotify_id])

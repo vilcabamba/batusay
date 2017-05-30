@@ -1,6 +1,8 @@
 class Event < ApplicationRecord
   belongs_to :user
   has_many :invitees, dependent: :destroy
+  has_many :songs, dependent: :destroy
+  has_many :tasks, dependent: :destroy
 
   validates :name,
             :user_id,
@@ -23,6 +25,10 @@ class Event < ApplicationRecord
     :lng,
     :date
   ].freeze
+
+  def playlist_songs
+    songs.not_played
+  end
 
   private
 

@@ -1,7 +1,8 @@
 module Api
   class SearchesController < BaseController
+    before_action :authenticate_api_user!
+
     def show
-      # TODO
       results = SongRepositoryService.search(params[:q])
       render json: results
     end
