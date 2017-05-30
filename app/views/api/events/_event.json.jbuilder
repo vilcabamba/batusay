@@ -6,7 +6,8 @@ json.extract!(
   :descripcion,
   :lat,
   :lng,
-  :date
+  :date,
+  :songs
 )
 
 json.invited_people event.invitees.count
