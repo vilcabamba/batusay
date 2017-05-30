@@ -7,7 +7,7 @@ class Invitee < ApplicationRecord
   validates :user,
             :event,
             presence: true
-  validate :unique_invitee_in_event
+  validate :unique_invitee_in_event, on: :create
 
   enumerize :status,
             in: [:pending, :accepted, :rejected],
