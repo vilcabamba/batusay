@@ -25,7 +25,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 30 May 2017 05:08:38 GMT
+      - Tue, 30 May 2017 06:22:19 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -73,12 +73,12 @@ http_interactions:
     body:
       encoding: ASCII-8BIT
       string: !binary |-
-        H4sIAAAAAAAAAx3NTQuCMBgA4P+yc4JUZHVLsoMoI8K+LmPoixvmnHs3l0X/
-        Pev6XJ434WUJiMx2DSiyJfExrmVqwKIfg5aqtfUnXQgFWJUb3tMx726Z9SKV
-        Jhr210ectEFzyYqcYaheNR96Mb/TZYuViOzBnV3jfLcjM/IPmB01/BbgBsyk
-        8NTSADI53YtVGH6+IRG4eJEAAAA=
+        H4sIAAAAAAAAAx3NTQuCMBgA4P+yc4ImiHTLqVE0Qm2tTmONF1JRN7f8KPrv
+        Wdfn8ryRkBKM4baroUUbFGVb1qSjj0+jHg7tlWt9ZMZp87NNKKPlHndT5rDi
+        SeZHcA8SG+O8jkOZRhdKPB5WFXklDZHUE2qYVLXDt2I9ohX6B9zOCn4LiB76
+        RWFSZQ+Gl8vtB677+QKyldZ0kQAAAA==
     http_version: 
-  recorded_at: Tue, 30 May 2017 05:08:39 GMT
+  recorded_at: Tue, 30 May 2017 06:22:19 GMT
 - request:
     method: get
     uri: https://api.spotify.com/v1/tracks/2vVc2G9w2JteBgxpSUVwX5
@@ -91,7 +91,7 @@ http_interactions:
       Accept-Encoding:
       - gzip, deflate
       Authorization:
-      - Bearer BQBgiJretswy-mOn8twSpUhnesdc9aqOyMoYLtwhJir7vDXlBEm-kWLUM_s0nzgavqh2ZO4msdh7tFuVukuwoA
+      - Bearer BQAWmFw3COwqvJnX_qqLWs-nRTtEUWUiICoxQ-WSuMyh6b6EtDCRkD8cFBVUM1_8jjMzEmMcU1apvxpjGCYS2w
       User-Agent:
       - Ruby
   response:
@@ -102,7 +102,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 30 May 2017 05:08:39 GMT
+      - Tue, 30 May 2017 06:22:20 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -149,5 +149,5 @@ http_interactions:
         oQsBZ/N1ejW5Xk1xU6KLxxIpb4OSMNv/xJEjh7ZQnUmTtAhJxoW8EUZ1MCun
         CVYztSjjIgxlXJJ5ZseuQ2S6hn3aHjI1aBPk4S8AAAD//wMAnVICkG0JAAA=
     http_version: 
-  recorded_at: Tue, 30 May 2017 05:08:39 GMT
+  recorded_at: Tue, 30 May 2017 06:22:20 GMT
 recorded_with: VCR 2.9.3
