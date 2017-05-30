@@ -15,5 +15,4 @@ Rails.application.routes.draw do
       resources :invitees, only: [:create, :index]
     end
   end
-  resources :place, path: "p", only: :show
 end
