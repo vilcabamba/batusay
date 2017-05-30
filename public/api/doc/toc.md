@@ -9,6 +9,8 @@
  * [GET /api/events/:event_id/invitees](api/events/invitees/index.md#get-apieventsevent_idinvitees)
 * [api/events/songs/create.md](api/events/songs/create.md)
  * [POST /api/events/:event_id/songs](api/events/songs/create.md#post-apieventsevent_idsongs)
+* [api/events/tasks/create.md](api/events/tasks/create.md)
+ * [POST /api/events/:event_id/tasks](api/events/tasks/create.md#post-apieventsevent_idtasks)
 * [api/friends/index.md](api/friends/index.md)
  * [GET /api/friends](api/friends/index.md#get-apifriends)
  * [GET /api/friends?q=](api/friends/index.md#get-apifriends?q=)
