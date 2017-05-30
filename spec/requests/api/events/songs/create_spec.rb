@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe Api::SongsController,
+describe "Event Songs Api::SongsController",
          type: :request,
          autodoc: true do
   describe "POST /api/events/:event_id/songs" do

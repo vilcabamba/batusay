@@ -1,6 +1,6 @@
 require "rails_helper"
 
-describe Api::SearchesController,
+describe "Song Searches Api::SearchesController",
          type: :request,
          autodoc: true do
   describe "GET /api/search" do

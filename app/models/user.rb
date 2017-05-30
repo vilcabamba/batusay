@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   include DeviseTokenAuth::Concerns::User
 
   has_many :events, dependent: :destroy
+  has_many :invitees
 
   def self.search(q)
     where("name ILIKE :q", q: "%#{q}%")
