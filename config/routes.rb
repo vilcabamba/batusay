@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     )
     resource :search, only: :show
     resources :friends, only: :index
+    resources :invites, only: :index
     resources :events do
       resources :songs, only: :create
       resources :invitees, only: [:create, :index]

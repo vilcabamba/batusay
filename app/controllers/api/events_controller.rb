@@ -1,7 +1,6 @@
 module Api
   class EventsController < ResourceableController
     before_action :authenticate_api_user!
-    respond_to :json # does this actually do anything?
 
     def index
       index! do

@@ -1,4 +1,6 @@
 class Invitee < ApplicationRecord
+  extend Enumerize
+
   belongs_to :event
   belongs_to :user
 
@@ -6,6 +8,11 @@ class Invitee < ApplicationRecord
             :event,
             presence: true
   validate :unique_invitee_in_event
+
+  enumerize :status,
+            in: [:pending, :accepted, :rejected],
+            default: :pending,
+            scope: true
 
   API_PERMITTED_ATTRS = [ :user_id ].freeze
 

@@ -7,6 +7,7 @@ class Song < ApplicationRecord
   scope :not_played, -> { where(already_played: false) }
 
   validates :user_id,
+            :event_id,
             :spotify_id,
             presence: true
 
