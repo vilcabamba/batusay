@@ -5,9 +5,5 @@ FactoryGirl.define do
     email          { uid }
     password       "password"
     name           { Faker::Name.name }
-
-    trait :with_place do
-      current_place { create :place }
-    end
   end
 end
