@@ -1,5 +1,8 @@
 class Song < ApplicationRecord
+  API_PERMITTED_ATTRS = [:spotify_id].freeze
+
   belongs_to :user
+  belongs_to :event
 
   scope :not_played, -> { where(already_played: false) }
 
