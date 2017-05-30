@@ -40,13 +40,7 @@ module Api
 
     def destroy
       destroy! do
-        status = :no_content
-        template_name = resource_instance_name
-        return render(
-          body: nil,
-          formats: :json,
-          status: status
-        )
+        return head(:no_content)
       end
     end
 

@@ -12,11 +12,8 @@ FactoryGirl.define do
 
     trait :past do
       after(:create) do |event|
-        past_date = Faker::Time.backward(23)
-        Timecop.freeze(past_date) do
-          event.date = past_date
-          event.save!(validate: false)
-        end
+        event.date = Faker::Time.backward(23)
+        event.save!(validate: false)
       end
     end
   end

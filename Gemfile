@@ -35,7 +35,6 @@ group :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails', '~> 3.5.2'
   gem 'database_cleaner', '~> 1.5'
-  gem 'timecop'
 
   # for generating docs
   gem 'autodoc'
