@@ -13,6 +13,8 @@
  * [GET /api/events/:event_id/songs](api/events/songs/index.md#get-apieventsevent_idsongs)
 * [api/events/tasks/create.md](api/events/tasks/create.md)
  * [POST /api/events/:event_id/tasks](api/events/tasks/create.md#post-apieventsevent_idtasks)
+* [api/events/tasks/index.md](api/events/tasks/index.md)
+ * [GET /api/events/:event_id/tasks](api/events/tasks/index.md#get-apieventsevent_idtasks)
 * [api/friends/index.md](api/friends/index.md)
  * [GET /api/friends](api/friends/index.md#get-apifriends)
  * [GET /api/friends?q=](api/friends/index.md#get-apifriends?q=)
