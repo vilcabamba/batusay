@@ -24,6 +24,12 @@ module Api
       normal_render_resource
     end
 
+    def show
+      show! do
+        return render resource_instance_name, formats: :json
+      end
+    end
+
     private
 
     def normal_render_resource
