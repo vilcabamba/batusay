@@ -7,6 +7,10 @@ module Api
       super
     end
 
+    def index
+      super
+    end
+
     private
 
     def create_resource(object)

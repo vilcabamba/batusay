@@ -4,6 +4,12 @@ module Api
 
     protected
 
+    def index
+      index! do
+        return render formats: :json
+      end
+    end
+
     def create
       create! do
         if resource.persisted?

@@ -1,1 +1,3 @@
-json.extract!(@song, :spotify_id, :spotify_track)
+json.song do
+  json.partial! 'song', song: @song
+end

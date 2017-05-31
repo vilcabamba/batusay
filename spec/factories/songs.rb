@@ -3,7 +3,5 @@ FactoryGirl.define do
     event
     user
     spotify_id "14523asdfas"
-    now_playing
-    already_played
   end
 end

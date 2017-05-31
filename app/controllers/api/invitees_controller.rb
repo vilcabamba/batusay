@@ -9,9 +9,7 @@ module Api
     end
 
     def index
-      index! do
-        return render formats: :json
-      end
+      super
     end
 
     protected
