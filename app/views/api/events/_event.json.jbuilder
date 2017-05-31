@@ -10,3 +10,7 @@ json.extract!(
 )
 
 json.invited_people event.invitees.count
+
+json.user do
+  json.partial!('api/users/user', user: event.user)
+end
