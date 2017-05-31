@@ -69,6 +69,10 @@
   </li>
   
       <li>
+    <a href="#public/api/doc/api/events/songs/index.md">api/events/songs/index.md</a>
+  </li>
+  
+      <li>
     <a href="#public/api/doc/api/events/tasks/create.md">api/events/tasks/create.md</a>
   </li>
   
@@ -95,13 +99,13 @@
 <div class='generated-at'>
 Generated at:
 <br>
-2017-05-30 02:53:34 -0500</div>
+2017-05-30 19:40:50 -0500</div>
 </div>
 
 <div class='page-wrapper'>
   <div id="public/api/doc/api/events/index.md" class="api-resource"><div class="api-action"><h2>GET /api/events</h2>
 
-<p>Let&#39;s assume current date is 2017-05-30 and there exists events for 2017-06-06 and 2017-05-19</p>
+<p>Let&#39;s assume current date is 2017-05-30 and there exists events for 2017-06-07 and 2017-05-13</p>
 
 <h3>Example</h3>
 
@@ -109,10 +113,10 @@ Generated at:
 
 <pre><code>GET /api/events HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: cg-BnM_-S7acbs3OxGx3aA
-Client: C-5CtC32t-QKgZ1NI7uxqw
+Access-Token: is2WQ8TbdePQ00NpUUJLqg
+Client: Nxo-oalyifsIw1hT318lWA
 Content-Length: 0
-Expiry: 1497340411
+Expiry: 1497400847
 Host: www.example.com
 Token-Type: Bearer
 Uid: person4@email.com
@@ -122,38 +126,38 @@ Uid: person4@email.com
 
 <pre><code>HTTP/1.1 200
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 299
+Content-Length: 303
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;a45add30af4917682be911bacab93f9c&quot;
+ETag: W/&quot;d777c64240f0b4f69de3d2c8c120326e&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 139612be-cbb0-44d5-a88f-f61cec4bd261
-X-Runtime: 0.121870
+X-Request-Id: 58a5d2b0-4c10-4b54-b8a1-f8cdb8b84d97
+X-Runtime: 0.112900
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;past_events&quot;: [
     {
-      &quot;id&quot;: 8,
-      &quot;user_id&quot;: 7,
+      &quot;id&quot;: 46,
+      &quot;user_id&quot;: 76,
       &quot;name&quot;: &quot;event 6&quot;,
       &quot;descripcion&quot;: null,
       &quot;lat&quot;: null,
       &quot;lng&quot;: null,
-      &quot;date&quot;: &quot;2017-05-19T17:54:40.000Z&quot;,
+      &quot;date&quot;: &quot;2017-05-13T06:38:30.000Z&quot;,
       &quot;invited_people&quot;: 0
     }
   ],
   &quot;future_events&quot;: [
     {
-      &quot;id&quot;: 7,
-      &quot;user_id&quot;: 7,
+      &quot;id&quot;: 45,
+      &quot;user_id&quot;: 76,
       &quot;name&quot;: &quot;event 5&quot;,
       &quot;descripcion&quot;: null,
       &quot;lat&quot;: null,
       &quot;lng&quot;: null,
-      &quot;date&quot;: &quot;2017-06-06T16:23:16.000Z&quot;,
+      &quot;date&quot;: &quot;2017-06-07T12:24:08.000Z&quot;,
       &quot;invited_people&quot;: 0
     }
   ]
@@ -167,42 +171,42 @@ X-XSS-Protection: 1; mode=block
 
 <h4>Request</h4>
 
-<pre><code>POST /api/events/9/invitees HTTP/1.1
+<pre><code>POST /api/events/47/invitees HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: 2wdGD1vPgg-WThnSb6JgYw
-Client: wmqMHE516kKpb76Ln75B0w
-Content-Length: 12
+Access-Token: RtrSC1CroZz3_SeifxwDbg
+Client: c6XCeo5U7vbXH5rsymTzdg
+Content-Length: 13
 Content-Type: application/x-www-form-urlencoded
-Expiry: 1497340411
+Expiry: 1497400847
 Host: www.example.com
 Token-Type: Bearer
 Uid: person5@email.com
 
-user_ids[]=9
+user_ids[]=78
 </code></pre>
 
 <h4>Response</h4>
 
 <pre><code>HTTP/1.1 201
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 91
+Content-Length: 94
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;0db3c5b12633a7d865c817fe22125003&quot;
+ETag: W/&quot;6d4b55b0ca3812aa5e11b8c147e7a3e3&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 040532a6-3d36-49c9-a3cc-ed266b701522
-X-Runtime: 0.147122
+X-Request-Id: 6801e6a1-d23f-43de-aa86-7a9c215e5aa4
+X-Runtime: 0.142175
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;invitees&quot;: [
     {
-      &quot;id&quot;: 1,
-      &quot;event_id&quot;: 9,
+      &quot;id&quot;: 23,
+      &quot;event_id&quot;: 47,
       &quot;user&quot;: {
-        &quot;id&quot;: 9,
-        &quot;name&quot;: &quot;Sta. Andrés Arevalo Figueroa&quot;
+        &quot;id&quot;: 78,
+        &quot;name&quot;: &quot;Sr. Sonia Alcántar González&quot;
       }
     }
   ]
@@ -216,50 +220,50 @@ X-XSS-Protection: 1; mode=block
 
 <h4>Request</h4>
 
-<pre><code>POST /api/events/10/invitees HTTP/1.1
+<pre><code>POST /api/events/48/invitees HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: 55gozzRQT5xQtypRqRKysA
-Client: Tnvve6NN0NMLmYkpmLhXOw
+Access-Token: zLiFaszBrF3EHb5EugNQng
+Client: rqi9xoqOSq9aRNNaC0dJlw
 Content-Length: 27
 Content-Type: application/x-www-form-urlencoded
-Expiry: 1497340411
+Expiry: 1497400847
 Host: www.example.com
 Token-Type: Bearer
 Uid: person7@email.com
 
-user_ids[]=11&amp;user_ids[]=12
+user_ids[]=80&amp;user_ids[]=81
 </code></pre>
 
 <h4>Response</h4>
 
 <pre><code>HTTP/1.1 201
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 165
+Content-Length: 163
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;bcc1386d1d1e76a210c48e6320f56be7&quot;
+ETag: W/&quot;513f6361f3e8c854fa035358a41cf43e&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: d487b65b-c4c6-4d7b-8ae8-2615fc9106e5
-X-Runtime: 0.120908
+X-Request-Id: 558dcaf0-fe21-4f6d-b75c-4adbb5466ba5
+X-Runtime: 0.118284
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;invitees&quot;: [
     {
-      &quot;id&quot;: 2,
-      &quot;event_id&quot;: 10,
+      &quot;id&quot;: 24,
+      &quot;event_id&quot;: 48,
       &quot;user&quot;: {
-        &quot;id&quot;: 11,
-        &quot;name&quot;: &quot;Sta. Ana Luisa Garay Cepeda&quot;
+        &quot;id&quot;: 80,
+        &quot;name&quot;: &quot;Mercedes Delagarza Barrera&quot;
       }
     },
     {
-      &quot;id&quot;: 3,
-      &quot;event_id&quot;: 10,
+      &quot;id&quot;: 25,
+      &quot;event_id&quot;: 48,
       &quot;user&quot;: {
-        &quot;id&quot;: 12,
-        &quot;name&quot;: &quot;Sr. Laura Cardona Lucero&quot;
+        &quot;id&quot;: 81,
+        &quot;name&quot;: &quot;Samuel Santacruz Nava&quot;
       }
     }
   ]
@@ -268,48 +272,48 @@ X-XSS-Protection: 1; mode=block
 </div><div class="api-action"><h2>POST /api/events/:event_id/invitees</h2>
 
 <p>when a friend has already been invited.
-In this case, user with id 14 is already an invitee</p>
+In this case, user with id 83 is already an invitee</p>
 
 <h3>Example</h3>
 
 <h4>Request</h4>
 
-<pre><code>POST /api/events/11/invitees HTTP/1.1
+<pre><code>POST /api/events/49/invitees HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: 8kQnP3woUz3HThPL7Z6x3g
-Client: 0xih2VBlZr3_hZ6Opo4RJQ
+Access-Token: KSegQrMCHnUACBg9lqA2RA
+Client: qyImT43sAtpC1xX1hNt1JQ
 Content-Length: 27
 Content-Type: application/x-www-form-urlencoded
-Expiry: 1497340411
+Expiry: 1497400848
 Host: www.example.com
 Token-Type: Bearer
 Uid: person10@email.com
 
-user_ids[]=14&amp;user_ids[]=15
+user_ids[]=83&amp;user_ids[]=84
 </code></pre>
 
 <h4>Response</h4>
 
 <pre><code>HTTP/1.1 201
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 92
+Content-Length: 82
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;fd34ac12ab52d90c4df596b2425540c0&quot;
+ETag: W/&quot;e37ea43a57197267056a7b2ca71beced&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 888326c6-3ebc-47d2-8f62-1a842718c59c
-X-Runtime: 0.118706
+X-Request-Id: 10824c46-d132-4aef-b9ec-b1abb02ec3cf
+X-Runtime: 0.121484
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;invitees&quot;: [
     {
-      &quot;id&quot;: 5,
-      &quot;event_id&quot;: 11,
+      &quot;id&quot;: 27,
+      &quot;event_id&quot;: 49,
       &quot;user&quot;: {
-        &quot;id&quot;: 15,
-        &quot;name&quot;: &quot;María Teresa Pedroza Arroyo&quot;
+        &quot;id&quot;: 84,
+        &quot;name&quot;: &quot;César Rojo Ulloa&quot;
       }
     }
   ]
@@ -323,12 +327,12 @@ X-XSS-Protection: 1; mode=block
 
 <h4>Request</h4>
 
-<pre><code>GET /api/events/12/invitees HTTP/1.1
+<pre><code>GET /api/events/50/invitees HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: iLaR_WXXRcyzFpeLDey5JA
-Client: 0p1fy1Pew8Qw0QjP7fJaIA
+Access-Token: vBxqilWSA8n_6a3F_2PD0A
+Client: LmhrOmHe_VYMB9wH3S-3CA
 Content-Length: 0
-Expiry: 1497340412
+Expiry: 1497400848
 Host: www.example.com
 Token-Type: Bearer
 Uid: person13@email.com
@@ -338,24 +342,24 @@ Uid: person13@email.com
 
 <pre><code>HTTP/1.1 200
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 94
+Content-Length: 90
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;9305a189a5f35652af5ddfeecfac8d29&quot;
+ETag: W/&quot;4498bc718e97558fefad09b472f0c491&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 4ba3af3f-3aef-4a21-a27e-c24afa89d7a9
-X-Runtime: 0.110612
+X-Request-Id: 40352f5b-a893-47e4-a91a-f3780a607bac
+X-Runtime: 0.127721
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;invitees&quot;: [
     {
-      &quot;id&quot;: 6,
-      &quot;event_id&quot;: 12,
+      &quot;id&quot;: 28,
+      &quot;event_id&quot;: 50,
       &quot;user&quot;: {
-        &quot;id&quot;: 17,
-        &quot;name&quot;: &quot;Sr. Lucas Carrasquillo Mendoza&quot;
+        &quot;id&quot;: 86,
+        &quot;name&quot;: &quot;Sr. Rafael Piña Valencia&quot;
       }
     }
   ]
@@ -369,13 +373,13 @@ X-XSS-Protection: 1; mode=block
 
 <h4>Request</h4>
 
-<pre><code>POST /api/events/14/songs HTTP/1.1
+<pre><code>POST /api/events/52/songs HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: 5aq9BevcQzkywmy6rRyTsg
-Client: ANr8y_NBqbsS4nBZ3hHEAQ
+Access-Token: 1_sAlgQDVa1sz9SsZDB-gg
+Client: bLBW4xyVEUosAl-0hJwDvg
 Content-Length: 33
 Content-Type: application/x-www-form-urlencoded
-Expiry: 1497340412
+Expiry: 1497400848
 Host: www.example.com
 Token-Type: Bearer
 Uid: person16@email.com
@@ -387,65 +391,95 @@ spotify_id=2vVc2G9w2JteBgxpSUVwX5
 
 <pre><code>HTTP/1.1 201
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 2370
+Content-Length: 2386
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;bac01836083cbe2215c865478dbcf368&quot;
+ETag: W/&quot;7f7baf14d696591ada46709704b157f1&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: cd522807-2745-4e32-9c7a-a6e7f85c0dc2
-X-Runtime: 0.188270
+X-Request-Id: 34b0fe7f-29f4-4478-921d-7b0e2ca57ab1
+X-Runtime: 0.176255
 X-XSS-Protection: 1; mode=block
 
 {
-  &quot;spotify_id&quot;: &quot;2vVc2G9w2JteBgxpSUVwX5&quot;,
-  &quot;spotify_track&quot;: {
-    &quot;available_markets&quot;: [
-      &quot;CA&quot;,
-      &quot;MX&quot;,
-      &quot;US&quot;
-    ],
-    &quot;disc_number&quot;: 1,
-    &quot;duration_ms&quot;: 232520,
-    &quot;explicit&quot;: true,
-    &quot;external_ids&quot;: {
-      &quot;isrc&quot;: &quot;USCM50800823&quot;
-    },
-    &quot;name&quot;: &quot;Let It Rock&quot;,
-    &quot;popularity&quot;: 52,
-    &quot;preview_url&quot;: null,
-    &quot;track_number&quot;: 1,
-    &quot;album&quot;: {
-      &quot;album_type&quot;: &quot;single&quot;,
+  &quot;song&quot;: {
+    &quot;id&quot;: 6,
+    &quot;spotify_id&quot;: &quot;2vVc2G9w2JteBgxpSUVwX5&quot;,
+    &quot;spotify_track&quot;: {
       &quot;available_markets&quot;: [
         &quot;CA&quot;,
         &quot;MX&quot;,
         &quot;US&quot;
       ],
-      &quot;copyrights&quot;: null,
-      &quot;external_ids&quot;: null,
-      &quot;genres&quot;: null,
-      &quot;images&quot;: [
-        {
-          &quot;height&quot;: 640,
-          &quot;url&quot;: &quot;https://i.scdn.co/image/b02c052d78d9b5fb228924383fd1484ef6e130d3&quot;,
-          &quot;width&quot;: 640
+      &quot;disc_number&quot;: 1,
+      &quot;duration_ms&quot;: 232520,
+      &quot;explicit&quot;: true,
+      &quot;external_ids&quot;: {
+        &quot;isrc&quot;: &quot;USCM50800823&quot;
+      },
+      &quot;name&quot;: &quot;Let It Rock&quot;,
+      &quot;popularity&quot;: 52,
+      &quot;preview_url&quot;: null,
+      &quot;track_number&quot;: 1,
+      &quot;album&quot;: {
+        &quot;album_type&quot;: &quot;single&quot;,
+        &quot;available_markets&quot;: [
+          &quot;CA&quot;,
+          &quot;MX&quot;,
+          &quot;US&quot;
+        ],
+        &quot;copyrights&quot;: null,
+        &quot;external_ids&quot;: null,
+        &quot;genres&quot;: null,
+        &quot;images&quot;: [
+          {
+            &quot;height&quot;: 640,
+            &quot;url&quot;: &quot;https://i.scdn.co/image/b02c052d78d9b5fb228924383fd1484ef6e130d3&quot;,
+            &quot;width&quot;: 640
+          },
+          {
+            &quot;height&quot;: 300,
+            &quot;url&quot;: &quot;https://i.scdn.co/image/712d2ac5e6e093085f406bf98e2ecce8ce3c461e&quot;,
+            &quot;width&quot;: 300
+          },
+          {
+            &quot;height&quot;: 64,
+            &quot;url&quot;: &quot;https://i.scdn.co/image/72e5bca9d58cc69914bd65bf402aaf7626d500ee&quot;,
+            &quot;width&quot;: 64
+          }
+        ],
+        &quot;name&quot;: &quot;Let It Rock (Remixes)&quot;,
+        &quot;popularity&quot;: null,
+        &quot;release_date&quot;: null,
+        &quot;release_date_precision&quot;: null,
+        &quot;artists&quot;: [
+          {
+            &quot;followers&quot;: null,
+            &quot;genres&quot;: null,
+            &quot;images&quot;: null,
+            &quot;name&quot;: &quot;Kevin Rudolf&quot;,
+            &quot;popularity&quot;: null,
+            &quot;top_tracks&quot;: {
+            },
+            &quot;external_urls&quot;: {
+              &quot;spotify&quot;: &quot;https://open.spotify.com/artist/0Chxmm4XMM87mJOHvyiUzL&quot;
+            },
+            &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/0Chxmm4XMM87mJOHvyiUzL&quot;,
+            &quot;id&quot;: &quot;0Chxmm4XMM87mJOHvyiUzL&quot;,
+            &quot;type&quot;: &quot;artist&quot;,
+            &quot;uri&quot;: &quot;spotify:artist:0Chxmm4XMM87mJOHvyiUzL&quot;
+          }
+        ],
+        &quot;tracks_cache&quot;: null,
+        &quot;total_tracks&quot;: null,
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/album/2YYAJxfw9pfWdMbuTBgtRc&quot;
         },
-        {
-          &quot;height&quot;: 300,
-          &quot;url&quot;: &quot;https://i.scdn.co/image/712d2ac5e6e093085f406bf98e2ecce8ce3c461e&quot;,
-          &quot;width&quot;: 300
-        },
-        {
-          &quot;height&quot;: 64,
-          &quot;url&quot;: &quot;https://i.scdn.co/image/72e5bca9d58cc69914bd65bf402aaf7626d500ee&quot;,
-          &quot;width&quot;: 64
-        }
-      ],
-      &quot;name&quot;: &quot;Let It Rock (Remixes)&quot;,
-      &quot;popularity&quot;: null,
-      &quot;release_date&quot;: null,
-      &quot;release_date_precision&quot;: null,
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/albums/2YYAJxfw9pfWdMbuTBgtRc&quot;,
+        &quot;id&quot;: &quot;2YYAJxfw9pfWdMbuTBgtRc&quot;,
+        &quot;type&quot;: &quot;album&quot;,
+        &quot;uri&quot;: &quot;spotify:album:2YYAJxfw9pfWdMbuTBgtRc&quot;
+      },
       &quot;artists&quot;: [
         {
           &quot;followers&quot;: null,
@@ -462,60 +496,226 @@ X-XSS-Protection: 1; mode=block
           &quot;id&quot;: &quot;0Chxmm4XMM87mJOHvyiUzL&quot;,
           &quot;type&quot;: &quot;artist&quot;,
           &quot;uri&quot;: &quot;spotify:artist:0Chxmm4XMM87mJOHvyiUzL&quot;
+        },
+        {
+          &quot;followers&quot;: null,
+          &quot;genres&quot;: null,
+          &quot;images&quot;: null,
+          &quot;name&quot;: &quot;Lil Wayne&quot;,
+          &quot;popularity&quot;: null,
+          &quot;top_tracks&quot;: {
+          },
+          &quot;external_urls&quot;: {
+            &quot;spotify&quot;: &quot;https://open.spotify.com/artist/55Aa2cqylxrFIXC767Z865&quot;
+          },
+          &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/55Aa2cqylxrFIXC767Z865&quot;,
+          &quot;id&quot;: &quot;55Aa2cqylxrFIXC767Z865&quot;,
+          &quot;type&quot;: &quot;artist&quot;,
+          &quot;uri&quot;: &quot;spotify:artist:55Aa2cqylxrFIXC767Z865&quot;
         }
       ],
-      &quot;tracks_cache&quot;: null,
-      &quot;total_tracks&quot;: null,
       &quot;external_urls&quot;: {
-        &quot;spotify&quot;: &quot;https://open.spotify.com/album/2YYAJxfw9pfWdMbuTBgtRc&quot;
+        &quot;spotify&quot;: &quot;https://open.spotify.com/track/2vVc2G9w2JteBgxpSUVwX5&quot;
       },
-      &quot;href&quot;: &quot;https://api.spotify.com/v1/albums/2YYAJxfw9pfWdMbuTBgtRc&quot;,
-      &quot;id&quot;: &quot;2YYAJxfw9pfWdMbuTBgtRc&quot;,
-      &quot;type&quot;: &quot;album&quot;,
-      &quot;uri&quot;: &quot;spotify:album:2YYAJxfw9pfWdMbuTBgtRc&quot;
-    },
-    &quot;artists&quot;: [
-      {
-        &quot;followers&quot;: null,
-        &quot;genres&quot;: null,
-        &quot;images&quot;: null,
-        &quot;name&quot;: &quot;Kevin Rudolf&quot;,
-        &quot;popularity&quot;: null,
-        &quot;top_tracks&quot;: {
-        },
-        &quot;external_urls&quot;: {
-          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/0Chxmm4XMM87mJOHvyiUzL&quot;
-        },
-        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/0Chxmm4XMM87mJOHvyiUzL&quot;,
-        &quot;id&quot;: &quot;0Chxmm4XMM87mJOHvyiUzL&quot;,
-        &quot;type&quot;: &quot;artist&quot;,
-        &quot;uri&quot;: &quot;spotify:artist:0Chxmm4XMM87mJOHvyiUzL&quot;
-      },
-      {
-        &quot;followers&quot;: null,
-        &quot;genres&quot;: null,
-        &quot;images&quot;: null,
-        &quot;name&quot;: &quot;Lil Wayne&quot;,
-        &quot;popularity&quot;: null,
-        &quot;top_tracks&quot;: {
-        },
-        &quot;external_urls&quot;: {
-          &quot;spotify&quot;: &quot;https://open.spotify.com/artist/55Aa2cqylxrFIXC767Z865&quot;
-        },
-        &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/55Aa2cqylxrFIXC767Z865&quot;,
-        &quot;id&quot;: &quot;55Aa2cqylxrFIXC767Z865&quot;,
-        &quot;type&quot;: &quot;artist&quot;,
-        &quot;uri&quot;: &quot;spotify:artist:55Aa2cqylxrFIXC767Z865&quot;
-      }
-    ],
-    &quot;external_urls&quot;: {
-      &quot;spotify&quot;: &quot;https://open.spotify.com/track/2vVc2G9w2JteBgxpSUVwX5&quot;
-    },
-    &quot;href&quot;: &quot;https://api.spotify.com/v1/tracks/2vVc2G9w2JteBgxpSUVwX5&quot;,
-    &quot;id&quot;: &quot;2vVc2G9w2JteBgxpSUVwX5&quot;,
-    &quot;type&quot;: &quot;track&quot;,
-    &quot;uri&quot;: &quot;spotify:track:2vVc2G9w2JteBgxpSUVwX5&quot;
+      &quot;href&quot;: &quot;https://api.spotify.com/v1/tracks/2vVc2G9w2JteBgxpSUVwX5&quot;,
+      &quot;id&quot;: &quot;2vVc2G9w2JteBgxpSUVwX5&quot;,
+      &quot;type&quot;: &quot;track&quot;,
+      &quot;uri&quot;: &quot;spotify:track:2vVc2G9w2JteBgxpSUVwX5&quot;
+    }
   }
+}
+</code></pre>
+</div></div><div id="public/api/doc/api/events/songs/index.md" class="api-resource"><div class="api-action"><h2>GET /api/events/:event_id/songs</h2>
+
+<p>Lists event songs.</p>
+
+<h3>Example</h3>
+
+<h4>Request</h4>
+
+<pre><code>GET /api/events/53/songs HTTP/1.1
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Access-Token: eTRiU0MMeAfnXYpympKdLg
+Client: oK8_g5Rpxo8Uv7P9xaIzuQ
+Content-Length: 0
+Expiry: 1497400848
+Host: www.example.com
+Token-Type: Bearer
+Uid: person17@email.com
+</code></pre>
+
+<h4>Response</h4>
+
+<pre><code>HTTP/1.1 200
+Cache-Control: max-age=0, private, must-revalidate
+Content-Length: 2384
+Content-Type: application/json; charset=utf-8
+ETag: W/&quot;f1c6958929cffeed60badb437ede23d7&quot;
+Vary: Origin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Request-Id: c80df23d-2386-4340-8d8a-dc6447a10cf8
+X-Runtime: 0.112174
+X-XSS-Protection: 1; mode=block
+
+{
+  &quot;songs&quot;: [
+    {
+      &quot;id&quot;: 7,
+      &quot;spotify_id&quot;: &quot;14523asdfas&quot;,
+      &quot;spotify_track&quot;: {
+        &quot;available_markets&quot;: [
+          &quot;AR&quot;,
+          &quot;AU&quot;,
+          &quot;BO&quot;,
+          &quot;BR&quot;,
+          &quot;CA&quot;,
+          &quot;CL&quot;,
+          &quot;CO&quot;,
+          &quot;CR&quot;,
+          &quot;DO&quot;,
+          &quot;EC&quot;,
+          &quot;GT&quot;,
+          &quot;HK&quot;,
+          &quot;HN&quot;,
+          &quot;ID&quot;,
+          &quot;JP&quot;,
+          &quot;MX&quot;,
+          &quot;MY&quot;,
+          &quot;NI&quot;,
+          &quot;NZ&quot;,
+          &quot;PA&quot;,
+          &quot;PE&quot;,
+          &quot;PH&quot;,
+          &quot;PY&quot;,
+          &quot;SG&quot;,
+          &quot;SV&quot;,
+          &quot;TW&quot;,
+          &quot;US&quot;,
+          &quot;UY&quot;
+        ],
+        &quot;disc_number&quot;: 1,
+        &quot;duration_ms&quot;: 318239,
+        &quot;explicit&quot;: false,
+        &quot;external_ids&quot;: {
+          &quot;isrc&quot;: &quot;GBN9Y1100126&quot;
+        },
+        &quot;name&quot;: &quot;The Gunner&#39;s Dream&quot;,
+        &quot;popularity&quot;: 43,
+        &quot;preview_url&quot;: &quot;https://p.scdn.co/mp3-preview/a88745105eb54aa5aa38aab0d8b80f34d8fcbeb5?cid=e16acd3a7ef344789b1a6cac6c2c8881&quot;,
+        &quot;track_number&quot;: 6,
+        &quot;album&quot;: {
+          &quot;album_type&quot;: &quot;album&quot;,
+          &quot;available_markets&quot;: [
+            &quot;AR&quot;,
+            &quot;AU&quot;,
+            &quot;BO&quot;,
+            &quot;BR&quot;,
+            &quot;CA&quot;,
+            &quot;CL&quot;,
+            &quot;CO&quot;,
+            &quot;CR&quot;,
+            &quot;DO&quot;,
+            &quot;EC&quot;,
+            &quot;GT&quot;,
+            &quot;HK&quot;,
+            &quot;HN&quot;,
+            &quot;ID&quot;,
+            &quot;JP&quot;,
+            &quot;MX&quot;,
+            &quot;MY&quot;,
+            &quot;NI&quot;,
+            &quot;NZ&quot;,
+            &quot;PA&quot;,
+            &quot;PE&quot;,
+            &quot;PH&quot;,
+            &quot;PY&quot;,
+            &quot;SG&quot;,
+            &quot;SV&quot;,
+            &quot;TW&quot;,
+            &quot;US&quot;,
+            &quot;UY&quot;
+          ],
+          &quot;copyrights&quot;: null,
+          &quot;external_ids&quot;: null,
+          &quot;genres&quot;: null,
+          &quot;images&quot;: [
+            {
+              &quot;height&quot;: 640,
+              &quot;url&quot;: &quot;https://i.scdn.co/image/b892e15ad121ba648245c915dbadfe76fc63b474&quot;,
+              &quot;width&quot;: 640
+            },
+            {
+              &quot;height&quot;: 300,
+              &quot;url&quot;: &quot;https://i.scdn.co/image/01341c18d7f55184a26e2ebe1a21d045be539715&quot;,
+              &quot;width&quot;: 300
+            },
+            {
+              &quot;height&quot;: 64,
+              &quot;url&quot;: &quot;https://i.scdn.co/image/90c8b134212e14035424205e2da53b1d5bf8e8aa&quot;,
+              &quot;width&quot;: 64
+            }
+          ],
+          &quot;name&quot;: &quot;The Final Cut&quot;,
+          &quot;popularity&quot;: null,
+          &quot;release_date&quot;: null,
+          &quot;release_date_precision&quot;: null,
+          &quot;artists&quot;: [
+            {
+              &quot;followers&quot;: null,
+              &quot;genres&quot;: null,
+              &quot;images&quot;: null,
+              &quot;name&quot;: &quot;Pink Floyd&quot;,
+              &quot;popularity&quot;: null,
+              &quot;top_tracks&quot;: {
+              },
+              &quot;external_urls&quot;: {
+                &quot;spotify&quot;: &quot;https://open.spotify.com/artist/0k17h0D3J5VfsdmQ1iZtE9&quot;
+              },
+              &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/0k17h0D3J5VfsdmQ1iZtE9&quot;,
+              &quot;id&quot;: &quot;0k17h0D3J5VfsdmQ1iZtE9&quot;,
+              &quot;type&quot;: &quot;artist&quot;,
+              &quot;uri&quot;: &quot;spotify:artist:0k17h0D3J5VfsdmQ1iZtE9&quot;
+            }
+          ],
+          &quot;tracks_cache&quot;: null,
+          &quot;total_tracks&quot;: null,
+          &quot;external_urls&quot;: {
+            &quot;spotify&quot;: &quot;https://open.spotify.com/album/1yMenUMOx7BpfTDuVQs99y&quot;
+          },
+          &quot;href&quot;: &quot;https://api.spotify.com/v1/albums/1yMenUMOx7BpfTDuVQs99y&quot;,
+          &quot;id&quot;: &quot;1yMenUMOx7BpfTDuVQs99y&quot;,
+          &quot;type&quot;: &quot;album&quot;,
+          &quot;uri&quot;: &quot;spotify:album:1yMenUMOx7BpfTDuVQs99y&quot;
+        },
+        &quot;artists&quot;: [
+          {
+            &quot;followers&quot;: null,
+            &quot;genres&quot;: null,
+            &quot;images&quot;: null,
+            &quot;name&quot;: &quot;Pink Floyd&quot;,
+            &quot;popularity&quot;: null,
+            &quot;top_tracks&quot;: {
+            },
+            &quot;external_urls&quot;: {
+              &quot;spotify&quot;: &quot;https://open.spotify.com/artist/0k17h0D3J5VfsdmQ1iZtE9&quot;
+            },
+            &quot;href&quot;: &quot;https://api.spotify.com/v1/artists/0k17h0D3J5VfsdmQ1iZtE9&quot;,
+            &quot;id&quot;: &quot;0k17h0D3J5VfsdmQ1iZtE9&quot;,
+            &quot;type&quot;: &quot;artist&quot;,
+            &quot;uri&quot;: &quot;spotify:artist:0k17h0D3J5VfsdmQ1iZtE9&quot;
+          }
+        ],
+        &quot;external_urls&quot;: {
+          &quot;spotify&quot;: &quot;https://open.spotify.com/track/1057KuzIH4fWCyI5Gb5kX2&quot;
+        },
+        &quot;href&quot;: &quot;https://api.spotify.com/v1/tracks/1057KuzIH4fWCyI5Gb5kX2&quot;,
+        &quot;id&quot;: &quot;1057KuzIH4fWCyI5Gb5kX2&quot;,
+        &quot;type&quot;: &quot;track&quot;,
+        &quot;uri&quot;: &quot;spotify:track:1057KuzIH4fWCyI5Gb5kX2&quot;
+      }
+    }
+  ]
 }
 </code></pre>
 </div></div><div id="public/api/doc/api/events/tasks/create.md" class="api-resource"><div class="api-action"><h2>POST /api/events/:event_id/tasks</h2>
@@ -526,16 +726,16 @@ X-XSS-Protection: 1; mode=block
 
 <h4>Request</h4>
 
-<pre><code>POST /api/events/15/tasks HTTP/1.1
+<pre><code>POST /api/events/54/tasks HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: 9UWm9O0QcKRc5aLlCZfG8Q
-Client: ZCRiw7Wc862BD7sZJT21FQ
+Access-Token: 9zt2D6tNkcmOh66ol_y8uA
+Client: 9-lXFoDyo-Q4ituDJUgKqQ
 Content-Length: 42
 Content-Type: application/x-www-form-urlencoded
-Expiry: 1497340412
+Expiry: 1497400849
 Host: www.example.com
 Token-Type: Bearer
-Uid: person17@email.com
+Uid: person19@email.com
 
 description=traer+bebidas+alcoh%C3%B3licas
 </code></pre>
@@ -546,19 +746,19 @@ description=traer+bebidas+alcoh%C3%B3licas
 Cache-Control: max-age=0, private, must-revalidate
 Content-Length: 100
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;95275ac7f36412ea082aa8ad13bb5a13&quot;
+ETag: W/&quot;f205a663abe2a885d7ba035d55189d1b&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 6b13f895-167b-466c-9e57-32bcade26178
-X-Runtime: 0.131475
+X-Request-Id: 3b3eacda-4e9c-4c9a-9c6a-d5d3494f1073
+X-Runtime: 0.136869
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;task&quot;: {
-    &quot;id&quot;: 3,
+    &quot;id&quot;: 5,
     &quot;description&quot;: &quot;traer bebidas alcohólicas&quot;,
-    &quot;created_at&quot;: &quot;2017-05-30T07:53:32.863Z&quot;
+    &quot;created_at&quot;: &quot;2017-05-31T00:40:49.290Z&quot;
   }
 }
 </code></pre>
@@ -572,34 +772,34 @@ X-XSS-Protection: 1; mode=block
 
 <pre><code>GET /api/friends HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: 0gKtp5nb-uxl0mFHq9rTZw
-Client: 9iTnEm5tUXMrYJpMNr-BsA
+Access-Token: l-kur-J5yrJHcm78-645iA
+Client: WTrbyUjz3mXSMb6QiYR-EA
 Content-Length: 0
-Expiry: 1497340412
+Expiry: 1497400849
 Host: www.example.com
 Token-Type: Bearer
-Uid: person18@email.com
+Uid: person20@email.com
 </code></pre>
 
 <h4>Response</h4>
 
 <pre><code>HTTP/1.1 200
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 56
+Content-Length: 61
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;094bcf8896ebed093d45b0b0f87a5249&quot;
+ETag: W/&quot;feea5c820dc881d11eac98fe484bcd5b&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: e8f094cd-675a-46d3-8e2a-056e5bce44e5
-X-Runtime: 0.119322
+X-Request-Id: 60117477-96e5-45da-8414-de6251166015
+X-Runtime: 0.129549
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;friends&quot;: [
     {
-      &quot;id&quot;: 22,
-      &quot;name&quot;: &quot;Ana Luisa Almonte Amaya&quot;
+      &quot;id&quot;: 93,
+      &quot;name&quot;: &quot;Elisa Montemayor Quintanilla&quot;
     }
   ]
 }
@@ -614,13 +814,13 @@ X-XSS-Protection: 1; mode=block
 
 <pre><code>GET /api/friends?q=Cebollas HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: 6UQJAcAA9HI0UMEkOsz7-Q
-Client: sCEundqiqDIRqIrwaw7Hzw
+Access-Token: ygokWkUmsSWS-PI7YGxjxg
+Client: UvfmetwXllPjPNa_17ow9w
 Content-Length: 0
-Expiry: 1497340413
+Expiry: 1497400849
 Host: www.example.com
 Token-Type: Bearer
-Uid: person20@email.com
+Uid: person22@email.com
 </code></pre>
 
 <h4>Response</h4>
@@ -629,18 +829,18 @@ Uid: person20@email.com
 Cache-Control: max-age=0, private, must-revalidate
 Content-Length: 54
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;26f6d1b592b493f0e42323c5fb996b80&quot;
+ETag: W/&quot;8e9852f5298d92e837f0e5aacbf63d9c&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: dabfdaaa-da96-40c8-bda1-914043bf1590
-X-Runtime: 0.111734
+X-Request-Id: ddc19ef9-aec4-4c55-87bb-047c88f3d1d4
+X-Runtime: 0.108672
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;friends&quot;: [
     {
-      &quot;id&quot;: 24,
+      &quot;id&quot;: 95,
       &quot;name&quot;: &quot;Peter Parker Cebollas&quot;
     }
   ]
@@ -654,44 +854,44 @@ X-XSS-Protection: 1; mode=block
 
 <h4>Request</h4>
 
-<pre><code>POST /api/invites/7/accept HTTP/1.1
+<pre><code>POST /api/invites/29/accept HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: ot5Q7YdS5Cp0DfGa7JJiXw
-Client: jfiFccj4OkLA9u3rYGmyjQ
+Access-Token: A83AYSVNYMk5VqYnJ_jXNQ
+Client: NSS1mEF9sjsDYK5to4B7sA
 Content-Length: 0
 Content-Type: application/x-www-form-urlencoded
-Expiry: 1497340413
+Expiry: 1497400849
 Host: www.example.com
 Token-Type: Bearer
-Uid: person23@email.com
+Uid: person25@email.com
 </code></pre>
 
 <h4>Response</h4>
 
 <pre><code>HTTP/1.1 202
 Cache-Control: no-cache
-Content-Length: 222
+Content-Length: 223
 Content-Type: application/json; charset=utf-8
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 9303d969-da67-4c1b-8525-c84eff3f2af7
-X-Runtime: 0.152540
+X-Request-Id: e8182937-b2c6-48b8-a184-fa50b665188b
+X-Runtime: 0.140144
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;invite&quot;: {
-    &quot;id&quot;: 7,
+    &quot;id&quot;: 29,
     &quot;status&quot;: &quot;accepted&quot;,
-    &quot;created_at&quot;: &quot;2017-05-30T07:53:33.340Z&quot;,
+    &quot;created_at&quot;: &quot;2017-05-31T00:40:49.777Z&quot;,
     &quot;event&quot;: {
-      &quot;id&quot;: 16,
-      &quot;user_id&quot;: 27,
-      &quot;name&quot;: &quot;event 14&quot;,
+      &quot;id&quot;: 55,
+      &quot;user_id&quot;: 98,
+      &quot;name&quot;: &quot;event 15&quot;,
       &quot;descripcion&quot;: null,
       &quot;lat&quot;: null,
       &quot;lng&quot;: null,
-      &quot;date&quot;: &quot;2017-06-08T12:38:59.000Z&quot;,
+      &quot;date&quot;: &quot;2017-06-15T11:06:14.000Z&quot;,
       &quot;invited_people&quot;: 1
     }
   }
@@ -707,77 +907,77 @@ X-XSS-Protection: 1; mode=block
 
 <pre><code>GET /api/invites HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: zzfZr4KTUdDeh9kTE3Jr0g
-Client: H-j6_Yj9K0DVajBFOS_YNQ
+Access-Token: d1kyqzq9riA1Nr6--fkihQ
+Client: BK14MnGlqNuJ_2Ny5uGaNA
 Content-Length: 0
-Expiry: 1497340413
+Expiry: 1497400850
 Host: www.example.com
 Token-Type: Bearer
-Uid: person25@email.com
+Uid: person27@email.com
 </code></pre>
 
 <h4>Response</h4>
 
 <pre><code>HTTP/1.1 200
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 699
+Content-Length: 704
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;74b86918cf3aab0eed77b1a97aa046dd&quot;
+ETag: W/&quot;2db67300df1ed8dad80c0bef75735115&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 66dae434-1aca-4eef-a426-e49eaaedbdd4
-X-Runtime: 0.143214
+X-Request-Id: cba58536-07a7-41e6-a97f-8da08334af87
+X-Runtime: 0.124696
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;pending_invites&quot;: [
     {
-      &quot;id&quot;: 8,
+      &quot;id&quot;: 30,
       &quot;status&quot;: &quot;pending&quot;,
-      &quot;created_at&quot;: &quot;2017-05-30T07:53:33.594Z&quot;,
+      &quot;created_at&quot;: &quot;2017-05-31T00:40:50.025Z&quot;,
       &quot;event&quot;: {
-        &quot;id&quot;: 17,
-        &quot;user_id&quot;: 29,
-        &quot;name&quot;: &quot;event 15&quot;,
+        &quot;id&quot;: 56,
+        &quot;user_id&quot;: 100,
+        &quot;name&quot;: &quot;event 16&quot;,
         &quot;descripcion&quot;: null,
         &quot;lat&quot;: null,
         &quot;lng&quot;: null,
-        &quot;date&quot;: &quot;2017-06-15T15:53:49.000Z&quot;,
+        &quot;date&quot;: &quot;2017-06-11T14:03:08.000Z&quot;,
         &quot;invited_people&quot;: 1
       }
     }
   ],
   &quot;accepted_invites&quot;: [
     {
-      &quot;id&quot;: 9,
+      &quot;id&quot;: 31,
       &quot;status&quot;: &quot;accepted&quot;,
-      &quot;created_at&quot;: &quot;2017-05-30T07:53:33.609Z&quot;,
+      &quot;created_at&quot;: &quot;2017-05-31T00:40:50.056Z&quot;,
       &quot;event&quot;: {
-        &quot;id&quot;: 18,
-        &quot;user_id&quot;: 30,
-        &quot;name&quot;: &quot;event 16&quot;,
+        &quot;id&quot;: 57,
+        &quot;user_id&quot;: 101,
+        &quot;name&quot;: &quot;event 17&quot;,
         &quot;descripcion&quot;: null,
         &quot;lat&quot;: null,
         &quot;lng&quot;: null,
-        &quot;date&quot;: &quot;2017-06-11T13:49:46.000Z&quot;,
+        &quot;date&quot;: &quot;2017-06-05T12:34:56.000Z&quot;,
         &quot;invited_people&quot;: 1
       }
     }
   ],
   &quot;rejected_invites&quot;: [
     {
-      &quot;id&quot;: 10,
+      &quot;id&quot;: 32,
       &quot;status&quot;: &quot;rejected&quot;,
-      &quot;created_at&quot;: &quot;2017-05-30T07:53:33.626Z&quot;,
+      &quot;created_at&quot;: &quot;2017-05-31T00:40:50.069Z&quot;,
       &quot;event&quot;: {
-        &quot;id&quot;: 19,
-        &quot;user_id&quot;: 31,
-        &quot;name&quot;: &quot;event 17&quot;,
+        &quot;id&quot;: 58,
+        &quot;user_id&quot;: 102,
+        &quot;name&quot;: &quot;event 18&quot;,
         &quot;descripcion&quot;: null,
         &quot;lat&quot;: null,
         &quot;lng&quot;: null,
-        &quot;date&quot;: &quot;2017-06-21T15:17:28.000Z&quot;,
+        &quot;date&quot;: &quot;2017-06-12T15:10:28.000Z&quot;,
         &quot;invited_people&quot;: 1
       }
     }
@@ -792,44 +992,44 @@ X-XSS-Protection: 1; mode=block
 
 <h4>Request</h4>
 
-<pre><code>POST /api/invites/11/reject HTTP/1.1
+<pre><code>POST /api/invites/33/reject HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: KDQ181pqlC8is8C6Jkvw7Q
-Client: nAr8MGYCC6ShbRgOIHzEfg
+Access-Token: dsYtAuKjr_yFrxkJ5Q4wcQ
+Client: JiwpXj9baVCwd_Ef9SEslw
 Content-Length: 0
 Content-Type: application/x-www-form-urlencoded
-Expiry: 1497340413
+Expiry: 1497400850
 Host: www.example.com
 Token-Type: Bearer
-Uid: person29@email.com
+Uid: person31@email.com
 </code></pre>
 
 <h4>Response</h4>
 
 <pre><code>HTTP/1.1 202
 Cache-Control: no-cache
-Content-Length: 223
+Content-Length: 224
 Content-Type: application/json; charset=utf-8
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 23850a76-05a4-4cad-b5ae-f4a1998ef7e6
-X-Runtime: 0.115932
+X-Request-Id: 5ec110e4-6b09-40d6-a4c5-0c978aa52d5a
+X-Runtime: 0.112164
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;invite&quot;: {
-    &quot;id&quot;: 11,
+    &quot;id&quot;: 33,
     &quot;status&quot;: &quot;rejected&quot;,
-    &quot;created_at&quot;: &quot;2017-05-30T07:53:33.870Z&quot;,
+    &quot;created_at&quot;: &quot;2017-05-31T00:40:50.292Z&quot;,
     &quot;event&quot;: {
-      &quot;id&quot;: 20,
-      &quot;user_id&quot;: 33,
-      &quot;name&quot;: &quot;event 18&quot;,
+      &quot;id&quot;: 59,
+      &quot;user_id&quot;: 104,
+      &quot;name&quot;: &quot;event 19&quot;,
       &quot;descripcion&quot;: null,
       &quot;lat&quot;: null,
       &quot;lng&quot;: null,
-      &quot;date&quot;: &quot;2017-06-14T16:59:51.000Z&quot;,
+      &quot;date&quot;: &quot;2017-06-09T15:59:58.000Z&quot;,
       &quot;invited_people&quot;: 1
     }
   }
@@ -845,13 +1045,13 @@ X-XSS-Protection: 1; mode=block
 
 <pre><code>GET /api/search?q=rock+it HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: 7T7dAsQaBYlQpiQIs23xJA
-Client: R-KuZu3Kk9udjsOrIjz6dA
+Access-Token: PuepyPUlpzfDO2Q3g5SlKA
+Client: PQOA2dl63onH0qy3HUZGWg
 Content-Length: 0
-Expiry: 1497340414
+Expiry: 1497400850
 Host: www.example.com
 Token-Type: Bearer
-Uid: person31@email.com
+Uid: person33@email.com
 </code></pre>
 
 <h4>Response</h4>
@@ -864,8 +1064,8 @@ ETag: W/&quot;ba7d8c4938de8234904fa6b7989f26c0&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 3c42dea4-e9c7-4a10-82f6-41c0ab058607
-X-Runtime: 0.137641
+X-Request-Id: 8971e550-8f96-4630-8fb6-20fc850637db
+X-Runtime: 0.134789
 X-XSS-Protection: 1; mode=block
 
 [

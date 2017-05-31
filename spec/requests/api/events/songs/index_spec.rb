@@ -9,7 +9,7 @@ RSpec.describe Api::SongsController,
 
     it "lists event songs" do
       event = create :event, user: user
-      song = create :song, event: event
+      song = create :song, :with_spotify_track, event: event
       get(
         api_event_songs_path(event_id: event.id),
         headers: headers
