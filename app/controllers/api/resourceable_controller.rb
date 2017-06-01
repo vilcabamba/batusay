@@ -44,6 +44,12 @@ module Api
       end
     end
 
+    def destroy
+      destroy! do
+        return head :no_content
+      end
+    end
+
     def build_resource_params
       [ params.permit(resource_class::API_PERMITTED_ATTRS) ]
     end
