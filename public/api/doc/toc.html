@@ -77,7 +77,15 @@
   </li>
   
       <li>
+    <a href="#public/api/doc/api/events/tasks/destroy.md">api/events/tasks/destroy.md</a>
+  </li>
+  
+      <li>
     <a href="#public/api/doc/api/events/tasks/index.md">api/events/tasks/index.md</a>
+  </li>
+  
+      <li>
+    <a href="#public/api/doc/api/events/tasks/update.md">api/events/tasks/update.md</a>
   </li>
   
       <li>
@@ -103,13 +111,13 @@
 <div class='generated-at'>
 Generated at:
 <br>
-2017-05-30 19:48:06 -0500</div>
+2017-06-01 16:44:37 -0500</div>
 </div>
 
 <div class='page-wrapper'>
   <div id="public/api/doc/api/events/index.md" class="api-resource"><div class="api-action"><h2>GET /api/events</h2>
 
-<p>Let&#39;s assume current date is 2017-05-30 and there exists events for 2017-06-12 and 2017-05-20</p>
+<p>Let&#39;s assume current date is 2017-06-01 and there exists events for 2017-06-04 and 2017-05-12</p>
 
 <h3>Example</h3>
 
@@ -117,10 +125,10 @@ Generated at:
 
 <pre><code>GET /api/events HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: eGe_NcnaWN2eYKGABKwOaA
-Client: EvLNajD5yHQsOBae-1gNjA
+Access-Token: POw6YMS2qV5HSuCm7jmqWw
+Client: R6ph42DNMucS9WLCwus3QQ
 Content-Length: 0
-Expiry: 1497401282
+Expiry: 1497563073
 Host: www.example.com
 Token-Type: Bearer
 Uid: person4@email.com
@@ -130,39 +138,47 @@ Uid: person4@email.com
 
 <pre><code>HTTP/1.1 200
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 305
+Content-Length: 391
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;ed11e94ea34251ef3f5ea4941cc86a8d&quot;
+ETag: W/&quot;a386425509b4e4d0d788a654d3819e36&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: a4a5e992-233e-4d8e-b0b9-452cca1a4727
-X-Runtime: 0.120945
+X-Request-Id: ae24a91a-da59-4cdb-9d8f-112913868eb2
+X-Runtime: 0.120880
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;past_events&quot;: [
     {
-      &quot;id&quot;: 67,
-      &quot;user_id&quot;: 112,
+      &quot;id&quot;: 32,
+      &quot;user_id&quot;: 49,
       &quot;name&quot;: &quot;event 6&quot;,
       &quot;descripcion&quot;: null,
       &quot;lat&quot;: null,
       &quot;lng&quot;: null,
-      &quot;date&quot;: &quot;2017-05-20T11:31:04.000Z&quot;,
-      &quot;invited_people&quot;: 0
+      &quot;date&quot;: &quot;2017-05-12T16:21:37.000Z&quot;,
+      &quot;invited_people&quot;: 0,
+      &quot;user&quot;: {
+        &quot;id&quot;: 49,
+        &quot;name&quot;: &quot;Pablo Peres Tamez&quot;
+      }
     }
   ],
   &quot;future_events&quot;: [
     {
-      &quot;id&quot;: 66,
-      &quot;user_id&quot;: 112,
+      &quot;id&quot;: 31,
+      &quot;user_id&quot;: 49,
       &quot;name&quot;: &quot;event 5&quot;,
       &quot;descripcion&quot;: null,
       &quot;lat&quot;: null,
       &quot;lng&quot;: null,
-      &quot;date&quot;: &quot;2017-06-12T14:55:08.000Z&quot;,
-      &quot;invited_people&quot;: 0
+      &quot;date&quot;: &quot;2017-06-04T11:55:48.000Z&quot;,
+      &quot;invited_people&quot;: 0,
+      &quot;user&quot;: {
+        &quot;id&quot;: 49,
+        &quot;name&quot;: &quot;Pablo Peres Tamez&quot;
+      }
     }
   ]
 }
@@ -175,42 +191,42 @@ X-XSS-Protection: 1; mode=block
 
 <h4>Request</h4>
 
-<pre><code>POST /api/events/68/invitees HTTP/1.1
+<pre><code>POST /api/events/33/invitees HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: Q-uZ2vGZPoduYIqbi1kegw
-Client: kJzgBALrUPnviDJo6q7OXQ
-Content-Length: 14
+Access-Token: 2bOmGmeQCB0Yb0byBDVW1Q
+Client: JDmm73uhup64LWTEtdAeDg
+Content-Length: 13
 Content-Type: application/x-www-form-urlencoded
-Expiry: 1497401282
+Expiry: 1497563073
 Host: www.example.com
 Token-Type: Bearer
 Uid: person5@email.com
 
-user_ids[]=114
+user_ids[]=51
 </code></pre>
 
 <h4>Response</h4>
 
 <pre><code>HTTP/1.1 201
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 98
+Content-Length: 89
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;49fe6a112ff6914d18e599b1bfe10ce1&quot;
+ETag: W/&quot;caf163bb79a4f582e4a2e8ec81d0781f&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: e446344a-c0a7-4977-b233-70d73894e7d7
-X-Runtime: 0.146948
+X-Request-Id: ae27a260-4120-4661-82bd-daece5b49b65
+X-Runtime: 0.136982
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;invitees&quot;: [
     {
-      &quot;id&quot;: 34,
-      &quot;event_id&quot;: 68,
+      &quot;id&quot;: 12,
+      &quot;event_id&quot;: 33,
       &quot;user&quot;: {
-        &quot;id&quot;: 114,
-        &quot;name&quot;: &quot;María Elena Montenegro Aguilera&quot;
+        &quot;id&quot;: 51,
+        &quot;name&quot;: &quot;Cristina Zapata Berríos&quot;
       }
     }
   ]
@@ -224,50 +240,50 @@ X-XSS-Protection: 1; mode=block
 
 <h4>Request</h4>
 
-<pre><code>POST /api/events/69/invitees HTTP/1.1
+<pre><code>POST /api/events/34/invitees HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: 95IpjvgUjHARMepSkilStg
-Client: mzuncHa6DF1etPPjB0lGnQ
-Content-Length: 29
+Access-Token: CCPmIeB_Xn3qTexjaU13mQ
+Client: Mq2eA9633PPXg75YK8cvPQ
+Content-Length: 27
 Content-Type: application/x-www-form-urlencoded
-Expiry: 1497401282
+Expiry: 1497563073
 Host: www.example.com
 Token-Type: Bearer
 Uid: person7@email.com
 
-user_ids[]=116&amp;user_ids[]=117
+user_ids[]=53&amp;user_ids[]=54
 </code></pre>
 
 <h4>Response</h4>
 
 <pre><code>HTTP/1.1 201
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 166
+Content-Length: 159
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;3148ac657a6170a4b042cd53cae7a89a&quot;
+ETag: W/&quot;4b6010447a89880d4fd1192a4ce80005&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 7fa93b59-2daa-46c7-b9d7-486a7da34d76
-X-Runtime: 0.128788
+X-Request-Id: 64d01093-260c-4a10-99a8-30abaf382640
+X-Runtime: 0.127824
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;invitees&quot;: [
     {
-      &quot;id&quot;: 35,
-      &quot;event_id&quot;: 69,
+      &quot;id&quot;: 13,
+      &quot;event_id&quot;: 34,
       &quot;user&quot;: {
-        &quot;id&quot;: 116,
-        &quot;name&quot;: &quot;Sra. Octavio Burgos Sisneros&quot;
+        &quot;id&quot;: 53,
+        &quot;name&quot;: &quot;Nicolás Lovato Pagan&quot;
       }
     },
     {
-      &quot;id&quot;: 36,
-      &quot;event_id&quot;: 69,
+      &quot;id&quot;: 14,
+      &quot;event_id&quot;: 34,
       &quot;user&quot;: {
-        &quot;id&quot;: 117,
-        &quot;name&quot;: &quot;Arturo Hurtado Rocha&quot;
+        &quot;id&quot;: 54,
+        &quot;name&quot;: &quot;Raúl Delatorre Puente&quot;
       }
     }
   ]
@@ -276,48 +292,48 @@ X-XSS-Protection: 1; mode=block
 </div><div class="api-action"><h2>POST /api/events/:event_id/invitees</h2>
 
 <p>when a friend has already been invited.
-In this case, user with id 119 is already an invitee</p>
+In this case, user with id 56 is already an invitee</p>
 
 <h3>Example</h3>
 
 <h4>Request</h4>
 
-<pre><code>POST /api/events/70/invitees HTTP/1.1
+<pre><code>POST /api/events/35/invitees HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: _6njNhBaQHrvRUtBUUPIFw
-Client: _f2gh8TB3LKw3YM-EH2TCA
-Content-Length: 29
+Access-Token: nCMdL5_drC2DVmRE_1r17w
+Client: nXUAaOfKs4NluFwshNrqow
+Content-Length: 27
 Content-Type: application/x-www-form-urlencoded
-Expiry: 1497401283
+Expiry: 1497563073
 Host: www.example.com
 Token-Type: Bearer
 Uid: person10@email.com
 
-user_ids[]=119&amp;user_ids[]=120
+user_ids[]=56&amp;user_ids[]=57
 </code></pre>
 
 <h4>Response</h4>
 
 <pre><code>HTTP/1.1 201
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 94
+Content-Length: 85
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;0e4d24675bea7cef99ed6507d3bdf0ca&quot;
+ETag: W/&quot;0d484c8b77a30b24e7a52ca26cfd00f0&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 25e10d1e-50a7-4a7b-b154-8b4a12219fbf
-X-Runtime: 0.120207
+X-Request-Id: 08fd45e9-7b1c-4849-ac4c-3f46f852f746
+X-Runtime: 0.127692
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;invitees&quot;: [
     {
-      &quot;id&quot;: 38,
-      &quot;event_id&quot;: 70,
+      &quot;id&quot;: 16,
+      &quot;event_id&quot;: 35,
       &quot;user&quot;: {
-        &quot;id&quot;: 120,
-        &quot;name&quot;: &quot;Beatriz Cervantes Miramontes&quot;
+        &quot;id&quot;: 57,
+        &quot;name&quot;: &quot;Elisa Fajardo Montez&quot;
       }
     }
   ]
@@ -331,12 +347,12 @@ X-XSS-Protection: 1; mode=block
 
 <h4>Request</h4>
 
-<pre><code>GET /api/events/71/invitees HTTP/1.1
+<pre><code>GET /api/events/36/invitees HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: FAh7Fo7UTwcxj-aykN4mOQ
-Client: vh9dIYhWuV1KrFvFV1wSXQ
+Access-Token: dVGaRrZQgn3NWEdIN18HnQ
+Client: z8iL4Z8OPWUMf1rl-JmipQ
 Content-Length: 0
-Expiry: 1497401283
+Expiry: 1497563074
 Host: www.example.com
 Token-Type: Bearer
 Uid: person13@email.com
@@ -346,24 +362,24 @@ Uid: person13@email.com
 
 <pre><code>HTTP/1.1 200
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 90
+Content-Length: 86
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;8abc06263130a0dcbb58e30c859e180e&quot;
+ETag: W/&quot;286cbcf21f9199d2e6a6033603ef449c&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: a542cf15-5710-4d7e-a8bf-9c0e99b2ae4f
-X-Runtime: 0.110463
+X-Request-Id: 8296c08c-5685-441c-b893-f65c7b15e150
+X-Runtime: 0.121580
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;invitees&quot;: [
     {
-      &quot;id&quot;: 39,
-      &quot;event_id&quot;: 71,
+      &quot;id&quot;: 17,
+      &quot;event_id&quot;: 36,
       &quot;user&quot;: {
-        &quot;id&quot;: 122,
-        &quot;name&quot;: &quot;Agustín Carmona Guevara&quot;
+        &quot;id&quot;: 59,
+        &quot;name&quot;: &quot;Marilu Quiroz Apodaca&quot;
       }
     }
   ]
@@ -377,13 +393,13 @@ X-XSS-Protection: 1; mode=block
 
 <h4>Request</h4>
 
-<pre><code>POST /api/events/73/songs HTTP/1.1
+<pre><code>POST /api/events/38/songs HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: irDsqMDL4CoOUDdAPviAyg
-Client: x8VoGuO_teSn2RJ6KY5CqQ
+Access-Token: wRTHnowzxGUsx8FMIJlpxw
+Client: cNWXM_paR_LGZD81yUaPlw
 Content-Length: 33
 Content-Type: application/x-www-form-urlencoded
-Expiry: 1497401283
+Expiry: 1497563074
 Host: www.example.com
 Token-Type: Bearer
 Uid: person16@email.com
@@ -397,17 +413,17 @@ spotify_id=2vVc2G9w2JteBgxpSUVwX5
 Cache-Control: max-age=0, private, must-revalidate
 Content-Length: 2386
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;944be6b73721ea595e22c9c6d4382f07&quot;
+ETag: W/&quot;074bb784559f1428f722525a9529f26c&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: d76a0352-9f3e-4a91-b66e-52c7092bba93
-X-Runtime: 0.179960
+X-Request-Id: 8ee25da1-c5ed-4e76-8e89-f9c0cff4a573
+X-Runtime: 0.202218
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;song&quot;: {
-    &quot;id&quot;: 8,
+    &quot;id&quot;: 3,
     &quot;spotify_id&quot;: &quot;2vVc2G9w2JteBgxpSUVwX5&quot;,
     &quot;spotify_track&quot;: {
       &quot;available_markets&quot;: [
@@ -537,12 +553,12 @@ X-XSS-Protection: 1; mode=block
 
 <h4>Request</h4>
 
-<pre><code>GET /api/events/74/songs HTTP/1.1
+<pre><code>GET /api/events/39/songs HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: VNSZw8szoyF2kidT8as0yw
-Client: Br8Wg779lKp4LZJS7ha9XA
+Access-Token: mG-tXXu3diPN79X4e_vQYw
+Client: IAfQcA0kufn4f3h7k4rt8g
 Content-Length: 0
-Expiry: 1497401284
+Expiry: 1497563074
 Host: www.example.com
 Token-Type: Bearer
 Uid: person17@email.com
@@ -554,18 +570,18 @@ Uid: person17@email.com
 Cache-Control: max-age=0, private, must-revalidate
 Content-Length: 2384
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;4efb609e20908f74e16419fb0a49b8ce&quot;
+ETag: W/&quot;b5e3759798904571c926df49b23dc283&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 41e5d3c6-94ea-4be2-82d7-721addcd59fa
-X-Runtime: 0.118857
+X-Request-Id: 01d4413c-aff2-4e2d-8740-b7d7e7eb5cf8
+X-Runtime: 0.128314
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;songs&quot;: [
     {
-      &quot;id&quot;: 9,
+      &quot;id&quot;: 4,
       &quot;spotify_id&quot;: &quot;14523asdfas&quot;,
       &quot;spotify_track&quot;: {
         &quot;available_markets&quot;: [
@@ -730,13 +746,13 @@ X-XSS-Protection: 1; mode=block
 
 <h4>Request</h4>
 
-<pre><code>POST /api/events/75/tasks HTTP/1.1
+<pre><code>POST /api/events/40/tasks HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: RcKIZFUO2NGx4HOw4sbzvw
-Client: 1SA102VvQv2HUHkeStr_EA
+Access-Token: eNmDOBhTQ9xc3k_CMxt26w
+Client: pLDDh85gMMWEm3PqH8UKOw
 Content-Length: 42
 Content-Type: application/x-www-form-urlencoded
-Expiry: 1497401284
+Expiry: 1497563075
 Host: www.example.com
 Token-Type: Bearer
 Uid: person19@email.com
@@ -748,23 +764,59 @@ description=traer+bebidas+alcoh%C3%B3licas
 
 <pre><code>HTTP/1.1 201
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 100
+Content-Length: 101
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;b7144001360ef267efe39a5443dc5a6c&quot;
+ETag: W/&quot;563b7b8b69f0ab7035c75867d63419f3&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 9e757bca-6f94-4168-9c9c-ae2cf4b735e3
-X-Runtime: 0.121175
+X-Request-Id: 85305c8d-5bfc-4214-8da6-f00dd6c099a8
+X-Runtime: 0.136499
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;task&quot;: {
-    &quot;id&quot;: 8,
+    &quot;id&quot;: 11,
     &quot;description&quot;: &quot;traer bebidas alcohólicas&quot;,
-    &quot;created_at&quot;: &quot;2017-05-31T00:48:04.391Z&quot;
+    &quot;created_at&quot;: &quot;2017-06-01T21:44:35.249Z&quot;
   }
 }
+</code></pre>
+</div></div><div id="public/api/doc/api/events/tasks/destroy.md" class="api-resource"><div class="api-action"><h2>DELETE /api/events/:event_id/tasks/:id</h2>
+
+<p>Destroy task.</p>
+
+<h3>Example</h3>
+
+<h4>Request</h4>
+
+<pre><code>DELETE /api/events/41/tasks/12 HTTP/1.1
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Access-Token: bFRoXogYmrlQnyH8sf93vg
+Client: CETU59dtu1XesRf0fjnfMQ
+Content-Length: 0
+Content-Type: application/x-www-form-urlencoded
+Expiry: 1497563075
+Host: www.example.com
+Token-Type: Bearer
+Uid: person20@email.com
+</code></pre>
+
+<h4>Response</h4>
+
+<pre><code>HTTP/1.1 302
+Cache-Control: no-cache
+Content-Length: 108
+Content-Type: text/html; charset=utf-8
+Location: http://www.example.com/api/events/41/tasks
+Vary: Origin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Request-Id: 9c9b6572-613e-46d9-9dbb-4bced1648c23
+X-Runtime: 0.123918
+X-XSS-Protection: 1; mode=block
+
+&lt;html&gt;&lt;body&gt;You are being &lt;a href=&quot;http://www.example.com/api/events/41/tasks&quot;&gt;redirected&lt;/a&gt;.&lt;/body&gt;&lt;/html&gt;
 </code></pre>
 </div></div><div id="public/api/doc/api/events/tasks/index.md" class="api-resource"><div class="api-action"><h2>GET /api/events/:event_id/tasks</h2>
 
@@ -774,39 +826,86 @@ X-XSS-Protection: 1; mode=block
 
 <h4>Request</h4>
 
-<pre><code>GET /api/events/76/tasks HTTP/1.1
+<pre><code>GET /api/events/42/tasks HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: u2DCUt5yu6rtAsgHcsd9IA
-Client: amsdY9D-fZYQt8CvNPnz0Q
+Access-Token: wjGPwv0_jPUEu5pSYJUy3w
+Client: _NZUYhlabc_Tjlpbrx0oxw
 Content-Length: 0
-Expiry: 1497401284
+Expiry: 1497563075
 Host: www.example.com
 Token-Type: Bearer
-Uid: person20@email.com
+Uid: person21@email.com
 </code></pre>
 
 <h4>Response</h4>
 
 <pre><code>HTTP/1.1 200
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 132
+Content-Length: 125
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;617b2703b79c44d054eaa11a35b88c8a&quot;
+ETag: W/&quot;40913c529ca2a81fc68632b2c9949632&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 299ffdd3-06eb-44db-9704-5226df86532c
-X-Runtime: 0.118472
+X-Request-Id: 10d98296-1ba1-4400-af53-40f63a05c016
+X-Runtime: 0.134351
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;tasks&quot;: [
     {
-      &quot;id&quot;: 9,
-      &quot;description&quot;: &quot;Leggings kickstarter diy gluten-free drinking tote bag.&quot;,
-      &quot;created_at&quot;: &quot;2017-05-31T00:48:04.442Z&quot;
+      &quot;id&quot;: 13,
+      &quot;description&quot;: &quot;Narwhal kinfolk twee hammock cronut knausgaard.&quot;,
+      &quot;created_at&quot;: &quot;2017-06-01T21:44:35.531Z&quot;
     }
   ]
+}
+</code></pre>
+</div></div><div id="public/api/doc/api/events/tasks/update.md" class="api-resource"><div class="api-action"><h2>PUT /api/events/:event_id/tasks/:id</h2>
+
+<p>Update task (assign to user).</p>
+
+<h3>Example</h3>
+
+<h4>Request</h4>
+
+<pre><code>PUT /api/events/43/tasks/14 HTTP/1.1
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
+Access-Token: 1K9J_ZnXsQyiWDMCyWEdEg
+Client: ZDEXajaiiZ6uBm8R6f2JMA
+Content-Length: 63
+Content-Type: application/x-www-form-urlencoded
+Expiry: 1497563075
+Host: www.example.com
+Token-Type: Bearer
+Uid: person22@email.com
+
+user_id=68&amp;description=Shoreditch+selvage+bicycle+rights+ramps.
+</code></pre>
+
+<h4>Response</h4>
+
+<pre><code>HTTP/1.1 202
+Cache-Control: no-cache
+Content-Length: 166
+Content-Type: application/json; charset=utf-8
+Vary: Origin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Request-Id: f9f9ee5b-cc1a-45b5-8d01-84deb9137abe
+X-Runtime: 0.118201
+X-XSS-Protection: 1; mode=block
+
+{
+  &quot;task&quot;: {
+    &quot;id&quot;: 14,
+    &quot;description&quot;: &quot;Shoreditch selvage bicycle rights ramps.&quot;,
+    &quot;created_at&quot;: &quot;2017-06-01T21:44:35.757Z&quot;,
+    &quot;user&quot;: {
+      &quot;id&quot;: 68,
+      &quot;name&quot;: &quot;Sr. David Ureña Quezada&quot;
+    }
+  }
 }
 </code></pre>
 </div></div><div id="public/api/doc/api/friends/index.md" class="api-resource"><div class="api-action"><h2>GET /api/friends</h2>
@@ -819,34 +918,34 @@ X-XSS-Protection: 1; mode=block
 
 <pre><code>GET /api/friends HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: ump33GdPkWxvFXghAQILIg
-Client: YztLyTKpczD3AjjAjc2c5A
+Access-Token: pEC9F0TfNXF8nb5D0OGo4g
+Client: 4ybsvCYcBbmaVjwgS6RM6A
 Content-Length: 0
-Expiry: 1497401284
+Expiry: 1497563076
 Host: www.example.com
 Token-Type: Bearer
-Uid: person21@email.com
+Uid: person24@email.com
 </code></pre>
 
 <h4>Response</h4>
 
 <pre><code>HTTP/1.1 200
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 54
+Content-Length: 58
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;bf649d2a18c7521fea946e939e5feaae&quot;
+ETag: W/&quot;d64bb728dd435e30b8abcf888f0a9461&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 02d99ca8-538c-4629-af51-39a1a4cb13f6
-X-Runtime: 0.122749
+X-Request-Id: 90e07746-6c3f-42c1-a4d9-bfa9238b7fb1
+X-Runtime: 0.122647
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;friends&quot;: [
     {
-      &quot;id&quot;: 130,
-      &quot;name&quot;: &quot;Jaime Alcala Camacho&quot;
+      &quot;id&quot;: 70,
+      &quot;name&quot;: &quot;Sra. Felipe Campos Valles&quot;
     }
   ]
 }
@@ -861,33 +960,33 @@ X-XSS-Protection: 1; mode=block
 
 <pre><code>GET /api/friends?q=Cebollas HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: eDSyHSYKiBm30q9LoG3JQQ
-Client: G1MX2hrePbItmRHnIt71pA
+Access-Token: RkT-bmNRqFKFuXZ9bCNjiw
+Client: 9BrkVbUSQa2o8cPY48o6KA
 Content-Length: 0
-Expiry: 1497401284
+Expiry: 1497563076
 Host: www.example.com
 Token-Type: Bearer
-Uid: person23@email.com
+Uid: person26@email.com
 </code></pre>
 
 <h4>Response</h4>
 
 <pre><code>HTTP/1.1 200
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 55
+Content-Length: 54
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;3926089134433acadbb1f4c49f72564f&quot;
+ETag: W/&quot;696cfa6b171dce4ec14db6f3c762f531&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: f2b0eed1-1f5e-4698-8e02-d1ae1c888cd1
-X-Runtime: 0.108654
+X-Request-Id: 5c83f7a4-e922-4162-b863-3c8da7a42196
+X-Runtime: 0.115099
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;friends&quot;: [
     {
-      &quot;id&quot;: 132,
+      &quot;id&quot;: 72,
       &quot;name&quot;: &quot;Peter Parker Cebollas&quot;
     }
   ]
@@ -901,45 +1000,49 @@ X-XSS-Protection: 1; mode=block
 
 <h4>Request</h4>
 
-<pre><code>POST /api/invites/40/accept HTTP/1.1
+<pre><code>POST /api/invites/18/accept HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: 3fpQnvDxLIY6d1qxi34dFQ
-Client: DSPy8p1KWuh0kQk7fDVHHg
+Access-Token: N_VxixmUT9fTBiBY9rJzkw
+Client: aN5w12mFf9ATfdd_4TLKXw
 Content-Length: 0
 Content-Type: application/x-www-form-urlencoded
-Expiry: 1497401285
+Expiry: 1497563076
 Host: www.example.com
 Token-Type: Bearer
-Uid: person26@email.com
+Uid: person29@email.com
 </code></pre>
 
 <h4>Response</h4>
 
 <pre><code>HTTP/1.1 202
 Cache-Control: no-cache
-Content-Length: 224
+Content-Length: 275
 Content-Type: application/json; charset=utf-8
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 747bf0a9-9341-47be-9139-e8bbd7f4d45d
-X-Runtime: 0.152359
+X-Request-Id: 5e7900c0-f5f3-4289-8eee-1fa71bf4c910
+X-Runtime: 0.140364
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;invite&quot;: {
-    &quot;id&quot;: 40,
+    &quot;id&quot;: 18,
     &quot;status&quot;: &quot;accepted&quot;,
-    &quot;created_at&quot;: &quot;2017-05-31T00:48:05.088Z&quot;,
+    &quot;created_at&quot;: &quot;2017-06-01T21:44:36.394Z&quot;,
     &quot;event&quot;: {
-      &quot;id&quot;: 77,
-      &quot;user_id&quot;: 135,
-      &quot;name&quot;: &quot;event 16&quot;,
+      &quot;id&quot;: 44,
+      &quot;user_id&quot;: 75,
+      &quot;name&quot;: &quot;event 18&quot;,
       &quot;descripcion&quot;: null,
       &quot;lat&quot;: null,
       &quot;lng&quot;: null,
-      &quot;date&quot;: &quot;2017-06-08T13:55:26.000Z&quot;,
-      &quot;invited_people&quot;: 1
+      &quot;date&quot;: &quot;2017-06-21T13:55:50.000Z&quot;,
+      &quot;invited_people&quot;: 1,
+      &quot;user&quot;: {
+        &quot;id&quot;: 75,
+        &quot;name&quot;: &quot;Elena Guajardo Benavídez&quot;
+      }
     }
   }
 }
@@ -954,78 +1057,90 @@ X-XSS-Protection: 1; mode=block
 
 <pre><code>GET /api/invites HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: YQCVBV2Jn5idlONekR2UFg
-Client: zH8y5QQVNC4kPFX5NKvCpw
+Access-Token: nNuachybZmQs7ieqPwpJUg
+Client: Ztf8ej5H2jiLkFJq_RI6vQ
 Content-Length: 0
-Expiry: 1497401285
+Expiry: 1497563076
 Host: www.example.com
 Token-Type: Bearer
-Uid: person28@email.com
+Uid: person31@email.com
 </code></pre>
 
 <h4>Response</h4>
 
 <pre><code>HTTP/1.1 200
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 704
+Content-Length: 855
 Content-Type: application/json; charset=utf-8
-ETag: W/&quot;c9c4974383453aa5c4318402b35f12ef&quot;
+ETag: W/&quot;05fafa7412854c97630924ea0b038871&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: de243b9a-9f86-408e-a62a-dd1f7e91aa77
-X-Runtime: 0.127140
+X-Request-Id: 360ffc73-d5c1-43de-9053-bbd986c87818
+X-Runtime: 0.133877
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;pending_invites&quot;: [
     {
-      &quot;id&quot;: 41,
+      &quot;id&quot;: 19,
       &quot;status&quot;: &quot;pending&quot;,
-      &quot;created_at&quot;: &quot;2017-05-31T00:48:05.337Z&quot;,
+      &quot;created_at&quot;: &quot;2017-06-01T21:44:36.634Z&quot;,
       &quot;event&quot;: {
-        &quot;id&quot;: 78,
-        &quot;user_id&quot;: 137,
-        &quot;name&quot;: &quot;event 17&quot;,
+        &quot;id&quot;: 45,
+        &quot;user_id&quot;: 77,
+        &quot;name&quot;: &quot;event 19&quot;,
         &quot;descripcion&quot;: null,
         &quot;lat&quot;: null,
         &quot;lng&quot;: null,
-        &quot;date&quot;: &quot;2017-06-18T14:47:19.000Z&quot;,
-        &quot;invited_people&quot;: 1
+        &quot;date&quot;: &quot;2017-06-05T12:58:08.000Z&quot;,
+        &quot;invited_people&quot;: 1,
+        &quot;user&quot;: {
+          &quot;id&quot;: 77,
+          &quot;name&quot;: &quot;Rosalia Abrego Márquez&quot;
+        }
       }
     }
   ],
   &quot;accepted_invites&quot;: [
     {
-      &quot;id&quot;: 42,
+      &quot;id&quot;: 20,
       &quot;status&quot;: &quot;accepted&quot;,
-      &quot;created_at&quot;: &quot;2017-05-31T00:48:05.349Z&quot;,
+      &quot;created_at&quot;: &quot;2017-06-01T21:44:36.646Z&quot;,
       &quot;event&quot;: {
-        &quot;id&quot;: 79,
-        &quot;user_id&quot;: 138,
-        &quot;name&quot;: &quot;event 18&quot;,
+        &quot;id&quot;: 46,
+        &quot;user_id&quot;: 78,
+        &quot;name&quot;: &quot;event 20&quot;,
         &quot;descripcion&quot;: null,
         &quot;lat&quot;: null,
         &quot;lng&quot;: null,
-        &quot;date&quot;: &quot;2017-06-08T14:00:10.000Z&quot;,
-        &quot;invited_people&quot;: 1
+        &quot;date&quot;: &quot;2017-06-06T15:57:59.000Z&quot;,
+        &quot;invited_people&quot;: 1,
+        &quot;user&quot;: {
+          &quot;id&quot;: 78,
+          &quot;name&quot;: &quot;Sr. Ernesto Adame Domínguez&quot;
+        }
       }
     }
   ],
   &quot;rejected_invites&quot;: [
     {
-      &quot;id&quot;: 43,
+      &quot;id&quot;: 21,
       &quot;status&quot;: &quot;rejected&quot;,
-      &quot;created_at&quot;: &quot;2017-05-31T00:48:05.363Z&quot;,
+      &quot;created_at&quot;: &quot;2017-06-01T21:44:36.659Z&quot;,
       &quot;event&quot;: {
-        &quot;id&quot;: 80,
-        &quot;user_id&quot;: 139,
-        &quot;name&quot;: &quot;event 19&quot;,
+        &quot;id&quot;: 47,
+        &quot;user_id&quot;: 79,
+        &quot;name&quot;: &quot;event 21&quot;,
         &quot;descripcion&quot;: null,
         &quot;lat&quot;: null,
         &quot;lng&quot;: null,
-        &quot;date&quot;: &quot;2017-05-31T16:18:33.000Z&quot;,
-        &quot;invited_people&quot;: 1
+        &quot;date&quot;: &quot;2017-06-14T14:19:27.000Z&quot;,
+        &quot;invited_people&quot;: 1,
+        &quot;user&quot;: {
+          &quot;id&quot;: 79,
+          &quot;name&quot;: &quot;Antonia Zamudio Abeyta&quot;
+        }
       }
     }
   ]
@@ -1039,45 +1154,49 @@ X-XSS-Protection: 1; mode=block
 
 <h4>Request</h4>
 
-<pre><code>POST /api/invites/44/reject HTTP/1.1
+<pre><code>POST /api/invites/22/reject HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: 9GuSzYIiRqN4bHrkKsm-bA
-Client: dGo9bM-7U7StHd-dZnfQSw
+Access-Token: 4swd1KZTk1bmgAMu1Fv_mQ
+Client: n5YMEG3ruom8Pq_tjMiXpA
 Content-Length: 0
 Content-Type: application/x-www-form-urlencoded
-Expiry: 1497401285
+Expiry: 1497563076
 Host: www.example.com
 Token-Type: Bearer
-Uid: person32@email.com
+Uid: person35@email.com
 </code></pre>
 
 <h4>Response</h4>
 
 <pre><code>HTTP/1.1 202
 Cache-Control: no-cache
-Content-Length: 224
+Content-Length: 277
 Content-Type: application/json; charset=utf-8
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: d9fc7e21-bda4-42a0-a149-12ad6f32cb79
-X-Runtime: 0.116079
+X-Request-Id: 02fd74e2-c052-4322-a662-0517569797a2
+X-Runtime: 0.117258
 X-XSS-Protection: 1; mode=block
 
 {
   &quot;invite&quot;: {
-    &quot;id&quot;: 44,
+    &quot;id&quot;: 22,
     &quot;status&quot;: &quot;rejected&quot;,
-    &quot;created_at&quot;: &quot;2017-05-31T00:48:05.586Z&quot;,
+    &quot;created_at&quot;: &quot;2017-06-01T21:44:36.896Z&quot;,
     &quot;event&quot;: {
-      &quot;id&quot;: 81,
-      &quot;user_id&quot;: 141,
-      &quot;name&quot;: &quot;event 20&quot;,
+      &quot;id&quot;: 48,
+      &quot;user_id&quot;: 81,
+      &quot;name&quot;: &quot;event 22&quot;,
       &quot;descripcion&quot;: null,
       &quot;lat&quot;: null,
       &quot;lng&quot;: null,
-      &quot;date&quot;: &quot;2017-06-05T16:31:36.000Z&quot;,
-      &quot;invited_people&quot;: 1
+      &quot;date&quot;: &quot;2017-06-18T16:07:44.000Z&quot;,
+      &quot;invited_people&quot;: 1,
+      &quot;user&quot;: {
+        &quot;id&quot;: 81,
+        &quot;name&quot;: &quot;Sr. Teodoro Meléndez Olmos&quot;
+      }
     }
   }
 }
@@ -1092,13 +1211,13 @@ X-XSS-Protection: 1; mode=block
 
 <pre><code>GET /api/search?q=rock+it HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: gCiBrkqAjPDaHX0FaG5D8A
-Client: k1rAdfzOzbVkKgsW1AdWfA
+Access-Token: Lvbd_JrBJwpif7xfkpYsGQ
+Client: ACw5ItHKQ7B1cGxmFF7h9g
 Content-Length: 0
-Expiry: 1497401285
+Expiry: 1497563077
 Host: www.example.com
 Token-Type: Bearer
-Uid: person34@email.com
+Uid: person37@email.com
 </code></pre>
 
 <h4>Response</h4>
@@ -1111,8 +1230,8 @@ ETag: W/&quot;ba7d8c4938de8234904fa6b7989f26c0&quot;
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: 397ece97-2d1d-460b-9c5e-4eb87d38a2a9
-X-Runtime: 0.138964
+X-Request-Id: df30b8e5-2ddd-415b-8065-5bd4db29de7d
+X-Runtime: 0.140879
 X-XSS-Protection: 1; mode=block
 
 [

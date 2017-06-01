@@ -7,78 +7,90 @@ Lists my accepted / pending invitations.
 ```
 GET /api/invites HTTP/1.1
 Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8,image/png,*/*;q=0.5
-Access-Token: bPSjuQamow5k4pTo662htQ
-Client: wA8MsyPycyoyNRGocRP8-g
+Access-Token: nNuachybZmQs7ieqPwpJUg
+Client: Ztf8ej5H2jiLkFJq_RI6vQ
 Content-Length: 0
-Expiry: 1497336745
+Expiry: 1497563076
 Host: www.example.com
 Token-Type: Bearer
-Uid: person24@email.com
+Uid: person31@email.com
 ```
 
 #### Response
 ```
 HTTP/1.1 200
 Cache-Control: max-age=0, private, must-revalidate
-Content-Length: 704
+Content-Length: 855
 Content-Type: application/json; charset=utf-8
-ETag: W/"e670f9ccf52e5c422378ee8fb155f84c"
+ETag: W/"05fafa7412854c97630924ea0b038871"
 Vary: Origin
 X-Content-Type-Options: nosniff
 X-Frame-Options: SAMEORIGIN
-X-Request-Id: d6e2e89b-8eef-4933-ad34-ef7b294d108a
-X-Runtime: 0.127930
+X-Request-Id: 360ffc73-d5c1-43de-9053-bbd986c87818
+X-Runtime: 0.133877
 X-XSS-Protection: 1; mode=block
 
 {
   "pending_invites": [
     {
-      "id": 53,
+      "id": 19,
       "status": "pending",
-      "created_at": "2017-05-30T06:52:25.377Z",
+      "created_at": "2017-06-01T21:44:36.634Z",
       "event": {
-        "id": 68,
-        "user_id": 119,
-        "name": "event 14",
+        "id": 45,
+        "user_id": 77,
+        "name": "event 19",
         "descripcion": null,
         "lat": null,
         "lng": null,
-        "date": "2017-06-04T15:04:07.000Z",
-        "invited_people": 1
+        "date": "2017-06-05T12:58:08.000Z",
+        "invited_people": 1,
+        "user": {
+          "id": 77,
+          "name": "Rosalia Abrego Márquez"
+        }
       }
     }
   ],
   "accepted_invites": [
     {
-      "id": 54,
+      "id": 20,
       "status": "accepted",
-      "created_at": "2017-05-30T06:52:25.393Z",
+      "created_at": "2017-06-01T21:44:36.646Z",
       "event": {
-        "id": 69,
-        "user_id": 120,
-        "name": "event 15",
+        "id": 46,
+        "user_id": 78,
+        "name": "event 20",
         "descripcion": null,
         "lat": null,
         "lng": null,
-        "date": "2017-06-19T16:53:08.000Z",
-        "invited_people": 1
+        "date": "2017-06-06T15:57:59.000Z",
+        "invited_people": 1,
+        "user": {
+          "id": 78,
+          "name": "Sr. Ernesto Adame Domínguez"
+        }
       }
     }
   ],
   "rejected_invites": [
     {
-      "id": 55,
+      "id": 21,
       "status": "rejected",
-      "created_at": "2017-05-30T06:52:25.414Z",
+      "created_at": "2017-06-01T21:44:36.659Z",
       "event": {
-        "id": 70,
-        "user_id": 121,
-        "name": "event 16",
+        "id": 47,
+        "user_id": 79,
+        "name": "event 21",
         "descripcion": null,
         "lat": null,
         "lng": null,
-        "date": "2017-06-16T14:33:43.000Z",
-        "invited_people": 1
+        "date": "2017-06-14T14:19:27.000Z",
+        "invited_people": 1,
+        "user": {
+          "id": 79,
+          "name": "Antonia Zamudio Abeyta"
+        }
       }
     }
   ]

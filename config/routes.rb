@@ -18,7 +18,7 @@ Rails.application.routes.draw do
     end
     resources :events do
       resources :tasks,
-                only: [:index, :create, :update]
+                only: [:index, :create, :update, :destroy]
       resources :songs, only: [:index, :create]
       resources :invitees, only: [:index, :create]
     end
