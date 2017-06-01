@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   has_many :events, dependent: :destroy
   has_many :invitees
   has_many :events_as_invitee, through: :invitees, source: :event
+  has_many :tasks
 
   def self.search(q)
     where("name ILIKE :q", q: "%#{q}%")
