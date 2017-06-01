@@ -14,6 +14,10 @@ module Api
       show! do
         return render resource_instance_name, formats: :json
       end
+    rescue ActiveRecord::RecordNotFound
+      # may be as invitee
+      @event = current_api_user.events_as_invitee.find params[:id]
+      render resource_instance_name, formats: :json
     end
 
     def create

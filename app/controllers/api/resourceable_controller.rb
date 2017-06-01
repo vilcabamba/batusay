@@ -30,5 +30,14 @@ module Api
     def build_resource_params
       [ params.permit(resource_class::API_PERMITTED_ATTRS) ]
     end
+
+    def find_event_as_owner_or_guest!
+      @event = parent
+    rescue ActiveRecord::RecordNotFound
+      # may be as invitee
+      @event = current_api_user.events_as_invitee.find(
+        params[:event_id]
+      )
+    end
   end
 end
