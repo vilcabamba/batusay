@@ -21,6 +21,7 @@ Rails.application.routes.draw do
                 only: [:index, :create, :update, :destroy]
       resources :songs, only: [:index, :create]
       resources :invitees, only: [:index, :create]
+      resources :media, only: [:index, :create]
     end
   end
 end
