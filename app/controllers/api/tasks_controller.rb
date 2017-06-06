@@ -1,6 +1,7 @@
 module Api
   class TasksController < ResourceableController
     before_action :authenticate_api_user!
+    before_action :find_event_as_owner_or_guest!
     belongs_to :event
 
     def create
@@ -9,11 +10,6 @@ module Api
 
     def index
       super
-    rescue ActiveRecord::RecordNotFound
-      # may be as invitee
-      event = current_api_user.events_as_invitee.find params[:event_id]
-      @tasks = event.tasks
-      render formats: :json
     end
 
     def update

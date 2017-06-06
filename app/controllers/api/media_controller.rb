@@ -1,6 +1,7 @@
 module Api
   class MediaController < ResourceableController
     before_action :authenticate_api_user!
+    before_action :find_event_as_owner_or_guest!
     belongs_to :event
     defaults resource_class: EventPicture
 
