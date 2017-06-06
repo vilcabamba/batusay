@@ -1,3 +1,3 @@
 json.medium do
-  json.partial!('medium', medium: @medium)
+  json.partial!('medium', medium: @medium.reload)
 end
