@@ -9,6 +9,11 @@ module Api
 
     def index
       super
+    rescue ActiveRecord::RecordNotFound
+      # may be as invitee
+      event = current_api_user.events_as_invitee.find params[:event_id]
+      @tasks = event.tasks
+      render formats: :json
     end
 
     def update

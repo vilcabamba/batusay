@@ -67,3 +67,4 @@ gem 'faker', '~> 1.7'
 gem 'enumerize'
 gem 'airbrake', '~> 4.3'
 gem 'carrierwave'
+gem 'pry-rails', group: :development
