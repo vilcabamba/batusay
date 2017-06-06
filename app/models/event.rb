@@ -3,6 +3,7 @@ class Event < ApplicationRecord
   has_many :invitees, dependent: :destroy
   has_many :songs, dependent: :destroy
   has_many :tasks, dependent: :destroy
+  has_many :pictures, dependent: :destroy, class_name: "EventPicture"
 
   validates :name,
             :user_id,

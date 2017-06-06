@@ -49,6 +49,10 @@ group :development do
   gem 'rails-erd'
 end
 
+group :production do #aka heroku
+  gem 'cloudinary', '~> 1.2'
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
@@ -62,3 +66,4 @@ gem 'inherited_resources'
 gem 'faker', '~> 1.7'
 gem 'enumerize'
 gem 'airbrake', '~> 4.3'
+gem 'carrierwave'
