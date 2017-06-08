@@ -31,6 +31,11 @@ module Api
         invitee = end_of_association_chain.new(user_id: user_id)
         if invitee.save
           invitee
+        else
+          existing_invitee = @event.invitees.where(user_id: user_id).first
+          if existing_invitee
+            existing_invitee
+          end
         end
       end.compact
       # 2. remove non present
