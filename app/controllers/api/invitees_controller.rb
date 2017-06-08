@@ -44,6 +44,7 @@ module Api
           invitee.destroy
         end
       end
+      @event.invitees.reload
     end
   end
 end
