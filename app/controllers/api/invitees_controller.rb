@@ -4,7 +4,7 @@ module Api
     belongs_to :event
 
     def create
-      @invitees = batch_create_invitees
+      @invitees = batch_update_invitees
       return render(:index, formats: :json, status: :created)
     end
 
@@ -21,16 +21,24 @@ module Api
     private
 
     ##
-    # batch create invitees with
+    # batch update invitees with
     # params[:user_ids] being an array.
-    # we'll reject non-saved invitees
-    def batch_create_invitees
-      Array(params[:user_ids]).map do |user_id|
+    # 1. we'll reject non-saved invitees
+    # 2. we'll remove non-present user ids
+    def batch_update_invitees
+      # 1. create
+      current_invitees = Array(params[:user_ids]).map do |user_id|
         invitee = end_of_association_chain.new(user_id: user_id)
         if invitee.save
           invitee
         end
       end.compact
+      # 2. remove non present
+      @event.invitees.find_each do |invitee|
+        if !current_invitees.include?(invitee)
+          invitee.destroy
+        end
+      end
     end
   end
 end
