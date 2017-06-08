@@ -26,7 +26,7 @@ gem 'rack-cors'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
+  gem 'pry-rails', platform: :mri
 end
 
 group :test do
@@ -67,4 +67,3 @@ gem 'faker', '~> 1.7'
 gem 'enumerize'
 gem 'airbrake', '~> 4.3'
 gem 'carrierwave'
-gem 'pry-rails', group: :development

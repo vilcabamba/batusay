@@ -5,6 +5,7 @@
  * [POST /api/events/:event_id/invitees](api/events/invitees/create.md#post-apieventsevent_idinvitees)
  * [POST /api/events/:event_id/invitees](api/events/invitees/create.md#post-apieventsevent_idinvitees-1)
  * [POST /api/events/:event_id/invitees](api/events/invitees/create.md#post-apieventsevent_idinvitees-2)
+ * [POST /api/events/:event_id/invitees](api/events/invitees/create.md#post-apieventsevent_idinvitees-3)
 * [api/events/invitees/index.md](api/events/invitees/index.md)
  * [GET /api/events/:event_id/invitees](api/events/invitees/index.md#get-apieventsevent_idinvitees)
 * [api/events/songs/create.md](api/events/songs/create.md)

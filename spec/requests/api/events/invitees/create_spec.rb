@@ -69,7 +69,33 @@ RSpec.describe Api::InviteesController,
           headers: headers
         )
         resp_invitees = JSON.parse(response.body).fetch("invitees")
+        expect(resp_invitees.count).to eq(2)
+      end
+    end
+
+    describe "update invitees based on present user ids" do
+      let(:description) {
+        "allow removing invitees by removing their user ids from the array.\nExample of removing & adding an invitee from an event:\nEvent: #{event.inspect}\nExisting invitee (we are removing this one): #{friend.inspect}\nNew invitee (adding this one): #{friend_2.inspect}"
+      }
+
+      let(:friend) { create :user }
+      let(:friend_2) { create :user }
+      let(:event) { create :event, user: user }
+
+      let(:params) {
+        { user_ids: [ friend_2.id ] }
+      }
+
+      it "removes non present user ids" do
+        invitee = create :invitee, user: friend, event: event
+        post(
+          api_event_invitees_path(event_id: event.id),
+          params: params,
+          headers: headers
+        )
+        resp_invitees = JSON.parse(response.body).fetch("invitees")
         expect(resp_invitees.count).to eq(1)
+        expect(resp_invitees.first["user"]["id"]).to eq(friend_2.id)
       end
     end
   end
