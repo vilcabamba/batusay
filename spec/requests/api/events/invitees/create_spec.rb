@@ -75,7 +75,7 @@ RSpec.describe Api::InviteesController,
 
     describe "update invitees based on present user ids" do
       let(:description) {
-        "allow removing invitees by removing their user ids from the array.\nExample of removing & adding an invitee from an event.\nEvent: #{event.inspect}\nInvitee: #{friend.inspect}\nNew invitee: #{friend_2.inspect}"
+        "allow removing invitees by removing their user ids from the array.\nExample of removing & adding an invitee from an event:\nEvent: #{event.inspect}\nExisting invitee (we are removing this one): #{friend.inspect}\nNew invitee (adding this one): #{friend_2.inspect}"
       }
 
       let(:friend) { create :user }
