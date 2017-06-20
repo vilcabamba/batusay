@@ -2,8 +2,7 @@ module Api
   class InvitesController < ResourceableController
     before_action :authenticate_api_user!
     defaults resource_class: Invitee
-    custom_actions resource: :accept,
-                   resource: :reject
+    custom_actions resource: [:accept,:reject]
 
     def index
       index! do
